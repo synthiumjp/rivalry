@@ -1,0 +1,743 @@
+{
+ "metadata": {
+  "programme": "Crewther Sampler v2.2",
+  "analysis": "Paper 1 Mechanistic Analysis (B.1.1\u2013B.1.4)",
+  "date": "2026-03-25 06:58:22",
+  "total_time_seconds": 2.4
+ },
+ "b11_phase_portraits": [
+  {
+   "label": "Low \u03b1, high \u03b2",
+   "params": {
+    "lambda": 0.15,
+    "beta": 0.3,
+    "alpha": 0.05,
+    "gamma": 0.02,
+    "kappa": 0.05
+   },
+   "alpha_eff": 0.125,
+   "conditions": {
+    "base": {
+     "g_value": 0.0,
+     "alpha_regime": 0.05,
+     "beta_regime": 0.3,
+     "kappa_regime": 0.05,
+     "alpha_eff": 0.125,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.8696,
+       "x_b": 0.8696,
+       "eigenvalues_real": [
+        0.025,
+        -0.575
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "A-dominant",
+       "x_a": 1.8182,
+       "x_b": 0.0,
+       "eigenvalues_real": [
+        -0.275,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "B-dominant",
+       "x_a": 0.0,
+       "x_b": 1.8182,
+       "eigenvalues_real": [
+        -0.275,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      }
+     ]
+    },
+    "dorsal": {
+     "g_value": 0.07125,
+     "alpha_regime": 0.075,
+     "beta_regime": 0.18,
+     "kappa_regime": 0.075,
+     "alpha_eff": 0.28125,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.818,
+       "x_b": 0.818,
+       "eigenvalues_real": [
+        -0.212133,
+        -0.579117
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 1.0226,
+       "x_b": 0.7326,
+       "eigenvalues_real": [
+        -0.212133,
+        -0.579117
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      }
+     ]
+    },
+    "ventral": {
+     "g_value": 0.07125,
+     "alpha_regime": 0.02,
+     "beta_regime": 0.45,
+     "kappa_regime": 0.02,
+     "alpha_eff": 0.02,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.8065,
+       "x_b": 0.8065,
+       "eigenvalues_real": [
+        0.317033,
+        -0.585783
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "A-dominant",
+       "x_a": 5.0633,
+       "x_b": 0.0,
+       "eigenvalues_real": [
+        -0.09875,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "B-dominant",
+       "x_a": 0.0,
+       "x_b": 2.9412,
+       "eigenvalues_real": [
+        -0.17,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 0.7539,
+       "x_b": 0.9457,
+       "eigenvalues_real": [
+        0.317033,
+        -0.585783
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      }
+     ]
+    }
+   }
+  },
+  {
+   "label": "Mid \u03b1, mid \u03b2",
+   "params": {
+    "lambda": 0.15,
+    "beta": 0.25,
+    "alpha": 0.08,
+    "gamma": 0.03,
+    "kappa": 0.04
+   },
+   "alpha_eff": 0.106667,
+   "conditions": {
+    "base": {
+     "g_value": 0.0,
+     "alpha_regime": 0.08,
+     "beta_regime": 0.25,
+     "kappa_regime": 0.04,
+     "alpha_eff": 0.106667,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.9868,
+       "x_b": 0.9868,
+       "eigenvalues_real": [
+        -0.006667,
+        -0.506667
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      }
+     ]
+    },
+    "dorsal": {
+     "g_value": 0.07125,
+     "alpha_regime": 0.12,
+     "beta_regime": 0.15,
+     "kappa_regime": 0.06,
+     "alpha_eff": 0.24,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.9259,
+       "x_b": 0.9259,
+       "eigenvalues_real": [
+        -0.200203,
+        -0.508547
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 1.1786,
+       "x_b": 0.8287,
+       "eigenvalues_real": [
+        -0.200203,
+        -0.508547
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      }
+     ]
+    },
+    "ventral": {
+     "g_value": 0.07125,
+     "alpha_regime": 0.032,
+     "beta_regime": 0.375,
+     "kappa_regime": 0.016,
+     "alpha_eff": 0.017067,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 0.9224,
+       "x_b": 0.9224,
+       "eigenvalues_real": [
+        0.245247,
+        -0.50813
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "A-dominant",
+       "x_a": 5.2183,
+       "x_b": 0.0,
+       "eigenvalues_real": [
+        -0.095817,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "B-dominant",
+       "x_a": 0.0,
+       "x_b": 2.9928,
+       "eigenvalues_real": [
+        -0.167067,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 0.8343,
+       "x_b": 1.1202,
+       "eigenvalues_real": [
+        0.245247,
+        -0.50813
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      }
+     ]
+    }
+   }
+  },
+  {
+   "label": "High \u03b1, low \u03b2",
+   "params": {
+    "lambda": 0.08,
+    "beta": 0.1,
+    "alpha": 0.05,
+    "gamma": 0.02,
+    "kappa": 0.0375
+   },
+   "alpha_eff": 0.09375,
+   "conditions": {
+    "base": {
+     "g_value": 0.0,
+     "alpha_regime": 0.05,
+     "beta_regime": 0.1,
+     "kappa_regime": 0.0375,
+     "alpha_eff": 0.09375,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 1.8265,
+       "x_b": 1.8265,
+       "eigenvalues_real": [
+        -0.07375,
+        -0.27375
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      }
+     ]
+    },
+    "dorsal": {
+     "g_value": 0.038,
+     "alpha_regime": 0.075,
+     "beta_regime": 0.06,
+     "kappa_regime": 0.05625,
+     "alpha_eff": 0.210938,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 1.4248,
+       "x_b": 1.4248,
+       "eigenvalues_real": [
+        -0.209001,
+        -0.334874
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 1.6498,
+       "x_b": 1.3783,
+       "eigenvalues_real": [
+        -0.209001,
+        -0.334874
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": true,
+       "oscillatory": false
+      }
+     ]
+    },
+    "ventral": {
+     "g_value": 0.038,
+     "alpha_regime": 0.02,
+     "beta_regime": 0.15,
+     "kappa_regime": 0.015,
+     "alpha_eff": 0.015,
+     "fixed_points": [
+      {
+       "type": "symmetric",
+       "x_a": 2.0408,
+       "x_b": 2.0408,
+       "eigenvalues_real": [
+        0.075199,
+        -0.227199
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "A-dominant",
+       "x_a": 8.7719,
+       "x_b": 0.0,
+       "eigenvalues_real": [
+        -0.057,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "B-dominant",
+       "x_a": 0.0,
+       "x_b": 5.2632,
+       "eigenvalues_real": [
+        -0.095,
+        0.0
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      },
+      {
+       "type": "G-biased",
+       "x_a": 1.6096,
+       "x_b": 2.7217,
+       "eigenvalues_real": [
+        0.075199,
+        -0.227199
+       ],
+       "eigenvalues_imag": [
+        0.0,
+        0.0
+       ],
+       "stable": false,
+       "oscillatory": false
+      }
+     ]
+    }
+   }
+  }
+ ],
+ "b12_sensitivity": {
+  "criteria_tightening": [
+   {
+    "label": "Pre-registered",
+    "cv_range": [
+     0.35,
+     0.65
+    ],
+    "dorsal_min": 0.5,
+    "ventral_max": 0.2,
+    "phase1_eligible": 762,
+    "phase2_strict": 5
+   },
+   {
+    "label": "Tightened CV",
+    "cv_range": [
+     0.4,
+     0.6
+    ],
+    "dorsal_min": 0.5,
+    "ventral_max": 0.2,
+    "phase1_eligible": 491,
+    "phase2_strict": 5
+   },
+   {
+    "label": "Tightened ventral",
+    "cv_range": [
+     0.35,
+     0.65
+    ],
+    "dorsal_min": 0.5,
+    "ventral_max": 0.1,
+    "phase1_eligible": 762,
+    "phase2_strict": 5
+   },
+   {
+    "label": "Tightened dorsal",
+    "cv_range": [
+     0.35,
+     0.65
+    ],
+    "dorsal_min": 0.6,
+    "ventral_max": 0.2,
+    "phase1_eligible": 762,
+    "phase2_strict": 5
+   },
+   {
+    "label": "All tightened",
+    "cv_range": [
+     0.4,
+     0.6
+    ],
+    "dorsal_min": 0.6,
+    "ventral_max": 0.1,
+    "phase1_eligible": 491,
+    "phase2_strict": 5
+   }
+  ],
+  "stability_radius": [
+   {
+    "config": 1,
+    "base_alpha": 0.03,
+    "base_beta": 0.15,
+    "n_neighbours": 1349,
+    "n_in_cv_target": 77,
+    "fraction_stable": 0.057
+   },
+   {
+    "config": 6,
+    "base_alpha": 0.05,
+    "base_beta": 0.3,
+    "n_neighbours": 1066,
+    "n_in_cv_target": 237,
+    "fraction_stable": 0.222
+   },
+   {
+    "config": 7,
+    "base_alpha": 0.08,
+    "base_beta": 0.25,
+    "n_neighbours": 2118,
+    "n_in_cv_target": 386,
+    "fraction_stable": 0.182
+   },
+   {
+    "config": 13,
+    "base_alpha": 0.05,
+    "base_beta": 0.2,
+    "n_neighbours": 1814,
+    "n_in_cv_target": 222,
+    "fraction_stable": 0.122
+   },
+   {
+    "config": 22,
+    "base_alpha": 0.05,
+    "base_beta": 0.1,
+    "n_neighbours": 1634,
+    "n_in_cv_target": 92,
+    "fraction_stable": 0.056
+   }
+  ]
+ },
+ "b13_transitional": {
+  "threshold": 5,
+  "n_total": 11014,
+  "short": {
+   "n": 1619,
+   "mean": 1.4996911673872761,
+   "cv": 0.6033590711679672,
+   "weibull_shape": 1.8312167593796267,
+   "weibull_scale": 1.7044595930796902
+  },
+  "long": {
+   "n": 9395,
+   "mean": 102.22778073443321,
+   "cv": 0.25251703745885923,
+   "weibull_shape": 3.797748890300143,
+   "weibull_scale": 111.99691077381533
+  },
+  "all": {
+   "n": 11014,
+   "mean": 87.42128200472126,
+   "cv": 0.49078543748404385,
+   "weibull_shape": 1.387998428258776,
+   "weibull_scale": 92.295417123093
+  }
+ },
+ "b14_kappa_role": [
+  {
+   "kappa": 0.01,
+   "cv_mean": null,
+   "dorsal_rate": 1.0,
+   "ventral_rate": 0.9,
+   "dissociation": 0.1
+  },
+  {
+   "kappa": 0.02,
+   "cv_mean": 1.2999441445089355,
+   "dorsal_rate": 1.0,
+   "ventral_rate": 0.9,
+   "dissociation": 0.1
+  },
+  {
+   "kappa": 0.03,
+   "cv_mean": 0.8301452864216939,
+   "dorsal_rate": 1.0,
+   "ventral_rate": 0.9,
+   "dissociation": 0.1
+  },
+  {
+   "kappa": 0.04,
+   "cv_mean": 0.49689315720965793,
+   "dorsal_rate": 0.9,
+   "ventral_rate": 0.9,
+   "dissociation": 0.0
+  },
+  {
+   "kappa": 0.05,
+   "cv_mean": 0.4023057532317905,
+   "dorsal_rate": 0.25,
+   "ventral_rate": 0.9,
+   "dissociation": -0.65
+  },
+  {
+   "kappa": 0.06,
+   "cv_mean": 0.35773700092234084,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.07,
+   "cv_mean": 0.3170263305116782,
+   "dorsal_rate": 0.1,
+   "ventral_rate": 0.9,
+   "dissociation": -0.8
+  },
+  {
+   "kappa": 0.08,
+   "cv_mean": 0.31100481525153645,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.09,
+   "cv_mean": 0.3019114131527134,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.1,
+   "cv_mean": 0.2907164607893241,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.11,
+   "cv_mean": 0.2998504620478422,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.12,
+   "cv_mean": 0.30729598283158815,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.13,
+   "cv_mean": 0.2929524488142651,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.14,
+   "cv_mean": 0.29730028539123615,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.15,
+   "cv_mean": 0.30127986502512927,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.16,
+   "cv_mean": 0.30600393387708236,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.17,
+   "cv_mean": 0.3138805462542047,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.18,
+   "cv_mean": 0.32872532742037863,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.19,
+   "cv_mean": 0.3330269523068671,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  },
+  {
+   "kappa": 0.2,
+   "cv_mean": 0.33122237683709455,
+   "dorsal_rate": 0.0,
+   "ventral_rate": 0.9,
+   "dissociation": -0.9
+  }
+ ]
+}
