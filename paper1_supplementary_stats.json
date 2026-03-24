@@ -1,0 +1,205 @@
+{
+ "metadata": {
+  "programme": "Crewther Sampler v2.2",
+  "analysis": "Paper 1 Supplementary Statistics",
+  "date": "2026-03-24 22:31:02",
+  "total_time_seconds": 0.7
+ },
+ "h3_interaction": {
+  "anova_2way": {
+   "regime": {
+    "F": 1.2293153418148541,
+    "df": [
+     1,
+     232
+    ],
+    "p": 0.2686882694854139,
+    "eta2": 0.0052582994618409346
+   },
+   "g_level": {
+    "F": 0.15246591450600475,
+    "df": [
+     3,
+     232
+    ],
+    "p": 0.9280318058034567,
+    "eta2": 0.001956482789059885
+   },
+   "interaction": {
+    "F": 0.03300332884231028,
+    "df": [
+     3,
+     232
+    ],
+    "p": 0.9919330368833884,
+    "eta2": 0.00042350741194105207
+   }
+  },
+  "cell_means": {
+   "regime0_g0": 0.14333333333333334,
+   "regime0_g1": 0.1866666666666667,
+   "regime0_g2": 0.20400000000000001,
+   "regime0_g3": 0.17933333333333332,
+   "regime1_g0": 0.212,
+   "regime1_g1": 0.232,
+   "regime1_g2": 0.23666666666666666,
+   "regime1_g3": 0.24666666666666667
+  },
+  "n_total": 240,
+  "n_per_cell": 30
+ },
+ "h4_duration_anova": {
+  "anova_2x2": {
+   "method": {
+    "F": 2.99260512040462,
+    "p": 0.0922118082724871
+   },
+   "percept": {
+    "F": 5.2122369755606845,
+    "p": 0.028436366322368678
+   },
+   "interaction": {
+    "F": 2.708483509341592,
+    "p": 0.10852026396409031,
+    "eta2": 0.057733777650484985
+   },
+   "df_within": 36
+  },
+  "cell_means": {
+   "baseline_target": 71.45997280727529,
+   "baseline_nontarget": 71.57270452391626,
+   "gclca_target": 1230.7718345954602,
+   "gclca_nontarget": 68.94319431391698,
+   "boost_target": 232.5125443524279,
+   "boost_nontarget": 44.05291599326837
+  },
+  "cohens_d_vs_baseline": {
+   "gclca_target": 0.8836552638418755,
+   "gclca_nontarget": -0.06615451527903467,
+   "boost_target": 0.9516632475103138,
+   "boost_nontarget": -0.7694820929625803
+  },
+  "cohens_d_gclca_vs_boost": {
+   "target": 0.7550402977310928,
+   "nontarget": 0.7808300998598642
+  }
+ },
+ "h2_effect_sizes": {
+  "G10": {
+   "cohens_d_paired": 0.3429758742697885,
+   "mean_switch_rate": 0.11,
+   "baseline_mean": 0.082,
+   "mean_difference": 0.027999999999999997
+  },
+  "G25": {
+   "cohens_d_paired": 0.3875462985746716,
+   "mean_switch_rate": 0.14333333333333334,
+   "baseline_mean": 0.082,
+   "mean_difference": 0.06133333333333334
+  },
+  "G50": {
+   "cohens_d_paired": 0.47777926432913553,
+   "mean_switch_rate": 0.1866666666666667,
+   "baseline_mean": 0.082,
+   "mean_difference": 0.1046666666666667
+  },
+  "G75": {
+   "cohens_d_paired": 0.5158809256550458,
+   "mean_switch_rate": 0.20400000000000001,
+   "baseline_mean": 0.082,
+   "mean_difference": 0.12200000000000001
+  },
+  "G90": {
+   "cohens_d_paired": 0.39369224180477724,
+   "mean_switch_rate": 0.17933333333333332,
+   "baseline_mean": 0.082,
+   "mean_difference": 0.09733333333333331
+  }
+ },
+ "h5_gradient_direction": {
+  "wilcoxon_W": 2.0,
+  "wilcoxon_p": 0.046875,
+  "mean_difference": 0.027999999999999994,
+  "n_positive": 6,
+  "n_negative": 1,
+  "n_zero": 23,
+  "n_tested": 30
+ },
+ "h6_developmental_trajectory": {
+  "fixed_params": {
+   "lambda": 0.15,
+   "beta": 0.25,
+   "sigma": 0.1,
+   "gamma": 0.03,
+   "alpha": 0.08
+  },
+  "trajectory": [
+   {
+    "kappa": 0.0,
+    "mean_switches": 0.0,
+    "regime": "winner-take-all",
+    "controllable": false
+   },
+   {
+    "kappa": 0.02,
+    "mean_switches": 1.2,
+    "regime": "winner-take-all",
+    "controllable": false
+   },
+   {
+    "kappa": 0.04,
+    "mean_switches": 199.0,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.06,
+    "mean_switches": 316.6,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.08,
+    "mean_switches": 396.4,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.1,
+    "mean_switches": 464.1,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.12,
+    "mean_switches": 530.0,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.14,
+    "mean_switches": 580.8,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.16,
+    "mean_switches": 635.7,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.18,
+    "mean_switches": 682.0,
+    "regime": "controllable-bistable",
+    "controllable": true
+   },
+   {
+    "kappa": 0.2,
+    "mean_switches": 730.6,
+    "regime": "controllable-bistable",
+    "controllable": true
+   }
+  ]
+ }
+}

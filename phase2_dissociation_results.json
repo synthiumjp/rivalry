@@ -1,0 +1,5927 @@
+{
+ "metadata": {
+  "programme": "Crewther Sampler v2.2",
+  "phase": "Phase II Dissociation",
+  "date": "2026-03-24 20:57:50",
+  "n_configs": 30,
+  "n_seeds": 50,
+  "g_fractions": [
+   0.0,
+   0.1,
+   0.25,
+   0.5,
+   0.75,
+   0.9
+  ],
+  "protocol": {
+   "baseline_steps": 5000,
+   "pulse_steps": 500,
+   "response_window": 800,
+   "switch_criterion": 50,
+   "lookback_window": 200,
+   "margin": 0.05
+  },
+  "regime_multipliers": {
+   "dorsal": {
+    "alpha": 1.5,
+    "beta": 0.6,
+    "kappa": 1.5
+   },
+   "ventral": {
+    "alpha": 0.4,
+    "beta": 1.5,
+    "kappa": 0.4
+   }
+  },
+  "summary": {
+   "strict_dissociation": 5,
+   "moderate_dissociation": 6,
+   "dorsal_monotonic": 24,
+   "ventral_floor_zero": 17
+  }
+ },
+ "config_results": [
+  {
+   "config_idx": 0,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.15,
+    "alpha": 0.1,
+    "sigma": 0.06,
+    "gamma": 0.05,
+    "kappa": 0.1
+   },
+   "phase1_cv": 0.5002,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.09,
+     "kappa": 0.15
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.225,
+     "kappa": 0.04
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 1,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.15,
+    "alpha": 0.03,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.045
+   },
+   "phase1_cv": 0.5004,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.045,
+     "beta": 0.09,
+     "kappa": 0.0675
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.78,
+      "n_switched": 39,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.78,
+      "net_switch_rate": 0.0,
+      "mean_latency": 335.3,
+      "median_latency": 306.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.9,
+      "n_switched": 45,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.7,
+      "net_switch_rate": 0.2,
+      "mean_latency": 258.2,
+      "median_latency": 230.0,
+      "signal_boost_rate": 0.74,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.84,
+      "net_switch_rate": 0.16,
+      "mean_latency": 140.3,
+      "median_latency": 74.0,
+      "signal_boost_rate": 0.9,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.76,
+      "net_switch_rate": 0.24,
+      "mean_latency": 53.8,
+      "median_latency": 49.5,
+      "signal_boost_rate": 0.92,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.72,
+      "net_switch_rate": 0.28,
+      "mean_latency": 50.7,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.72,
+      "net_switch_rate": 0.28,
+      "mean_latency": 50.9,
+      "median_latency": 50.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.012,
+     "beta": 0.225,
+     "kappa": 0.018
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 2,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.35,
+    "alpha": 0.12,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.09
+   },
+   "phase1_cv": 0.4995,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.21,
+     "kappa": 0.135
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.525,
+     "kappa": 0.036
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 432.0,
+      "median_latency": 432.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 3,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.2,
+    "alpha": 0.12,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.18
+   },
+   "phase1_cv": 0.4993,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.12,
+     "kappa": 0.27
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.3,
+     "kappa": 0.072
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 81.8,
+      "median_latency": 50.5,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 78.1,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 72.6,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 54.0,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 74.0,
+      "median_latency": 54.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 72.8,
+      "median_latency": 56.5,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 4,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.25,
+    "alpha": 0.1,
+    "sigma": 0.04,
+    "gamma": 0.05,
+    "kappa": 0.1
+   },
+   "phase1_cv": 0.5009,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.15,
+     "kappa": 0.15
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.08,
+      "n_switched": 4,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.08,
+      "mean_latency": 370.2,
+      "median_latency": 376.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.26,
+      "n_switched": 13,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.26,
+      "mean_latency": 243.9,
+      "median_latency": 234.0,
+      "signal_boost_rate": 0.26,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.72,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.375,
+     "kappa": 0.04
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 5,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.2,
+    "alpha": 0.1,
+    "sigma": 0.1,
+    "gamma": 0.03,
+    "kappa": 0.05
+   },
+   "phase1_cv": 0.499,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.12,
+     "kappa": 0.075
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.0,
+      "mean_latency": 744.0,
+      "median_latency": 744.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.06,
+      "mean_latency": 426.3,
+      "median_latency": 428.0,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.12,
+      "n_switched": 6,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.12,
+      "mean_latency": 247.7,
+      "median_latency": 275.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.1,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.3,
+     "kappa": 0.02
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 6,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.3,
+    "alpha": 0.05,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.05
+   },
+   "phase1_cv": 0.4989,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.075,
+     "beta": 0.18,
+     "kappa": 0.075
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.56,
+      "n_switched": 28,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.56,
+      "net_switch_rate": 0.0,
+      "mean_latency": 421.1,
+      "median_latency": 455.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.72,
+      "n_switched": 36,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.56,
+      "net_switch_rate": 0.16,
+      "mean_latency": 388.3,
+      "median_latency": 361.0,
+      "signal_boost_rate": 0.64,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.92,
+      "n_switched": 46,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.72,
+      "net_switch_rate": 0.2,
+      "mean_latency": 222.1,
+      "median_latency": 219.5,
+      "signal_boost_rate": 0.88,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.72,
+      "net_switch_rate": 0.28,
+      "mean_latency": 173.2,
+      "median_latency": 139.5,
+      "signal_boost_rate": 0.84,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.58,
+      "net_switch_rate": 0.42,
+      "mean_latency": 123.8,
+      "median_latency": 73.0,
+      "signal_boost_rate": 0.94,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.68,
+      "net_switch_rate": 0.32,
+      "mean_latency": 113.2,
+      "median_latency": 103.5,
+      "signal_boost_rate": 0.92,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.02,
+     "beta": 0.45,
+     "kappa": 0.02
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 7,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.25,
+    "alpha": 0.08,
+    "sigma": 0.1,
+    "gamma": 0.03,
+    "kappa": 0.04
+   },
+   "phase1_cv": 0.4989,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.15,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.0,
+      "mean_latency": 269.0,
+      "median_latency": 269.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.14,
+      "n_switched": 7,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.08,
+      "net_switch_rate": 0.06,
+      "mean_latency": 366.1,
+      "median_latency": 324.0,
+      "signal_boost_rate": 0.1,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.34,
+      "n_switched": 17,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.12,
+      "net_switch_rate": 0.22,
+      "mean_latency": 296.5,
+      "median_latency": 211.0,
+      "signal_boost_rate": 0.2,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.76,
+      "n_switched": 38,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.06,
+      "net_switch_rate": 0.7,
+      "mean_latency": 205.3,
+      "median_latency": 194.5,
+      "signal_boost_rate": 0.36,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.86,
+      "n_switched": 43,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.82,
+      "mean_latency": 166.8,
+      "median_latency": 136.0,
+      "signal_boost_rate": 0.56,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.08,
+      "net_switch_rate": 0.92,
+      "mean_latency": 143.7,
+      "median_latency": 130.5,
+      "signal_boost_rate": 0.74,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.375,
+     "kappa": 0.016
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 8,
+   "base_params": {
+    "lambda": 0.08,
+    "beta": 0.15,
+    "alpha": 0.12,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.4986,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.09,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.225,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 81.1,
+      "median_latency": 53.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 77.3,
+      "median_latency": 53.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 69.7,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 62.6,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 61.1,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 68.0,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 9,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.2,
+    "alpha": 0.1,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.5017,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.12,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.3,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.66,
+      "n_switched": 33,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.66,
+      "net_switch_rate": 0.0,
+      "mean_latency": 344.3,
+      "median_latency": 310.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.68,
+      "n_switched": 34,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.68,
+      "net_switch_rate": 0.0,
+      "mean_latency": 393.7,
+      "median_latency": 382.0,
+      "signal_boost_rate": 0.68,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.64,
+      "n_switched": 32,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.58,
+      "net_switch_rate": 0.06,
+      "mean_latency": 354.0,
+      "median_latency": 382.5,
+      "signal_boost_rate": 0.68,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.68,
+      "n_switched": 34,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.6,
+      "net_switch_rate": 0.08,
+      "mean_latency": 295.6,
+      "median_latency": 266.5,
+      "signal_boost_rate": 0.84,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.7,
+      "n_switched": 35,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.56,
+      "net_switch_rate": 0.14,
+      "mean_latency": 248.8,
+      "median_latency": 205.0,
+      "signal_boost_rate": 0.9,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.84,
+      "n_switched": 42,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.68,
+      "net_switch_rate": 0.16,
+      "mean_latency": 239.9,
+      "median_latency": 165.5,
+      "signal_boost_rate": 0.92,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 10,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.2,
+    "alpha": 0.12,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.06
+   },
+   "phase1_cv": 0.5018,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.12,
+     "kappa": 0.09
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.3,
+     "kappa": 0.024
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 11,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.25,
+    "alpha": 0.1,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.1
+   },
+   "phase1_cv": 0.4981,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.15,
+     "kappa": 0.15
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.375,
+     "kappa": 0.04
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 134.0,
+      "median_latency": 134.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.02,
+      "mean_latency": 250.3,
+      "median_latency": 255.0,
+      "signal_boost_rate": 0.08,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 12,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.2,
+    "alpha": 0.08,
+    "sigma": 0.1,
+    "gamma": 0.03,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.502,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.12,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.3,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 13,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.2,
+    "alpha": 0.05,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.0375
+   },
+   "phase1_cv": 0.5022,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.075,
+     "beta": 0.12,
+     "kappa": 0.05625
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.92,
+      "n_switched": 46,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.92,
+      "net_switch_rate": 0.0,
+      "mean_latency": 272.8,
+      "median_latency": 191.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.96,
+      "n_switched": 48,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.98,
+      "net_switch_rate": -0.02,
+      "mean_latency": 188.7,
+      "median_latency": 141.0,
+      "signal_boost_rate": 0.98,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.94,
+      "net_switch_rate": 0.06,
+      "mean_latency": 135.1,
+      "median_latency": 134.5,
+      "signal_boost_rate": 0.96,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.92,
+      "net_switch_rate": 0.08,
+      "mean_latency": 89.0,
+      "median_latency": 65.5,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.96,
+      "net_switch_rate": 0.04,
+      "mean_latency": 60.2,
+      "median_latency": 51.0,
+      "signal_boost_rate": 0.98,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 56.7,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.02,
+     "beta": 0.3,
+     "kappa": 0.015
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 14,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.25,
+    "alpha": 0.08,
+    "sigma": 0.04,
+    "gamma": 0.05,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.5022,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.15,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.24,
+      "n_switched": 12,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.24,
+      "mean_latency": 214.8,
+      "median_latency": 173.0,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.42,
+      "n_switched": 21,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.42,
+      "mean_latency": 355.7,
+      "median_latency": 395.0,
+      "signal_boost_rate": 0.38,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.82,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.375,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 15,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.25,
+    "alpha": 0.12,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.497,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.15,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.375,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.9,
+      "n_switched": 45,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.9,
+      "net_switch_rate": 0.0,
+      "mean_latency": 284.4,
+      "median_latency": 230.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.84,
+      "n_switched": 42,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.82,
+      "net_switch_rate": 0.02,
+      "mean_latency": 308.8,
+      "median_latency": 295.5,
+      "signal_boost_rate": 0.88,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.88,
+      "n_switched": 44,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.82,
+      "net_switch_rate": 0.06,
+      "mean_latency": 239.5,
+      "median_latency": 187.0,
+      "signal_boost_rate": 0.98,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.92,
+      "n_switched": 46,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.88,
+      "net_switch_rate": 0.04,
+      "mean_latency": 260.1,
+      "median_latency": 204.5,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.92,
+      "n_switched": 46,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.88,
+      "net_switch_rate": 0.04,
+      "mean_latency": 210.8,
+      "median_latency": 169.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.96,
+      "n_switched": 48,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.84,
+      "net_switch_rate": 0.12,
+      "mean_latency": 178.2,
+      "median_latency": 127.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 16,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.2,
+    "alpha": 0.08,
+    "sigma": 0.1,
+    "gamma": 0.03,
+    "kappa": 0.06
+   },
+   "phase1_cv": 0.5032,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.12,
+     "kappa": 0.09
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 182.0,
+      "median_latency": 182.0,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.12,
+      "n_switched": 6,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.12,
+      "mean_latency": 154.5,
+      "median_latency": 94.5,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.06,
+      "mean_latency": 240.3,
+      "median_latency": 256.0,
+      "signal_boost_rate": 0.06,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.04,
+      "n_switched": 2,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.04,
+      "mean_latency": 78.0,
+      "median_latency": 78.0,
+      "signal_boost_rate": 0.1,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.3,
+     "kappa": 0.024
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 17,
+   "base_params": {
+    "lambda": 0.08,
+    "beta": 0.1,
+    "alpha": 0.12,
+    "sigma": 0.06,
+    "gamma": 0.02,
+    "kappa": 0.06
+   },
+   "phase1_cv": 0.4966,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.06,
+     "kappa": 0.09
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.15,
+     "kappa": 0.024
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.3,
+      "n_switched": 15,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.3,
+      "net_switch_rate": 0.0,
+      "mean_latency": 419.9,
+      "median_latency": 422.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.36,
+      "n_switched": 18,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.3,
+      "net_switch_rate": 0.06,
+      "mean_latency": 353.6,
+      "median_latency": 374.0,
+      "signal_boost_rate": 0.4,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.28,
+      "n_switched": 14,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.22,
+      "net_switch_rate": 0.06,
+      "mean_latency": 350.2,
+      "median_latency": 311.5,
+      "signal_boost_rate": 0.5,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.58,
+      "n_switched": 29,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.22,
+      "net_switch_rate": 0.36,
+      "mean_latency": 331.8,
+      "median_latency": 336.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.52,
+      "n_switched": 26,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.18,
+      "net_switch_rate": 0.34,
+      "mean_latency": 317.6,
+      "median_latency": 318.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.72,
+      "n_switched": 36,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.24,
+      "net_switch_rate": 0.48,
+      "mean_latency": 264.4,
+      "median_latency": 227.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 18,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.35,
+    "alpha": 0.08,
+    "sigma": 0.12,
+    "gamma": 0.05,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.5037,
+   "phase1_levelt_rho": 0.82,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.21,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.525,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 19,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.3,
+    "alpha": 0.08,
+    "sigma": 0.12,
+    "gamma": 0.03,
+    "kappa": 0.06
+   },
+   "phase1_cv": 0.4955,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.18,
+     "kappa": 0.09
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": -0.02,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.0,
+      "mean_latency": 208.0,
+      "median_latency": 208.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.06,
+      "mean_latency": 686.0,
+      "median_latency": 645.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 790.0,
+      "median_latency": 790.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.45,
+     "kappa": 0.024
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 20,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.25,
+    "alpha": 0.12,
+    "sigma": 0.08,
+    "gamma": 0.03,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.5046,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.15,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.375,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.06,
+      "net_switch_rate": 0.0,
+      "mean_latency": 128.3,
+      "median_latency": 49.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.02,
+      "mean_latency": 467.0,
+      "median_latency": 583.0,
+      "signal_boost_rate": 0.16,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.04,
+      "n_switched": 2,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.0,
+      "mean_latency": 474.5,
+      "median_latency": 474.5,
+      "signal_boost_rate": 0.22,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.18,
+      "n_switched": 9,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.14,
+      "mean_latency": 332.7,
+      "median_latency": 263.0,
+      "signal_boost_rate": 0.78,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.16,
+      "n_switched": 8,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.08,
+      "net_switch_rate": 0.08,
+      "mean_latency": 335.5,
+      "median_latency": 278.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.24,
+      "n_switched": 12,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.06,
+      "net_switch_rate": 0.18,
+      "mean_latency": 294.3,
+      "median_latency": 267.5,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 21,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.3,
+    "alpha": 0.1,
+    "sigma": 0.1,
+    "gamma": 0.02,
+    "kappa": 0.125
+   },
+   "phase1_cv": 0.4949,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.15,
+     "beta": 0.18,
+     "kappa": 0.1875
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.04,
+     "beta": 0.45,
+     "kappa": 0.05
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.06,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.04,
+      "n_switched": 2,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.04,
+      "mean_latency": 260.5,
+      "median_latency": 260.5,
+      "signal_boost_rate": 0.34,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 150.0,
+      "median_latency": 150.0,
+      "signal_boost_rate": 0.62,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 22,
+   "base_params": {
+    "lambda": 0.08,
+    "beta": 0.1,
+    "alpha": 0.05,
+    "sigma": 0.04,
+    "gamma": 0.02,
+    "kappa": 0.0375
+   },
+   "phase1_cv": 0.4945,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.075,
+     "beta": 0.06,
+     "kappa": 0.05625
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.1,
+      "n_switched": 5,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.1,
+      "net_switch_rate": 0.0,
+      "mean_latency": 413.0,
+      "median_latency": 447.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.5,
+      "n_switched": 25,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.2,
+      "net_switch_rate": 0.3,
+      "mean_latency": 233.0,
+      "median_latency": 164.0,
+      "signal_boost_rate": 0.28,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.84,
+      "n_switched": 42,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.2,
+      "net_switch_rate": 0.64,
+      "mean_latency": 141.2,
+      "median_latency": 85.0,
+      "signal_boost_rate": 0.34,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.26,
+      "net_switch_rate": 0.74,
+      "mean_latency": 58.7,
+      "median_latency": 50.0,
+      "signal_boost_rate": 0.7,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.2,
+      "net_switch_rate": 0.8,
+      "mean_latency": 50.5,
+      "median_latency": 50.0,
+      "signal_boost_rate": 0.86,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.26,
+      "net_switch_rate": 0.74,
+      "mean_latency": 50.0,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.02,
+     "beta": 0.15,
+     "kappa": 0.015
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 23,
+   "base_params": {
+    "lambda": 0.15,
+    "beta": 0.25,
+    "alpha": 0.08,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.4944,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.15,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.375,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.015,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0075
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.0375,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 410.0,
+      "median_latency": 410.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.01875
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.1125,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 256.0,
+      "median_latency": 256.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.05625
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.135,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.0675
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 24,
+   "base_params": {
+    "lambda": 0.2,
+    "beta": 0.25,
+    "alpha": 0.12,
+    "sigma": 0.06,
+    "gamma": 0.05,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.4944,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.15,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.375,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.1,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.05
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.15,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.075
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.18,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.09
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 25,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.2,
+    "alpha": 0.12,
+    "sigma": 0.12,
+    "gamma": 0.02,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.4939,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.12,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.3,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.48,
+      "n_switched": 24,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.48,
+      "net_switch_rate": 0.0,
+      "mean_latency": 380.3,
+      "median_latency": 389.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.36,
+      "n_switched": 18,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.34,
+      "net_switch_rate": 0.02,
+      "mean_latency": 249.9,
+      "median_latency": 245.5,
+      "signal_boost_rate": 0.36,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.5,
+      "n_switched": 25,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.48,
+      "net_switch_rate": 0.02,
+      "mean_latency": 289.1,
+      "median_latency": 273.0,
+      "signal_boost_rate": 0.6,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.54,
+      "n_switched": 27,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.46,
+      "net_switch_rate": 0.08,
+      "mean_latency": 348.7,
+      "median_latency": 335.0,
+      "signal_boost_rate": 0.72,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.72,
+      "n_switched": 36,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.56,
+      "net_switch_rate": 0.16,
+      "mean_latency": 336.5,
+      "median_latency": 355.0,
+      "signal_boost_rate": 0.92,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.62,
+      "n_switched": 31,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.52,
+      "net_switch_rate": 0.1,
+      "mean_latency": 272.7,
+      "median_latency": 183.0,
+      "signal_boost_rate": 0.88,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  },
+  {
+   "config_idx": 26,
+   "base_params": {
+    "lambda": 0.08,
+    "beta": 0.1,
+    "alpha": 0.08,
+    "sigma": 0.06,
+    "gamma": 0.02,
+    "kappa": 0.12
+   },
+   "phase1_cv": 0.5063,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.12,
+     "beta": 0.06,
+     "kappa": 0.18
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.032,
+     "beta": 0.15,
+     "kappa": 0.048
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 67.1,
+      "median_latency": 49.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 66.3,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 64.7,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 63.2,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 60.0,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 63.1,
+      "median_latency": 49.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 27,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.15,
+    "alpha": 0.05,
+    "sigma": 0.12,
+    "gamma": 0.03,
+    "kappa": 0.075
+   },
+   "phase1_cv": 0.493,
+   "phase1_levelt_rho": 0.81,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.075,
+     "beta": 0.09,
+     "kappa": 0.1125
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.08,
+      "n_switched": 4,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.08,
+      "net_switch_rate": 0.0,
+      "mean_latency": 367.2,
+      "median_latency": 401.5,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.06,
+      "net_switch_rate": 0.0,
+      "mean_latency": 407.3,
+      "median_latency": 356.0,
+      "signal_boost_rate": 0.06,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.14,
+      "n_switched": 7,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.04,
+      "net_switch_rate": 0.1,
+      "mean_latency": 273.6,
+      "median_latency": 249.0,
+      "signal_boost_rate": 0.08,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.24,
+      "n_switched": 12,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.22,
+      "mean_latency": 298.2,
+      "median_latency": 409.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.26,
+      "n_switched": 13,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.06,
+      "net_switch_rate": 0.2,
+      "mean_latency": 272.4,
+      "median_latency": 332.0,
+      "signal_boost_rate": 0.12,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.26,
+      "n_switched": 13,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.24,
+      "mean_latency": 257.1,
+      "median_latency": 266.0,
+      "signal_boost_rate": 0.08,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.02,
+     "beta": 0.225,
+     "kappa": 0.03
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 28,
+   "base_params": {
+    "lambda": 0.08,
+    "beta": 0.1,
+    "alpha": 0.05,
+    "sigma": 0.06,
+    "gamma": 0.02,
+    "kappa": 0.075
+   },
+   "phase1_cv": 0.5073,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.075,
+     "beta": 0.06,
+     "kappa": 0.1125
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 243.0,
+      "median_latency": 243.0,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.02,
+      "n_switched": 1,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.02,
+      "mean_latency": 172.0,
+      "median_latency": 172.0,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.08,
+      "n_switched": 4,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.08,
+      "mean_latency": 243.0,
+      "median_latency": 249.0,
+      "signal_boost_rate": 0.04,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.08,
+      "n_switched": 4,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.08,
+      "mean_latency": 310.5,
+      "median_latency": 374.5,
+      "signal_boost_rate": 0.02,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.06,
+      "n_switched": 3,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.02,
+      "net_switch_rate": 0.04,
+      "mean_latency": 225.3,
+      "median_latency": 182.0,
+      "signal_boost_rate": 0.08,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": false
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.02,
+     "beta": 0.15,
+     "kappa": 0.03
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.008,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.004
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.02,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.01
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.04,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.02
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.06,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.03
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.072,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.036
+     }
+    },
+    "dose_response_monotonic": true
+   }
+  },
+  {
+   "config_idx": 29,
+   "base_params": {
+    "lambda": 0.1,
+    "beta": 0.15,
+    "alpha": 0.12,
+    "sigma": 0.1,
+    "gamma": 0.03,
+    "kappa": 0.15
+   },
+   "phase1_cv": 0.5073,
+   "phase1_levelt_rho": 1.0,
+   "dorsal": {
+    "regime_params": {
+     "alpha": 0.18,
+     "beta": 0.09,
+     "kappa": 0.225
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 0.0,
+      "n_switched": 0,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": null,
+      "median_latency": null,
+      "signal_boost_rate": 0.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": true
+   },
+   "ventral": {
+    "regime_params": {
+     "alpha": 0.048,
+     "beta": 0.225,
+     "kappa": 0.06
+    },
+    "g_levels": {
+     "G0": {
+      "g_fraction": 0.0,
+      "g_value": 0.0,
+      "switch_rate": 0.94,
+      "n_switched": 47,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.94,
+      "net_switch_rate": 0.0,
+      "mean_latency": 238.6,
+      "median_latency": 153.0,
+      "signal_boost_rate": null
+     },
+     "G10": {
+      "g_fraction": 0.1,
+      "g_value": 0.01,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.96,
+      "net_switch_rate": 0.04,
+      "mean_latency": 208.7,
+      "median_latency": 150.5,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.005
+     },
+     "G25": {
+      "g_fraction": 0.25,
+      "g_value": 0.025,
+      "switch_rate": 0.98,
+      "n_switched": 49,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.94,
+      "net_switch_rate": 0.04,
+      "mean_latency": 185.2,
+      "median_latency": 104.0,
+      "signal_boost_rate": 0.98,
+      "signal_boost_amount": 0.0125
+     },
+     "G50": {
+      "g_fraction": 0.5,
+      "g_value": 0.05,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.98,
+      "net_switch_rate": 0.02,
+      "mean_latency": 155.4,
+      "median_latency": 130.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.025
+     },
+     "G75": {
+      "g_fraction": 0.75,
+      "g_value": 0.075,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 1.0,
+      "net_switch_rate": 0.0,
+      "mean_latency": 126.7,
+      "median_latency": 101.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.0375
+     },
+     "G90": {
+      "g_fraction": 0.9,
+      "g_value": 0.09,
+      "switch_rate": 1.0,
+      "n_switched": 50,
+      "n_seeds": 50,
+      "baseline_switch_rate": 0.98,
+      "net_switch_rate": 0.02,
+      "mean_latency": 122.6,
+      "median_latency": 103.0,
+      "signal_boost_rate": 1.0,
+      "signal_boost_amount": 0.045
+     }
+    },
+    "dose_response_monotonic": false
+   }
+  }
+ ],
+ "dissociation_summary": [
+  {
+   "config": 0,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.0,
+   "dissociation": 0.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 1,
+   "best_dorsal": 1.0,
+   "best_ventral": 0.0,
+   "dissociation": 1.0,
+   "strict": true,
+   "moderate": true,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 2,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.02,
+   "dissociation": -0.02,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 3,
+   "best_dorsal": 0.0,
+   "best_ventral": 1.0,
+   "dissociation": -1.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 4,
+   "best_dorsal": 0.26,
+   "best_ventral": 0.0,
+   "dissociation": 0.26,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 5,
+   "best_dorsal": 0.12,
+   "best_ventral": 0.0,
+   "dissociation": 0.12,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 6,
+   "best_dorsal": 1.0,
+   "best_ventral": 0.0,
+   "dissociation": 1.0,
+   "strict": true,
+   "moderate": true,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 7,
+   "best_dorsal": 1.0,
+   "best_ventral": 0.0,
+   "dissociation": 1.0,
+   "strict": true,
+   "moderate": true,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 8,
+   "best_dorsal": 0.0,
+   "best_ventral": 1.0,
+   "dissociation": -1.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 9,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.84,
+   "dissociation": -0.84,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 10,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.0,
+   "dissociation": 0.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 11,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.06,
+   "dissociation": -0.06,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 12,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.0,
+   "dissociation": 0.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 13,
+   "best_dorsal": 1.0,
+   "best_ventral": 0.0,
+   "dissociation": 1.0,
+   "strict": true,
+   "moderate": true,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 14,
+   "best_dorsal": 0.42,
+   "best_ventral": 0.0,
+   "dissociation": 0.42,
+   "strict": false,
+   "moderate": true,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 15,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.96,
+   "dissociation": -0.96,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 16,
+   "best_dorsal": 0.12,
+   "best_ventral": 0.0,
+   "dissociation": 0.12,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 17,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.72,
+   "dissociation": -0.72,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 18,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.0,
+   "dissociation": 0.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 19,
+   "best_dorsal": 0.06,
+   "best_ventral": 0.0,
+   "dissociation": 0.06,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 20,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.24,
+   "dissociation": -0.24,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 21,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.04,
+   "dissociation": -0.04,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 22,
+   "best_dorsal": 1.0,
+   "best_ventral": 0.0,
+   "dissociation": 1.0,
+   "strict": true,
+   "moderate": true,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 23,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.02,
+   "dissociation": -0.02,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 24,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.0,
+   "dissociation": 0.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 25,
+   "best_dorsal": 0.0,
+   "best_ventral": 0.72,
+   "dissociation": -0.72,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 26,
+   "best_dorsal": 0.0,
+   "best_ventral": 1.0,
+   "dissociation": -1.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 27,
+   "best_dorsal": 0.26,
+   "best_ventral": 0.0,
+   "dissociation": 0.26,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  },
+  {
+   "config": 28,
+   "best_dorsal": 0.08,
+   "best_ventral": 0.0,
+   "dissociation": 0.08,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": false
+  },
+  {
+   "config": 29,
+   "best_dorsal": 0.0,
+   "best_ventral": 1.0,
+   "dissociation": -1.0,
+   "strict": false,
+   "moderate": false,
+   "dorsal_monotonic": true
+  }
+ ]
+}

@@ -1,0 +1,9 @@
+Dissociation Retest Summary
+Protocol: Transient G, 500 steps at t=5000, 30 seeds
+Configs: 118
+Time: 848s
+
+G25: strict+CV+Levelt=1, moderate+CV+Levelt=5
+G50: strict+CV+Levelt=5, moderate+CV+Levelt=11
+G75: strict+CV+Levelt=8, moderate+CV+Levelt=9
+G90: strict+CV+Levelt=8, moderate+CV+Levelt=11
