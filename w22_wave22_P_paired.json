@@ -1,0 +1,23 @@
+{
+ "called_as": "full 18-argument positional",
+ "n_steps": 20000,
+ "seed": 12345,
+ "max_abs_diff_A": 0.0,
+ "first_divergence_A": -1,
+ "max_abs_diff_B": 0.0,
+ "first_divergence_B": -1,
+ "agree": true,
+ "_provenance": {
+  "THETA": 0.05,
+  "SPLIT_INDET": 1,
+  "ADAPT_PIPELINE": 1,
+  "MIN_DUR": 5,
+  "X_INIT": 0.1,
+  "BURN": 500,
+  "XMAX": 5.0,
+  "numba": "0.64.0",
+  "git_commit": "c193930",
+  "argv": "wave22_adaptation.py --block P --out w22_ --force",
+  "timestamp": "2026-07-31T11:24:26"
+ }
+}
