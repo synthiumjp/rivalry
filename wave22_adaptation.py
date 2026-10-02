@@ -702,6 +702,16 @@ def save(path, obj, force):
     print(f"  wrote {p}")
 
 
+
+def _load_elig(args):
+    """The eligibility pool, keyed by exponent. Every saved output carries a
+    _provenance entry; it is metadata, not an exponent, so it is dropped here.
+    Blocks run on their own load the pool from disk and would otherwise try to
+    read '_provenance' as a number."""
+    raw = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+    return {k: v for k, v in raw.items() if not str(k).startswith('_')}
+
+
 # ==========================================================================
 # BLOCK V — kernel agreement against wave2_campaign at p = 1
 # ==========================================================================
@@ -981,7 +991,7 @@ def block_A(args):
 def block_B(args, elig=None):
     print("\n=== BLOCK B: Levelt II reachability vs exponent ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
 
     rng = np.random.default_rng(22)
@@ -1059,7 +1069,7 @@ def block_B(args, elig=None):
 def block_C(args, elig=None):
     print("\n=== BLOCK C: gate-timing sign contrast vs exponent ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(23)
 
@@ -1199,7 +1209,7 @@ def block_D(args, elig=None):
     """
     print("\n=== BLOCK D: joint feasibility, Levelt II and the Chong ratio ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(24)
     CHONG = 0.310
@@ -1355,7 +1365,7 @@ def block_E(args, elig=None):
     """
     print("\n=== BLOCK E: Modified Proposition IV vs adaptation exponent ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(25)
     LEVELS = (0.20, 0.30, 0.40, 0.50, 0.60, 0.70)
@@ -1500,7 +1510,7 @@ def block_G(args, elig=None):
     """
     print("\n=== BLOCK G: dominance-gated adaptation modulation ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(26)
     CHONG = 0.310
@@ -1673,7 +1683,7 @@ def block_F(args, elig=None):
     """
     print("\n=== BLOCK F: dominance-phase self-gain ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(26)
     CHONG, RTOL = 0.310, 0.10
@@ -1893,7 +1903,7 @@ def block_H(args, elig=None):
     """
     print("\n=== BLOCK H: inhibition-driven adaptation ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(27)
     CHONG, RTOL = 0.310, 0.10
@@ -2093,7 +2103,7 @@ def block_I(args, elig=None):
     """
     print("\n=== BLOCK I: closing the outstanding manuscript figures ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), None) or \
         sorted(elig, key=float)[0]
     pool_idx = elig[pk]['eligible_idx']
@@ -2420,7 +2430,7 @@ def block_K(args, elig=None):
     """
     print("\n=== BLOCK K: exponent scan on a fixed configuration set ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(28)
 
@@ -2638,7 +2648,7 @@ def block_M(args, elig=None):
     """
     print("\n=== BLOCK M: phase-shifted self-gating ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(30)
@@ -2803,7 +2813,7 @@ def block_N(args, elig=None):
     """
     print("\n=== BLOCK N: what the intermittency term measures ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(31)
@@ -3072,7 +3082,7 @@ def block_O(args, elig=None):
     """
     print("\n=== BLOCK O: convexity account of the schedule-statistics term ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(32)
@@ -3441,7 +3451,7 @@ def block_Q(args, elig=None):
     (M4) the gated-versus-ungated contrast on an unfiltered sample."""
     print("\n=== BLOCK Q: CM review, M1a, M1b and M4 ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(33)
@@ -3673,7 +3683,7 @@ def block_R(args, elig=None):
     """
     print("\n=== BLOCK R: threshold geometry of the coupling sign ===")
     if elig is None:
-        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+        elig = _load_elig(args)
     pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
     pool = {c['idx']: c for c in load_pool(args.quick)}
     rng = np.random.default_rng(34)
