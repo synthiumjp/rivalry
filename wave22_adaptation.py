@@ -116,6 +116,8 @@ BLK_L_SCREEN, BLK_L_BASE, BLK_L_COND = 2320, 2321, 2322
 BLK_M_BASE, BLK_M_REC, BLK_M_COND = 2330, 2331, 2332
 BLK_N_BASE, BLK_N_REC = 2340, 2341
 BLK_O_BASE, BLK_O_REC = 2350, 2351
+BLK_Q_BASE, BLK_Q_BURST, BLK_Q_REC, BLK_Q_UNF = 2360, 2361, 2362, 2363
+BLK_R_GEO, BLK_R_BASE, BLK_R_COND = 2370, 2371, 2372
 
 # kernel output slots
 (O_DURA, O_DURB, O_CVA, O_CVB, O_NA, O_NB, O_SW, O_SWF,
@@ -454,7 +456,8 @@ def LEVEL(*parts):
     dfrac = 0.0 and dfrac = 0.05 both round to 100 and therefore share a seed. That is
     the third instance in this project of the defect Section A.3 documents twice.
     """
-    key = tuple(round(float(x), 6) for x in parts)
+    key = tuple(round(float(x), 6) if isinstance(x, (int, float, np.floating, np.integer))
+                else str(x) for x in parts)
     if key not in _LEVEL_CACHE:
         _LEVEL_CACHE[key] = len(_LEVEL_CACHE) + 1
     return _LEVEL_CACHE[key]
@@ -3365,10 +3368,396 @@ def block_P(args, elig=None):
     save(args.out + 'wave22_P_paired.json', out, True)
     return out
 
+
+# ==========================================================================
+# BLOCK Q - the three runs the CM review asks for that fit this kernel
+# ==========================================================================
+@njit(cache=True)
+def _trace_burst(lam, beta, alpha, sigma, gam, kap, S_A, S_B, inc, T, every,
+                 n_steps, seed, theta, ta, tb, flag):
+    """Unmanipulated dynamics except for a burst of length T on channel A, triggered
+    at the onset of every `every`-th A-dominance episode. Writes both traces and a
+    per-timestep flag marking when a burst is being delivered. Update order matches
+    the pipeline: activation first, adaptation from the new activation."""
+    np.random.seed(seed)
+    xA = X_INIT
+    xB = X_INIT
+    aA = 0.0
+    aB = 0.0
+    rec = 1.0 - lam
+    prevA = 0
+    nA_on = 0
+    left = 0
+    for t in range(n_steps):
+        d = xA - xB
+        isA = 1 if d > theta else 0
+        if isA == 1 and prevA == 0:
+            nA_on += 1
+            if nA_on % every == 0:
+                left = T
+        prevA = isA
+        add = 0.0
+        if left > 0:
+            add = inc
+            flag[t] = 1
+            left -= 1
+        ta[t] = xA
+        tb[t] = xB
+        eA = np.random.normal(0.0, sigma)
+        eB = np.random.normal(0.0, sigma)
+        newA = rec * xA + S_A + add - beta * xB - alpha * aA + eA
+        newB = rec * xB + S_B - beta * xA - alpha * aB + eB
+        if newA < 0.0:
+            newA = 0.0
+        elif newA > XMAX:
+            newA = XMAX
+        if newB < 0.0:
+            newB = 0.0
+        elif newB > XMAX:
+            newB = XMAX
+        xA = newA
+        xB = newB
+        aA = (1.0 - gam) * aA + kap * xA
+        aB = (1.0 - gam) * aB + kap * xB
+
+
+def _episodes(ta, tb, flag, theta):
+    """Episodes after burn-in as (channel, start, length, burst_inside)."""
+    d = ta[BURN:] - tb[BURN:]
+    st = np.where(d > theta, 1, np.where(d < -theta, -1, 0))
+    fl = flag[BURN:]
+    eps, cur, start = [], 0, 0
+    for t, s in enumerate(st):
+        if s != 0 and s != cur:
+            if cur != 0:
+                eps.append((cur, start, t - start, int(fl[start:t].any())))
+            cur, start = s, t
+    return eps[1:]                           # drop the first, as the pipeline does
+
+
+def block_Q(args, elig=None):
+    """(M1a) single-burst response phase-locked to dominance onset;
+    (M1b) gamma schedules with gaps drawn independently of bursts;
+    (M4) the gated-versus-ungated contrast on an unfiltered sample."""
+    print("\n=== BLOCK Q: CM review, M1a, M1b and M4 ===")
+    if elig is None:
+        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+    pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
+    pool = {c['idx']: c for c in load_pool(args.quick)}
+    rng = np.random.default_rng(33)
+    take = rng.choice(elig[pk]['eligible_idx'],
+                      min(args.n_config, len(elig[pk]['eligible_idx'])), replace=False)
+    out = {}
+
+    # ---------------- M1a ----------------
+    print("\n  (M1a) single burst at A-dominance onset, every 4th episode, paired "
+          "within run")
+    TS = (5, 10, 20, 40, 80)
+    resA = {T: {'own': [], 'next': []} for T in TS}
+    for ci in take:
+        c = pool[int(ci)]
+        bl = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps,
+                      max(4, args.seeds // 2), BLK_Q_BASE, 0, split_indet=SPLIT_INDET)
+        ref = 0.5 * c['lam'] * sm(bl, O_ACTA)
+        if not (0.005 <= ref <= 0.5):
+            continue
+        for T in TS:
+            own_d, next_d = [], []
+            for s in range(args.seeds):
+                ta = np.zeros(args.steps); tb = np.zeros(args.steps)
+                fl = np.zeros(args.steps, dtype=np.uint8)
+                seed = canonical_seed(BLK_Q_BURST, int(ci), 0, LEVEL(T), s)
+                _trace_burst(c['lam'], c['beta'], c['alpha'], c['sigma'], c['gam'],
+                             c['kap'], 0.5, 0.5, 2.0 * ref, T, 4, args.steps, seed,
+                             THETA, ta, tb, fl)
+                eps = _episodes(ta, tb, fl, THETA)
+                a_b = [e[2] for e in eps if e[0] == 1 and e[3]]
+                a_n = [e[2] for e in eps if e[0] == 1 and not e[3]]
+                nb_b, nb_n = [], []
+                for k in range(len(eps) - 1):
+                    if eps[k][0] == 1 and eps[k + 1][0] == -1:
+                        (nb_b if eps[k][3] else nb_n).append(eps[k + 1][2])
+                if a_b and a_n:
+                    own_d.append(100 * (np.mean(a_b) - np.mean(a_n)) / np.mean(a_n))
+                if nb_b and nb_n:
+                    next_d.append(100 * (np.mean(nb_b) - np.mean(nb_n)) / np.mean(nb_n))
+            if own_d:
+                resA[T]['own'].append(float(np.mean(own_d)))
+            if next_d:
+                resA[T]['next'].append(float(np.mean(next_d)))
+    print(f"  {'burst T':>8} {'n':>5} {'containing A episode':>21} {'following B episode':>21}")
+    for T in TS:
+        o, nx = np.array(resA[T]['own']), np.array(resA[T]['next'])
+        print(f"  {T:>8} {o.size:>5} {np.median(o) if o.size else np.nan:>+20.1f}% "
+              f"{np.median(nx) if nx.size else np.nan:>+20.1f}%")
+    out['M1a'] = {str(T): {k: list(v) for k, v in resA[T].items()} for T in TS}
+    print("""
+      Read the following-B column against T. If it rises with T and is convex, the
+      single-burst response has the curvature the withdrawn convexity account needed
+      and the earlier flat result was the dilution artefact Section 4.5.3 names. If it
+      is flat here too, the schedule-statistics term needs interaction between bursts.""")
+
+    # ---------------- M1b ----------------
+    print("\n  (M1b) gamma bursts with independently drawn gaps, against yoked")
+    SH = (50.0, 3.8, 1.0)
+    resB = {'yoked': [], 'ungated': [], **{f'k{s}': [] for s in SH}}
+    for ci in take:
+        c = pool[int(ci)]
+        bl = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps,
+                      max(4, args.seeds // 2), BLK_Q_BASE, 1, split_indet=SPLIT_INDET)
+        ref = 0.5 * c['lam'] * sm(bl, O_ACTA)
+        b = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps, args.seeds,
+                     BLK_Q_BASE, 2, split_indet=SPLIT_INDET)
+        dB0, D = sm(b, O_DURB), sm(b, O_DURA)
+        if not (np.isfinite(dB0) and D > 4 and 0.005 <= ref <= 0.5):
+            continue
+        acc = {k: [] for k in resB}
+        for s in range(args.seeds):
+            lvl = LEVEL('Q', s)
+            sch = np.zeros(args.steps, dtype=np.uint8)
+            run_cell(c, 1.0, 0.5, 0.5, 2.0 * ref, G_ON, 0.0, args.steps, 1,
+                     BLK_Q_REC, lvl, schedule=sch, record=True,
+                     split_indet=SPLIT_INDET)
+            duty = max(float(sch.mean()), 1e-3)
+            gap_mean = D * (1.0 - duty) / duty
+            yk = np.zeros(args.steps, dtype=np.uint8)
+            run_cell(c, 1.0, 0.5, 0.5, 2.0 * ref, G_ON, 0.0, args.steps, 1,
+                     BLK_Q_REC, LEVEL('Qy', s), schedule=yk, record=True,
+                     split_indet=SPLIT_INDET)
+            r = run_cell(c, 1.0, 0.5, 0.5, 2.0 * ref, G_REPLAY, 0.0, args.steps, 1,
+                         BLK_Q_REC, lvl, schedule=yk, split_indet=SPLIT_INDET)
+            acc['yoked'].append(sm(r, O_DURB))
+            r = run_cell(c, 1.0, 0.5, 0.5, 1.0 * ref, G_UNGATED, 0.0, args.steps, 1,
+                         BLK_Q_REC, lvl, split_indet=SPLIT_INDET)
+            acc['ungated'].append(sm(r, O_DURB))
+            rr = np.random.default_rng(9000 + s + int(ci))
+            for shp in SH:
+                g = np.zeros(args.steps, dtype=np.uint8)
+                t_ = 0
+                while t_ < args.steps:
+                    bd = max(1, int(round(rr.gamma(shp, D / shp))))
+                    gp = max(1, int(round(rr.gamma(shp, gap_mean / shp))))
+                    g[t_:min(t_ + bd, args.steps)] = 1
+                    t_ += bd + gp
+                r = run_cell(c, 1.0, 0.5, 0.5, 2.0 * ref, G_REPLAY, 0.0, args.steps,
+                             1, BLK_Q_REC, lvl, schedule=g, split_indet=SPLIT_INDET)
+                acc[f'k{shp}'].append(sm(r, O_DURB))
+        for k in resB:
+            v = [x for x in acc[k] if np.isfinite(x)]
+            resB[k].append(pct(np.mean(v), dB0) if v else np.nan)
+    print(f"  {'schedule':>28} {'n':>5} {'competitor':>11}")
+    for k, lab in (('ungated', 'continuous, dose-matched'), ('yoked', 'yoked'),
+                   *[(f'k{s}', f'gamma shape {s}, indep. gaps') for s in SH]):
+        v = np.array([x for x in resB[k] if np.isfinite(x)])
+        print(f"  {lab:>28} {v.size:>5} {np.median(v) if v.size else np.nan:>+11.1f}")
+    out['M1b'] = {k: [float(x) for x in v] for k, v in resB.items()}
+    print("""
+      If independent gaps bring the gamma schedules up to the yoked value, the burst-gap
+      coupling in the earlier synthetic schedules was the missing ingredient and the
+      schedule-statistics term is a property of the joint distribution. If they stay
+      near the tied-gap values, it is not, and the term remains unexplained.""")
+
+    # ---------------- M4 ----------------
+    print("\n  (M4) gated vs ungated on an UNFILTERED rivalry-producing sample")
+    riv = [c['idx'] for c in load_pool(args.quick) if c['rivalry']]
+    unf = rng.choice(riv, min(args.n_config, len(riv)), replace=False)
+    g_pos = g_n = u_pos = u_n = 0
+    gv, uv = [], []
+    for ci in unf:
+        c = pool[int(ci)]
+        bl = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps,
+                      max(4, args.seeds // 2), BLK_Q_BASE, 3, split_indet=SPLIT_INDET)
+        ref = 0.5 * c['lam'] * sm(bl, O_ACTA)
+        b = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps, args.seeds,
+                     BLK_Q_BASE, 4, split_indet=SPLIT_INDET)
+        dB0 = sm(b, O_DURB)
+        if not (np.isfinite(dB0) and sm(b, O_SW) >= 10 and 0.005 <= ref <= 0.5):
+            continue
+        g = run_cell(c, 1.0, 0.5, 0.5, ref, G_ON, 0.0, args.steps, args.seeds,
+                     BLK_Q_UNF, 1, split_indet=SPLIT_INDET)
+        u = run_cell(c, 1.0, 0.5, 0.5, ref, G_UNGATED, 0.0, args.steps, args.seeds,
+                     BLK_Q_UNF, 2, split_indet=SPLIT_INDET)
+        pg, pu = pct(sm(g, O_DURB), dB0), pct(sm(u, O_DURB), dB0)
+        if np.isfinite(pg):
+            g_n += 1; g_pos += int(pg > 0); gv.append(pg)
+        if np.isfinite(pu):
+            u_n += 1; u_pos += int(pu > 0); uv.append(pu)
+    gl, gh = wilson(g_pos, g_n) if g_n else (np.nan, np.nan)
+    ul, uh = wilson(u_pos, u_n) if u_n else (np.nan, np.nan)
+    print(f"    gated 1x   competitor > 0 in {g_pos}/{g_n} [{100*gl:.0f}%, {100*gh:.0f}%], "
+          f"median {np.median(gv) if gv else np.nan:+.1f}%")
+    print(f"    ungated 1x competitor > 0 in {u_pos}/{u_n} [{100*ul:.0f}%, {100*uh:.0f}%], "
+          f"median {np.median(uv) if uv else np.nan:+.1f}%")
+    print("""
+      This is the number Section 6 needs. Intervals on opposite sides of chance mean the
+      central result holds without the eligibility filter; a gated proportion near 61%
+      means it behaves like the goal signal and weakens outside it.""")
+    out['M4'] = dict(gated=[g_pos, g_n], ungated=[u_pos, u_n], gated_vals=gv, ungated_vals=uv)
+    save(args.out + 'wave22_Q_cmreview.json', out, args.force)
+    return out
+
+
+# ==========================================================================
+# BLOCK R - the threshold-geometry account of the coupling sign
+# ==========================================================================
+def _geometry(c, n_steps, seed):
+    """Switching geometry of one unmanipulated trace.
+
+    Reduces the dynamics to the adaptation imbalance u = a_A - a_B. During B's
+    dominance u relaxes towards -L, where L = kappa (x_B - x_A) / gamma with the
+    activations averaged over B-dominant timesteps. Switches happen at |u| = c,
+    measured as the median imbalance at each handover. A B-episode then lasts
+    T = ln((L + c) / (L - c)) / gamma, and rho = (L - c) / (L + c).
+    Adaptation is reconstructed from the activation trace in the pipeline's
+    update order, a(t+1) = (1 - gamma) a(t) + kappa x(t+1)."""
+    ta = np.zeros(n_steps); tb = np.zeros(n_steps)
+    _trace_full(c['lam'], c['beta'], c['alpha'], c['sigma'], c['gam'], c['kap'],
+                0.5, 0.5, n_steps, seed, ADAPT_PIPELINE, ta, tb)
+    g, k = c['gam'], c['kap']
+    aA = np.zeros(n_steps); aB = np.zeros(n_steps)
+    for t in range(n_steps - 1):
+        aA[t + 1] = (1 - g) * aA[t] + k * ta[t + 1]
+        aB[t + 1] = (1 - g) * aB[t] + k * tb[t + 1]
+    s0 = BURN
+    d = ta[s0:] - tb[s0:]
+    u = (aA - aB)[s0:]
+    st = np.where(d > THETA, 1, np.where(d < -THETA, -1, 0))
+    last, c_ab, c_ba = 0, [], []
+    for t, s in enumerate(st):
+        if s == 0:
+            continue
+        if last == 1 and s == -1:
+            c_ab.append(u[t])
+        if last == -1 and s == 1:
+            c_ba.append(-u[t])
+        last = s
+    if len(c_ab) < 5 or len(c_ba) < 5:
+        return None
+    cc = 0.5 * (np.median(c_ab) + np.median(c_ba))
+    Bdom = st == -1
+    if Bdom.sum() < 50:
+        return None
+    L = k * (np.mean(tb[s0:][Bdom]) - np.mean(ta[s0:][Bdom])) / g
+    if not (L > cc > 0):
+        return None
+    return dict(c=float(cc), L=float(L), rho=float((L - cc) / (L + cc)),
+                T_pred=float(np.log((L + cc) / (L - cc)) / g))
+
+
+def block_R(args, elig=None):
+    """Does switching-threshold geometry explain the coupling sign?
+
+    THE ACCOUNT. Treat the adaptation imbalance u as the one slow variable. An
+    episode is the time for u to travel between two switching thresholds while
+    relaxing towards an asymptote. An increment on channel A displaces thresholds:
+
+      gated     displaces only the A-to-B handover threshold, so B's episode starts
+                further from its own end point and lengthens;
+      ungated   displaces both thresholds equally, but B's episode ends near its
+                asymptote where the logarithm is steep, so the end shift dominates
+                and B shortens; to first order the two channels trade off
+                symmetrically, which is why Levelt II is unreachable;
+      anti      displaces only the threshold that ends B's episode, so B shortens
+                by more than A does.
+
+    To first order the gated competitor-to-attended ratio is rho = (L-c)/(L+c), the
+    ungated ratio is -1, and the anti-gated ratio is 1/rho.
+
+    WHAT THIS BLOCK TESTS, in order of how much the paper will lean on it:
+      (1) whether (c, L) measured from an unmanipulated trace predicts episode
+          duration, i.e. whether the reduction describes the dynamics at all;
+      (2) the three signs;
+      (3) the first-order magnitude predictions, which a sandbox check on random
+          configurations found weak for the gated ratio and absent for the
+          anti-gated ratio. They are reported whatever they show.
+    """
+    print("\n=== BLOCK R: threshold geometry of the coupling sign ===")
+    if elig is None:
+        elig = json.load(open((args.elig or args.out) + 'wave22_A_eligibility.json'))
+    pk = next((k for k in elig if abs(float(k) - 1.0) < 1e-9), sorted(elig, key=float)[0])
+    pool = {c['idx']: c for c in load_pool(args.quick)}
+    rng = np.random.default_rng(34)
+    take = rng.choice(elig[pk]['eligible_idx'],
+                      min(args.n_config, len(elig[pk]['eligible_idx'])), replace=False)
+    AMPS = (0.25, 0.50)                       # fraction of lambda * baseline activation
+    rows = []
+    t0 = time.time()
+    for j, ci in enumerate(take):
+        if (j + 1) % PROGRESS_EVERY == 0:
+            el = time.time() - t0
+            print(f"    {j+1}/{len(take)}  [{el:.0f}s, ~{el/(j+1)*(len(take)-j-1):.0f}s left]",
+                  flush=True)
+        c = pool[int(ci)]
+        geo = _geometry(c, 2 * args.steps, canonical_seed(BLK_R_GEO, int(ci), 0, 0, 0))
+        if geo is None:
+            continue
+        b = run_cell(c, 1.0, 0.5, 0.5, 0.0, G_NONE, 0.0, args.steps, args.seeds,
+                     BLK_R_BASE, 0, split_indet=SPLIT_INDET)
+        dA0, dB0 = sm(b, O_DURA), sm(b, O_DURB)
+        if not (np.isfinite(dA0) and np.isfinite(dB0) and sm(b, O_SW) >= 20):
+            continue
+        rec = dict(config=int(ci), **geo, T_obs=float(0.5 * (dA0 + dB0)))
+        for a in AMPS:
+            inc = a * c['lam'] * sm(b, O_ACTA)
+            for lab, gate in (('gated', G_ON), ('ungated', G_UNGATED), ('anti', G_OFF)):
+                o = run_cell(c, 1.0, 0.5, 0.5, inc, gate, 0.0, args.steps, args.seeds,
+                             BLK_R_COND, LEVEL(lab, a), split_indet=SPLIT_INDET)
+                pA, pB = pct(sm(o, O_DURA), dA0), pct(sm(o, O_DURB), dB0)
+                rec[f'{lab}_{a}'] = (pB / pA) if (np.isfinite(pA) and np.isfinite(pB)
+                                                 and abs(pA) > 1e-6) else np.nan
+                rec[f'{lab}_{a}_pB'] = pB
+        rows.append(rec)
+
+    R = {k: np.array([r[k] for r in rows], float) for k in rows[0]} if rows else {}
+    n = len(rows)
+    print(f"\n  {n} configurations with a measurable switching geometry")
+    if n < 10:
+        print("  too few to test")
+        return rows
+    rs = _spear(R['T_pred'], R['T_obs'])
+    print(f"\n  (1) DOES THE REDUCTION DESCRIBE THE DYNAMICS")
+    print(f"      Spearman(predicted, observed episode duration) = {rs:+.3f}")
+    print(f"      median predicted / observed = {np.nanmedian(R['T_pred'] / R['T_obs']):.2f}")
+    print(f"      median rho = {np.median(R['rho']):.3f}, IQR "
+          f"[{np.percentile(R['rho'], 25):.3f}, {np.percentile(R['rho'], 75):.3f}]")
+    out = dict(n=n, spearman_duration=rs)
+    for a in AMPS:
+        print(f"\n  (2) SIGNS, increment {a} x lambda x baseline activation")
+        for lab, want in (('gated', '+'), ('ungated', '-'), ('anti', '-')):
+            v = R[f'{lab}_{a}_pB']; v = v[np.isfinite(v)]
+            pos = int((v > 0).sum())
+            lo, hi = wilson(pos, v.size)
+            print(f"      {lab:<8} competitor lengthens in {pos:>4}/{v.size:<4} "
+                  f"[{100*lo:.0f}%, {100*hi:.0f}%]   theory: {want}")
+            out[f'sign_{lab}_{a}'] = [pos, int(v.size)]
+        g, u, an = R[f'gated_{a}'], R[f'ungated_{a}'], R[f'anti_{a}']
+        print(f"\n  (3) FIRST-ORDER MAGNITUDES, increment {a}")
+        print(f"      gated ratio vs rho      Spearman {_spear(R['rho'], g):+.3f}, "
+              f"median gated/rho {np.nanmedian(g / R['rho']):.2f}")
+        print(f"      ungated ratio vs -1     median {np.nanmedian(u):+.3f}")
+        print(f"      anti ratio vs 1/rho     Spearman {_spear(1 / R['rho'], an):+.3f}, "
+              f"median anti x rho {np.nanmedian(an * R['rho']):.2f}")
+        out[f'mag_{a}'] = dict(sp_gated_rho=_spear(R['rho'], g),
+                               gated_over_rho=float(np.nanmedian(g / R['rho'])),
+                               ungated=float(np.nanmedian(u)),
+                               sp_anti_invrho=_spear(1 / R['rho'], an),
+                               anti_times_rho=float(np.nanmedian(an * R['rho'])))
+    print("""
+  HOW TO READ THIS. (1) is the licence for everything else: a strong duration
+  correlation means the one-variable reduction describes these dynamics. (2) is what
+  the paper will claim as derived. (3) says whether the reduction also predicts
+  magnitudes; the sandbox check says mostly not, and the paper should report
+  whichever way it falls rather than lean on it.""")
+    save(args.out + 'wave22_R_geometry.json',
+         dict(summary=out, rows=[{k: (float(v) if isinstance(v, (float, np.floating))
+                                      else v) for k, v in r.items()} for r in rows]),
+         args.force)
+    return rows
+
 # ==========================================================================
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--block', choices=['V', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'all'], default='all')
+    ap.add_argument('--block', choices=['V', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'all'], default='all')
     ap.add_argument('--verify', action='store_true', help='run block V only')
     ap.add_argument('--analyse', action='store_true',
                     help='reanalyse existing JSON, no simulation')
@@ -3440,6 +3829,10 @@ def main():
         block_O(args, elig)
     if args.block in ('P', 'all'):
         block_P(args, elig)
+    if args.block in ('Q', 'all'):
+        block_Q(args, elig)
+    if args.block in ('R', 'all'):
+        block_R(args, elig)
 
 
 if __name__ == '__main__':

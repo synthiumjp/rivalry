@@ -91,7 +91,7 @@ G_NONE, G_UNGATED, G_ON, G_OFF = 0, 1, 2, 3
 
 @njit(cache=True)
 def _trace(arch, lam, beta, alpha, sigma, gam, kap, sig_n, w, thr, slope,
-           S_A, S_B, inc, gate, n_steps, seed, tau):
+           S_A, S_B, inc, gate, n_steps, seed, tau, delay):
     """One trace. Returns [durA, durB, cvA, nEpisodes, switchesFiltered,
     predomA, actA, actB]."""
     np.random.seed(seed)
@@ -118,6 +118,8 @@ def _trace(arch, lam, beta, alpha, sigma, gam, kap, sig_n, w, thr, slope,
     actA = 0.0
     actB = 0.0
     npost = 0
+    L = delay + 1
+    hist = np.zeros(L, dtype=np.int64)     # ring buffer of gate states, for a pure delay
 
     for t in range(n_steps):
         d = xA - xB
@@ -129,6 +131,9 @@ def _trace(arch, lam, beta, alpha, sigma, gam, kap, sig_n, w, thr, slope,
             on = 1 if d > THETA else 0
         else:
             on = 1 if d < -THETA else 0
+        if delay > 0:
+            hist[t % L] = on
+            on = hist[(t - delay) % L] if t >= delay else 0
         target = inc if on == 1 else 0.0
         if tau <= 1.0:
             gsig = target
@@ -249,14 +254,22 @@ def wilson(k, n, z=1.96):
     return (max(0.0, c - h), min(1.0, c + h))
 
 
-def cell(arch, p, S_A, S_B, inc, gate, n_seeds, n_steps, tag, tau=0.0):
+def _seed(*parts):
+    """Deterministic across processes. The previous version used hash() on a tuple
+    containing a string, which Python salts per process unless PYTHONHASHSEED is set,
+    so runs were statistically stable but not bit-reproducible."""
+    import zlib
+    return zlib.crc32(repr(parts).encode()) % (2 ** 31 - 1)
+
+
+def cell(arch, p, S_A, S_B, inc, gate, n_seeds, n_steps, tag, tau=0.0, delay=0):
     r = np.empty((n_seeds, 8))
     for s in range(n_seeds):
-        seed = (hash((arch, tag, round(p['lam'], 5), round(p['beta'], 5),
-                      round(p['sigma'], 5), s)) % (2 ** 31 - 1))
+        seed = _seed(arch, tag, round(p['lam'], 5), round(p['beta'], 5),
+                     round(p['sigma'], 5), s)
         r[s] = _trace(arch, p['lam'], p['beta'], p['alpha'], p['sigma'], p['gam'],
                       p['kap'], p['sig_n'], p['w'], p['thr'], p['slope'],
-                      S_A, S_B, inc, gate, n_steps, seed, tau)
+                      S_A, S_B, inc, gate, n_steps, seed, tau, int(delay))
     return np.nanmean(r, axis=0)
 
 
@@ -304,6 +317,45 @@ def eligible(arch, p, args):
                 actA=float(b[6]), actB=float(b[7]))
 
 
+
+def _rank(v):
+    return np.argsort(np.argsort(np.asarray(v, float)))
+
+
+def _sp(a, b, minn=5):
+    a, b = np.asarray(a, float), np.asarray(b, float)
+    ok = np.isfinite(a) & np.isfinite(b)
+    if ok.sum() < minn:
+        return float('nan')
+    return float(np.corrcoef(_rank(a[ok]), _rank(b[ok]))[0, 1])
+
+
+def geometry_check(rows, tag, seed=0):
+    """Does exp(-gamma T) predict the gated coupling ratio in this family?
+
+    The threshold-geometry reduction of the main paper gives the gated ratio as
+    rho = (L - c)/(L + c) and episode duration as T = ln(1/rho)/gamma, hence
+    rho = exp(-gamma T). In the paper's own architecture exp(-gamma T) predicts the
+    gated ratio at Spearman +0.85. This asks whether it does in each family, whether
+    the combination beats either part alone, and whether pairing each configuration's
+    gamma with its own T matters, by permuting gamma within the family."""
+    rr = [x for x in rows.get(tag, []) if np.isfinite(x['pA']) and np.isfinite(x['pB'])
+          and abs(x['pA']) > 1e-9 and np.isfinite(x.get('T0', np.nan))]
+    if len(rr) < 8:
+        return None
+    ratio = np.array([x['pB'] / x['pA'] for x in rr])
+    gam = np.array([x['gam'] for x in rr]); T = np.array([x['T0'] for x in rr])
+    pred = np.exp(-gam * T)
+    obs_sp = _sp(ratio, pred)
+    rng = np.random.default_rng(seed)
+    null = np.array([_sp(ratio, np.exp(-rng.permutation(gam) * T)) for _ in range(2000)])
+    return dict(n=len(rr), sp_pred=obs_sp, sp_T=_sp(ratio, -T), sp_gam=_sp(ratio, -gam),
+                perm_p=float((np.sum(null >= obs_sp) + 1) / (null.size + 1)),
+                perm_95=float(np.percentile(null, 95)),
+                calib=float(np.median(ratio / pred)),
+                med_ratio=float(np.median(ratio)), med_pred=float(np.median(pred)))
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--n-config', type=int, default=40, dest='n_config')
@@ -311,6 +363,9 @@ def main():
     ap.add_argument('--steps', type=int, default=15000)
     ap.add_argument('--max-draws', type=int, default=4000, dest='max_draws')
     ap.add_argument('--out', default='wave23_architectures.json')
+    ap.add_argument('--delay-mode', action='store_true', dest='delay_mode',
+                    help='with --crossover: sweep a pure delay on the gate instead of '
+                         'a first-order lag, to place a report-contingent gate')
     ap.add_argument('--crossover', action='store_true',
                     help='also sweep the ramp time constant and locate '
                          'the tau/D crossover in each architecture')
@@ -357,7 +412,8 @@ def main():
                 pA = 100 * (r[0] - dA0) / dA0 if dA0 > 0 else np.nan
                 pB = 100 * (r[1] - dB0) / dB0 if dB0 > 0 else np.nan
                 rows[tag].append(dict(pA=float(pA), pB=float(pB),
-                                      cv=float(r[2])))
+                                      cv=float(r[2]), gam=float(p['gam']),
+                                      T0=float(0.5 * (dA0 + dB0))))
 
         print(f"\n  {'condition':>14} {'n':>4} {'attended':>9} {'competitor':>11} "
               f"{'pB>0':>10} {'ratio':>8} {'CV':>7}")
@@ -402,6 +458,17 @@ def main():
             summ['medians_opposite'] = direction
             summ['wilson_gated'] = [gl, gh]
             summ['wilson_ungated'] = [ul, uh]
+        geo = {t: geometry_check(rows, t, seed=arch) for t in ('gated_1x', 'gated_2x')}
+        g1 = geo.get('gated_1x')
+        if g1:
+            print(f"\n  GEOMETRY CHECK, gated 1x, n = {g1['n']}")
+            print(f"    Spearman(ratio, exp(-gamma T))  {g1['sp_pred']:+.3f}   "
+                  f"permuting gamma: 95th pct {g1['perm_95']:+.3f}, p = {g1['perm_p']:.4f}")
+            print(f"    Spearman(ratio, -T alone)       {g1['sp_T']:+.3f}")
+            print(f"    Spearman(ratio, -gamma alone)   {g1['sp_gam']:+.3f}")
+            print(f"    median ratio / prediction       {g1['calib']:.2f}   "
+                  f"(median ratio {g1['med_ratio']:+.3f}, median prediction {g1['med_pred']:.3f})")
+        summ['geometry'] = geo
         results[name] = dict(n=len(found), yield_frac=float(yld),
                              median_cv=float(np.median(cvs)), summary=summ,
                              rows=rows, params=found)
@@ -420,6 +487,38 @@ def main():
               f"{r['median_cv']:>7.3f} {g.get('med_pB', float('nan')):>+10.1f} "
               f"{u.get('med_pB', float('nan')):>+11.1f} "
               f"{('yes' if s.get('sign_reversal') else ('signs only' if s.get('medians_opposite') else 'NO')):>10}")
+
+    print(f"\n{'=' * 74}\nGEOMETRY ACROSS FAMILIES: does exp(-gamma T) explain the spread?\n{'=' * 74}")
+    print(f"  {'architecture':>16} {'n':>4} {'Spearman':>9} {'perm p':>8} {'vs T':>7} "
+          f"{'vs gam':>7} {'obs/pred':>9} {'med obs':>8} {'med pred':>9}")
+    fam_obs, fam_pred, pooled_r, pooled_p = [], [], [], []
+    for name, r in results.items():
+        g1 = (r.get('summary') or {}).get('geometry', {}).get('gated_1x')
+        if not g1:
+            continue
+        print(f"  {name:>16} {g1['n']:>4} {g1['sp_pred']:>+9.3f} {g1['perm_p']:>8.4f} "
+              f"{g1['sp_T']:>+7.3f} {g1['sp_gam']:>+7.3f} {g1['calib']:>9.2f} "
+              f"{g1['med_ratio']:>+8.3f} {g1['med_pred']:>9.3f}")
+        fam_obs.append(g1['med_ratio']); fam_pred.append(g1['med_pred'])
+        for x in r['rows'].get('gated_1x', []):
+            if (np.isfinite(x['pA']) and np.isfinite(x['pB']) and abs(x['pA']) > 1e-9
+                    and np.isfinite(x.get('T0', np.nan))):
+                pooled_r.append(x['pB'] / x['pA'])
+                pooled_p.append(np.exp(-x['gam'] * x['T0']))
+    if len(fam_obs) >= 3:
+        print(f"\n  pooled across families: Spearman {_sp(pooled_r, pooled_p):+.3f} "
+              f"on {len(pooled_r)} configurations")
+        print(f"  family medians, observed vs predicted: Spearman "
+              f"{_sp(fam_obs, fam_pred, minn=3):+.3f} on {len(fam_obs)} families "
+              f"(four points: read the ordering, not the coefficient)")
+        print("""
+  HOW TO READ THIS. Within a family, a Spearman well above the permutation 95th
+  percentile means pairing each configuration's own gamma and T matters, so the
+  combination is doing work that neither part does. If that holds in every family the
+  prediction is architecture-general. If the family medians also line up, the
+  thirtyfold spread in coupling ratio across architectures is explained rather than
+  merely reported. Where a family fails, the claim in Section 4.4 must be scoped to
+  the families where it holds, and the failure reported.""")
 
     n_arch = sum(1 for r in results.values() if r.get('n'))
     n_rev = sum(1 for r in results.values()
@@ -487,7 +586,9 @@ def main():
                 vals = []
                 for k, f in enumerate(FR):
                     r = cell(arch, p, 0.5, 0.5, ref, G_ON, args.seeds,
-                             args.steps, f'x{k}', tau=max(1.0, f * D))
+                             args.steps, f'x{k}',
+                             tau=(1.0 if args.delay_mode else max(1.0, f * D)),
+                             delay=(int(round(f * D)) if args.delay_mode else 0))
                     v = 100 * (r[1] - dB0) / dB0 if dB0 > 0 else np.nan
                     vals.append(v)
                     if np.isfinite(v):

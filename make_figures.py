@@ -59,13 +59,20 @@ def need(fig, panel, what):
     MISSING.append(f"Figure {fig}{panel}: {what}")
 
 
+# Generators are named by their original numbering; outputs follow the manuscript's
+# order of appearance. No title is drawn inside a figure: the caption in the
+# manuscript is the only place a figure number appears.
+OUTNUM = {8: 1, 1: 2, 2: 3, 4: 4, 3: 5, 5: 6, 6: 7, 7: 8}
+
+
 def finish(fig, num, title):
     OUT.mkdir(exist_ok=True)
-    fig.suptitle(title, fontsize=9.5, ha='left', x=0.01)
-    fig.savefig(OUT / f'figure{num}.png', bbox_inches='tight')
-    fig.savefig(OUT / f'figure{num}.pdf', bbox_inches='tight')
+    n = OUTNUM.get(num, num)
+    fig.savefig(OUT / f'figure{n}.png', bbox_inches='tight')
+    fig.savefig(OUT / f'figure{n}.pdf', bbox_inches='tight')
     plt.close(fig)
-    print(f"  wrote figures/figure{num}.png and .pdf")
+    import re as _re
+    print(f"  wrote figures/figure{n}.pdf  ({_re.sub(r'^Figure \\d+\\. ', '', title)})")
 
 
 # ---------------------------------------------------------------- Figure 1
@@ -81,25 +88,14 @@ def figure1():
             riv += 1
             if isinstance(m, dict) and np.isfinite(m.get('cv', np.nan) or np.nan):
                 cv.append(float(m['cv']))
-    fig, ax = plt.subplots(1, 2, figsize=(8.0, 2.6))
-    ax[0].axis('off')
-    ax[0].text(0.0, 0.95, 'Architecture and example traces', va='top', fontsize=8.5)
-    ax[0].text(0.0, 0.78, 'Panel A is a schematic and a pair of example traces.\\n'
-               'Draw by hand or from a saved trace; this script does not\\n'
-               'simulate. See block P in wave22_adaptation.py for a\\n'
-               'trace-returning kernel if you want to generate one.',
-               va='top', fontsize=7, color=MUT)
-    need(1, 'A', 'architecture schematic and example traces, drawn by hand')
+    fig, ax1 = plt.subplots(1, 1, figsize=(4.2, 2.6))
     if cv:
-        ax[1].hist(cv, bins=60, color=ACC, alpha=.85, edgecolor='none')
-        ax[1].axvspan(0.35, 0.65, color=WARN, alpha=.13, lw=0)
-        ax[1].axvline(float(np.median(cv)), color=INK, lw=1, ls='--')
-        ax[1].set_xlabel('coefficient of variation of dominance durations')
-        ax[1].set_ylabel('configurations')
-        ax[1].set_title(f'B  {riv:,} rivalry-producing of {len(recs):,}\\n'
-                        f'shaded band is the registered eligibility window',
-                        loc='left')
-        ax[1].set_xlim(0, 1.6)
+        ax1.hist(cv, bins=60, color=ACC, alpha=.85, edgecolor='none')
+        ax1.axvspan(0.35, 0.65, color=WARN, alpha=.13, lw=0)
+        ax1.axvline(float(np.median(cv)), color=INK, lw=1, ls='--')
+        ax1.set_xlabel('coefficient of variation of dominance durations')
+        ax1.set_ylabel('configurations')
+        ax1.set_xlim(0, 1.6)
     finish(fig, 1, 'Figure 1. Parameter space and duration variability')
 
 
@@ -273,7 +269,8 @@ def figure7():
 # ---------------------------------------------------------------- Figure 8
 def figure8():
     w = load('wave9_results.json')
-    fig, ax = plt.subplots(1, 2, figsize=(6.4, 2.6))
+    fig, ax0 = plt.subplots(1, 1, figsize=(4.4, 2.6))
+    ax = [ax0]
     cl = (w or {}).get('classifiers') or {}
     rows = []
     for key, d in cl.items():
@@ -295,19 +292,9 @@ def figure8():
         ax[0].set_xticks(np.arange(len(preds)) + .4 - wdt / 2)
         ax[0].set_xticklabels(preds, rotation=25, ha='right')
         ax[0].set_ylabel('AUC'); ax[0].set_ylim(0, 1)
-        ax[0].set_title('A  what classifies controllability', loc='left')
         ax[0].legend(frameon=False, fontsize=5.5)
     else:
         need(8, 'A', 'classifiers.*.auc in wave9_results.json')
-    ax[1].axis('off')
-    ax[1].text(0.0, .95, 'B  rectifier sharpness', va='top', fontsize=8.5)
-    ax[1].text(0.0, .80, 'Switch rate against $k$ at each goal level, with\\n'
-               'f(0) annotated. The table is in Appendix A.1; the\\n'
-               'underlying sweep is not in any stored JSON, so this\\n'
-               'panel needs a rerun of the softplus sweep or can be\\n'
-               'drawn from the six numbers in that table.',
-               va='top', fontsize=7, color=MUT)
-    need(8, 'B', 'softplus sweep, or transcribe Appendix A.1 table')
     finish(fig, 8, 'Figure 8. Controllability and the graded rectifier')
 
 
@@ -626,8 +613,9 @@ def main():
     ap.add_argument('--audit', action='store_true')
     ap.add_argument('--audit-panels', action='store_true', dest='ap')
     args = ap.parse_args()
-    todo = {1: figure1, 2: figure2, 3: figure3, 4: figure4,
-            5: figure5, 6: figure6, 7: figure7, 8: figure8}
+    # keyed by manuscript figure number
+    todo = {1: figure8, 2: figure1, 3: figure2, 4: figure4,
+            5: figure3, 6: figure5, 7: figure6, 8: figure7}
     if args.ap:
         audit_panels()
         return
