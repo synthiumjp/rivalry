@@ -1,44 +1,39 @@
 # Why a dominance-gated contrast increment mimics attention in binocular rivalry
 ## Suppressed-phase activation, switching thresholds, and the sign of inter-channel coupling
 
-**Jon-Paul Cacioli**<sup>1</sup> and **Chris Marmo**<sup>2</sup>
+**Jon-Paul Cacioli**<sup>a</sup> and **Chris Marmo**<sup>b</sup>
 
-<sup>1</sup> Independent Researcher, Melbourne, Victoria, Australia. synthiumhotmail.com
-<sup>2</sup> [AFFILIATION TO CONFIRM]
+<sup>a</sup> Independent Researcher, Melbourne, Victoria, Australia
+<sup>b</sup> [TO SUPPLY: school or centre], RMIT University, Melbourne, Victoria, Australia
 
-**Author contributions (CRediT).** J-PC: conceptualisation, methodology, software, formal
-analysis, investigation, writing (original draft), writing (review and editing),
-visualisation. CM: [TO SUPPLY: contribution roles. Select from the CRediT taxonomy and agree
-with the co-author before submission. Resources and software are the likely categories if the
-contribution was computational infrastructure.]
+Corresponding author: [TO SUPPLY: name and email. If Chris corresponds from his RMIT address,
+the article may qualify for fee-free open access under RMIT's CAUL agreement with Elsevier.]
 
 ---
 
 ## Abstract
 
-Chong, Tadin and Blake (2005) obtained the signature of endogenous attention in binocular
-rivalry from a pure contrast increment, by applying it only while the attended stimulus was
-dominant: the attended percept lengthened without the competing percept shortening, contrary
-to Levelt's second proposition. Why a contrast change should mimic attention has not been
+Chong, Tadin and Blake (2005) reproduced the signature of endogenous attention in binocular
+rivalry with a pure contrast increment applied only while the attended stimulus was dominant:
+the attended percept lengthened while the competing percept did not shorten, contrary to
+Levelt's second proposition. Why a contrast change should mimic attention has not been
 explained. In a goal-conditioned leaky competing accumulator we show that the sign of a
-modulation's effect on the competing percept is set by how active the attended channel is while
-the competitor is dominant, and we derive why. Reduced to one slow variable, the adaptation
-imbalance travelling between two switching thresholds, a modulation present at the handover
-that begins the competitor's episode lengthens it and one present at the handover that ends it
-shortens it, the second effect being the larger because episodes end near their asymptote. The
-reduction predicts episode durations from unmanipulated traces, every sign we observe, and the
-size of the gated coupling ratio, which it identifies with how close to the adaptation
-asymptote switches occur and which, where adaptation is driven by a channel's own output, it predicts from mean
-dominance duration and adaptation rate alone. An increment delivered only during the attended channel's dominance
-therefore lengthens the competitor's episodes where the same increment delivered continuously
-shortens them. The contrast survives a duty-cycle-matched yoked control, an outcome criterion
-that does not reference the attended channel, removal of the eligibility filter and a change of
-update rule, and it is established in three of four architectural families. The same geometry
-explains why the model cannot reproduce Levelt's second proposition, since a continuous
-increment trades the two channels off almost symmetrically, and why making adaptation
-superlinear repairs it. The account predicts that lengthening Chong et al.'s contrast ramp far
-enough will invert the sign of the effect on the competing percept. Both pre-registered regime
-contrasts were null and are reported as specified.
+modulation's effect on the competing percept is set by the attended channel's activation while
+the competitor is dominant, and we derive why. Reducing the dynamics to an adaptation imbalance
+travelling between two switching thresholds, a modulation present at the handover that begins
+the competitor's episode lengthens it, whereas one present at the handover that ends it shortens
+it by more, because episodes end near their asymptote. An increment delivered only during the
+attended channel's dominance therefore lengthens the competitor's episodes, whereas the same
+increment delivered continuously shortens them, a contrast that survives yoked-schedule,
+outcome-criterion and parameter-filter controls and holds in three of four architectural
+families. The reduction predicts episode durations, which configurations leave rivalry, and the
+size of the gated coupling ratio, which in models with output-driven adaptation it relates to
+dominance duration and adaptation rate. The same geometry explains why the model cannot
+reproduce Levelt's second proposition and why superlinear adaptation repairs it. The account
+predicts that lengthening Chong et al.'s contrast ramp will invert the effect on the competing
+percept. Both pre-registered regime contrasts were null.
+
+**Keywords:** binocular rivalry; attention; adaptation; mutual inhibition; perceptual bistability; computational model; Levelt's propositions
 
 ## 1. Introduction
 
@@ -62,7 +57,7 @@ Two accounts identify different limiting quantities. Dieter and Tadin (2011) arg
 biased competition that the limit is the hierarchical level at which stimulus conflict
 resolves: conflict persisting through many processing stages should be susceptible to
 attentional bias, conflict resolved early in interocular interactions should not (see also
-Stuit et al., 2014). Hugrass and Crewther (2012) identified a different quantity. Testing
+Stuit et al., 2011). Hugrass and Crewther (2012) identified a different quantity. Testing
 volitional switching between apparent motion, drifting gratings and stationary gratings, they
 found observers could generate intentional switches in the two motion conditions but not the
 stationary one, verified objectively by corresponding reversals in optokinetic nystagmus
@@ -86,7 +81,9 @@ proposition, though at *n* = 4 their effect on the unattended percept is not dis
 from zero and Section 5.3 states what that does and does not license us to claim; Hancock and Andrews (2007) report the reverse under cueing and call it analogous
 to a contrast increase. Neither has a mechanism producing both. Section 4.3 shows the sign of
 inter-channel coupling distinguishes them, and that what sets that sign is when the
-modulation is delivered.
+modulation is delivered. Section 4.4 derives why, from the geometry of switching between
+adaptation thresholds, and shows what a measured coupling ratio such as Chong et al.'s then
+estimates about the observer.
 
 ### 1.2 Why input gain is the wrong starting point
 
@@ -426,10 +423,10 @@ interchangeable. Every analysis states which it uses.
 | Pool | *n* | Criteria | Used by |
 |---|---|---|---|
 | Registered eligible | **762** | rivalry (≥10 switches/seed), Levelt ρ > 0.7 over 11 signal levels at 8 seeds, CV ∈ [0.35, 0.65] | the canonical campaigns behind Tables 2 and 3, Sections 4.6 and S2, and the 100-configuration random draws throughout |
-| Exponent-scan eligible | **946** at *p* = 1 | the same three, but Levelt ρ computed over 5 levels at 3 seeds, which is too coarse to discriminate (median ρ = 1.000) | every analysis run with the later pipeline: Sections 4.3.3, 4.4 and 4.7, the sign counts of Section 4.3.5, the window control of Section 4.3.1, and the bound of Section S5 |
+| Exponent-scan eligible | **942** at *p* = 1 | the same three, but Levelt ρ computed over 5 levels at 3 seeds, which is too coarse to discriminate (median ρ = 1.000) | every analysis run with the later pipeline: Sections 4.3.3, 4.4 and 4.7, the sign counts of Section 4.3.5, the window control of Section 4.3.1, and the bound of Section S5 |
 | Update-order comparison | **931** | rivalry and CV ∈ [0.35, 0.65]; no Levelt criterion | Section S9 only |
 
-The 946 pool is more permissive than the registered one. Most analyses added after the
+The 942 pool is more permissive than the registered one. Most analyses added after the
 pre-registered campaigns draw on it, and their results must not be pooled
 with results from the 762. The 931 figure in Section S9 is the pipeline arm of a paired
 comparison whose other arm gives 890; neither applies the Levelt criterion, so neither is
@@ -560,27 +557,19 @@ the gated schedule gives +9.5% on the competitor and the ungated −10.4%.
 
 **The anti-gated direction is forced, and leaves the rivalry regime.** Raising the attended
 channel while its competitor is winning must shorten that competitor's episode, so this
-condition is architecturally guaranteed in direction and its function is only to establish
-that the manipulation reaches the competitor. It also departs from the regime: both channels'
-episodes shorten together and the coefficient of variation rises to 1.17 against a baseline of
-0.54, outside the [0.35, 0.65] window by which every configuration here was admitted, while
-filtered switch count does not rise (413 against 418), so most of the trace has become
-indeterminate. Recomputing with exclusions logged excludes none of 200 and gives the
-anti-gated 1× row as −30.5% attended and −54.2% competitor at a coefficient of variation of
-0.829, against −69.1% and −85.1% at a coefficient of variation of 1.203 for 2×. The 2×
-competitor value of −85.1% here and −76.1% in the table above come from different campaigns,
-and we quote the canonical one in the table; the difference does not bear on the conclusion,
-which is that the condition has left the rivalry regime at both amplitudes. **−76.1% is therefore not reported as a coupling magnitude.**
+condition only establishes that the manipulation reaches the competitor. It also leaves the
+regime: both channels' episodes shorten together and the coefficient of variation rises to 1.17
+against a baseline of 0.54, at both amplitudes (Section S3). **−76.1% is therefore not reported
+as a coupling magnitude.**
 
 **The informative direction is not forced.** Delivering the increment only while the attended
 channel is *already dominant* makes the competitor's episodes longer. Nothing in mutual
-inhibition requires that, and it is the direction the empirical literature reports. It follows from
-adaptation recovery: a lengthened attended episode gives the competitor more time to
-de-adapt, so it returns stronger. That mechanism is confirmed by intervention rather than
-asserted: adding a term so each channel adapts to the inhibition it receives keeps a
-suppressed channel adapted, and drives the gated coupling ratio from +0.882 to +0.118 at an adaptation exponent of *p* = 2,
-where that intervention was run; at *p* = 1.75 it reverses the ratio's sign. Section S8
-reports what else it removes.
+inhibition requires that, and it is the direction the empirical literature reports. It follows
+from adaptation recovery: a lengthened attended episode lets the competitor de-adapt further, so
+it starts its own episode further from the point at which it will hand back, which is the
+geometry Section 4.4 derives. The mechanism is confirmed by intervention: making each channel
+adapt to the inhibition it receives keeps a suppressed channel adapted, and drives the gated
+coupling ratio from +0.881 to +0.110 at *p* = 2, and to +0.022 at *p* = 1.75 (Section S8).
 
 **Control 1: yoked replay.** Gating lengthens the attended channel's episodes by 61%, which by
 itself gives the competitor more recovery time, so the control is not the ungated increment but
@@ -588,11 +577,10 @@ a schedule with the same duty cycle and no contingency, obtained by replaying a 
 dominance time-course. Yoking abolishes the gated-versus-anti-gated separation entirely: 92.3
 percentage points live, **−0.1** yoked, the two yoked schedules indistinguishable. Against its
 own yoked control the live gate exceeds it by **+9.7 pp** at 1× and **+20.4 pp**
-at 2× under the absolute criterion, at paired effect sizes of *d* = +1.61 and +1.72. Those
-effect sizes are paired across the 100 configurations, not across observers, and their
-denominator shrinks as seed count rises, so they index the consistency of the difference
-across parameter space and not a subject-level magnitude. Yoked delivery is not inert, it gives +5.2%
-and +5.3%, reaching 28% to 46% of the live effect across the exponent scan.
+at 2× under the absolute criterion, at paired effect sizes of *d* = +1.61 and +1.72. These are paired across
+configurations, not observers, so they index how consistent the difference is across parameter
+space rather than a subject-level magnitude. Yoked delivery is not inert, it gives +5.2%
+and +5.3%, reaching 28% to 41% of the live effect across the exponent scan.
 
 **Control 2: an outcome criterion not referencing the attended channel.** Redefining the
 competitor's dominance as *x*<sub>B</sub> exceeding a fixed threshold removes the definitional
@@ -610,16 +598,11 @@ should diverge as the increment shrinks. Across a sixteenfold range the coupling
 bounded and slowly varying: 0.38 to 0.26 gated, 2.63 to 1.23 anti-gated, −0.60 to −0.94
 ungated.
 
-**What remains.** The two channels are coupled by inhibition, so no manipulation of one is
-fully independent of the other, and the definitional dependence of "the competitor is not dominant" on "the attended channel
-is high" is reduced but not eliminated by the absolute
-criterion. That bounds how strongly any claim of this kind can be made in a two-channel model.
 What the series establishes is that an experimenter who fixes when an otherwise identical
-increment is delivered fixes the sign of the coupling, in the predicted direction, and that
-this requires the increment to be structured on the timescale of the alternation and to track
-the present trial, not merely to be intermittent. Section 5.2 states the
-scope condition: this holds for modulations that leave no trace when withdrawn, and not for
-those carrying persistent state.
+increment is delivered fixes the sign of the coupling, and that this requires the increment to be
+structured on the timescale of the alternation and to track the present trial, not merely to be
+intermittent. Section 5.2 states the scope condition: this holds for modulations that leave no
+trace when withdrawn, and not for those carrying persistent state.
 
 ![Figure 3](figures/figure5.pdf)
 
@@ -627,20 +610,21 @@ those carrying persistent state.
 
 #### 4.3.3 What the difference between continuous and gated delivery is made of
 
-Separating the components of the +33.1 percentage points between continuous and gated
+Separating the components of the +32.6 percentage points between continuous and gated
 delivery, at matched amplitude, duty cycle and dose and with the noise held identical, gives two
 terms (Section S3, Tables S1 to S3). Intermittency as such contributes nothing: chopping the
 increment into regular bursts at any period from 2 to 200 timesteps reproduces continuous
 delivery. A schedule whose burst durations are drawn from the system's own dominance episodes,
-but which does not track the present trial, contributes +20.5 points [+15.3, +23.8]; shuffling
-its bursts into a random order changes nothing, and phase contributes nothing separable.
-Contingency on the present trial contributes the remaining +14.9 [+11.4, +17.8].
+but which does not track the present trial, contributes +20.0 points [+15.3, +23.9]; shuffling its bursts into a
+random order changes it only slightly, by −2.1 [−3.0, −1.0], about a tenth as much, and phase
+contributes nothing separable.
+Contingency on the present trial contributes the remaining +14.7 [+12.5, +17.3].
 
 Both terms act by lengthening the attended channel, and the competitor follows. Continuous,
-yoked, shuffled and live-gated delivery lengthen the attended channel by +17.8%, +41.2%, +40.4%
-and +63.0%, and change the competitor by −17.9%, +4.7%, +3.9% and +18.6%. That is what the
+yoked, shuffled and live-gated delivery lengthen the attended channel by +19.5%, +40.3%, +40.5%
+and +62.0%, and change the competitor by −19.2%, +4.2%, +3.9% and +18.6%. That is what the
 adaptation-recovery account of Section 4.3.2 requires. Contingency additionally raises the
-competitor-to-attended ratio, from 0.11 to 0.30, so tracking the present trial makes each unit
+competitor-to-attended ratio, from 0.10 to 0.30, so tracking the present trial makes each unit
 of attended lengthening transfer more effectively.
 
 Why the schedule-statistics term exists is not resolved. Rectifier self-gating, the adaptation
@@ -695,56 +679,45 @@ are medians across 100 configurations, from an earlier campaign than the canonic
 | Increment, ungated, 2× | +24.0% | −21.9% |
 | *Chong Exp 3, observed* | *+29.0%* | *+9.0%* |
 
-**The direction reproduces robustly.** Gated delivery gives a positive
-competitor-to-attended ratio in 182 of 188 configurations at 1× and 161 of 162 at 2×; ungated
-delivery gives a positive ratio in 6 of 189 and 5 of 166, with medians of +0.527 and +0.462
-against −0.483 and −0.450. The denominators fall short of 200 because configurations in which
-gated delivery leaves no measurable competitor episode are excluded; Section 4.3.3 shows those
-are cases of near-exclusive attended dominance, not competitor responses of either sign, and
-Section 4.4 that the switching geometry predicts them. Under the superlinear adaptation law of Section 4.7 the
-separation is cleaner still, 200 of 200 against 8 of 200 at *p* = 2, and under the published
-form of Equation 2 rather than the executed one it is unchanged, 176 of 187 against 9 of 189
-(Section S9). We withdraw a stronger
-claim made in an earlier draft that the two distributions are non-overlapping: they are not,
-since at *p* = 1 the gated range runs from −0.022 to +1.083 and the ungated from −2.902 to
-+0.274. The intersection is a tail artefact, a ratio is unstable wherever its denominator
-passes near zero, but that is a reason to report sign counts rather than ranges, which is
-what Section S9 recommends generally and what we should have done here.
+**The direction reproduces robustly.** Gated delivery gives a positive competitor-to-attended
+ratio in 179 of 188 configurations at 1× and 158 of 161 at 2×; ungated delivery gives a positive
+ratio in 8 of 190 and 2 of 165, with medians of +0.437 and +0.440 against −0.462 and −0.393. The
+denominators fall short of 200 because configurations in which gated delivery leaves no
+measurable competitor episode are excluded; those are cases of near-exclusive attended
+dominance, which the switching geometry predicts (Section 4.4). Under the superlinear adaptation
+law of Section 4.7 the separation is 200 of 200 against 4 of 200 at *p* = 2, and under the
+published form of Equation 2 it is unchanged, 176 of 187 against 9 of 189 (Section S9). It also
+survives removal of the eligibility filter: on 200 configurations drawn from all
+rivalry-producing ones, with no coefficient-of-variation and no Levelt criterion, the gated
+increment lengthens the competitor in 158 of 168 [89%, 97%] and the ungated increment in 1 of
+164 [0%, 3%], at roughly half the median magnitude (+5.5% against −13.6%). The two ratio
+distributions do overlap in their tails, which is why we report sign counts rather than ranges.
 
-**The magnitudes are not reproduced, and we withdraw the earlier claim that they were.** We
-reported a match to Chong et al.'s ratio of 9/29 = 0.310. Across 100 configurations the gated
-ratio spans 0.006 to 0.935 with a median of 0.522; only 6% fall within ±0.06 of the observed
-value; and 90% of its variance is predictable from the six model parameters (leave-one-out
-*R*² = 0.902, principally adaptation gain at ρ = +0.733 with inhibition at −0.486). The model
-can produce almost any ratio in this range, so producing 0.310 constrains its parameters
-rather than its mechanism. The comparison is also aggregation-dependent, the ratio of medians
-gives 0.279 and the median of ratios 0.522, one of six occasions in this study where that
-choice mattered (Section S9). Section 4.5 shows the ratio is not even
-architecture-invariant. Timing sets the sign of the coupling and the dynamics set how much transfers, so an observed
-ratio characterises the observer rather than testing the gating account. Section 4.4 identifies
-which property of the dynamics it measures.
+**The magnitudes are not reproduced.** The gated ratio spans 0.006 to 0.935 across 100
+configurations with a median of 0.522, only 6% fall within ±0.06 of Chong et al.'s 0.310, and
+90% of its variance is predictable from the six model parameters (leave-one-out *R*² = 0.902),
+so producing 0.310 would constrain the parameters rather than the mechanism. An earlier draft
+reported a match, which we withdraw (Table S5). Section 4.4 identifies which property of the
+dynamics the ratio measures, and Section 4.5 shows it is not architecture-invariant.
 
-**A boundary condition on ramp speed, in usable units.** Sweeping the lag constant relative to
-mean dominance duration locates a sign crossover at **τ / duration ≈ 0.59**. At the fastest
-gate (0.028) the competitor changes by +5.6% with 18 of 20 configurations same-signed; at
-0.139, +4.0% and 17 of 20; at 1.115, −2.8% and only 5 of 20. A ramp slow relative to episode
-duration delivers part of the increment while the target is suppressed, and the gating is
-lost. Section 4.5 finds the crossover at 0.45 to 0.70 in three further architectures but 0.17
-in a fourth, so the value is architecture-dependent and only its order of magnitude is
-structural.
+**A boundary condition on ramp speed.** Sweeping the lag constant relative to mean dominance
+duration locates a sign crossover at τ / duration ≈ 0.59 in this architecture: at the fastest
+gate (0.028) the competitor changes by +5.6% with 18 of 20 configurations same-signed, and at
+1.115 by −2.8% with only 5 of 20. A ramp slow relative to the episode delivers part of the
+increment while the target is suppressed, and the gating is lost. Section 4.5 finds the
+crossover at 0.45 to 0.70 in three further architectures and 0.17 in a fourth, so only its
+order of magnitude is structural.
 
-**A falsifiable prediction the existing data do not address.** The gate must complete within a
-fraction of a dominance episode for the attentional signature to appear, and lengthening it
-inverts the sign. Chong et al.'s gate was contingent on observers' *reports*, which adds a
-report latency of roughly 200–450 ms. A latency is a pure delay rather than part of the lag, but
-Section 4.5 finds that a pure delay places the crossover almost exactly where a lag of the same
-duration does, so the report latency can be added to the ramp: against episodes of two to three
-seconds their gate sits at τ / duration of about 0.27 to 0.41, below the crossover in three of
-four architectures. A ramp of 1.5 to 2.5 seconds places τ / duration between 0.6 and 1.2, beyond
-the crossover in all four. The prediction is a **sign reversal in the competing percept's duration**, which is
-the form this paper is best placed to make since the magnitudes are parameter-determined and
-the sign is not, and the model fails if the competitor's change remains positive above
-τ / duration of unity.
+**A falsifiable prediction the existing data do not address.** Chong et al.'s gate was
+contingent on observers' reports, which adds a latency of roughly 200–450 ms. A latency is a
+pure delay rather than part of the lag, but a pure delay places the crossover almost exactly
+where a lag of the same duration does (Section 4.5), so the latency can be added to the ramp:
+against episodes of two to three seconds their gate sits at τ / duration of about 0.27 to 0.41,
+below the crossover in three of four architectures. A ramp of 2.5 to 3 seconds places
+τ / duration between about 0.8 and 1.5, beyond the crossover in all four. The prediction is a
+**sign reversal in the competing percept's duration**, the form this paper is best placed to
+make since the sign is structural and the magnitude is not, and the model fails if the
+competitor's change remains positive with τ / duration above unity.
 
 ![Figure 4](figures/figure6.pdf)
 
@@ -770,31 +743,31 @@ sooner. **A modulation present at the handover that begins the competitor's epis
 it, and one present at the handover that ends it shortens it, by more.** A dominance-gated
 increment is present only at the first; a continuous one at both, where the second wins; an
 anti-gated one only at the second. That is the sign reversal of Table 3, derived from the
-ordering of two distances along a single variable (Section S4). Table 5 tests the reduction
+ordering of two distances along a single variable (Figure 5A; Section S4). Table 5 tests the reduction
 directly.
 
 **Table 5.** The switching-threshold reduction against simulation, on configurations from the
 eligible pool. The threshold *c* and asymptote *L* are measured from each unmanipulated trace,
 and ρ = (*L* − *c*)/(*L* + *c*). Increments are 0.25 × λ × baseline activation; at 0.5 × the
-counts are 170/187, 4/188 and 0/199 and the gated ratio correlates with ρ at +0.87, 1.13 ρ.
+counts are 177/189, 7/190 and 0/200 and the gated ratio correlates with ρ at +0.87, 1.11 ρ.
 
 | Test | Prediction | Result |
 |---|---|---|
-| Episode duration from (*c*, *L*) | tracks observed | Spearman +0.89 on 199 configurations; predicted/observed 1.04 |
-| Competitor under gated increment | lengthens | lengthens in 177/195 [86%, 94%] |
-| Competitor under ungated increment | shortens | shortens in 182/195; lengthens in 13 [4%, 11%] |
-| Competitor under anti-gated increment | shortens | shortens in 199/199; lengthens in 0 [0%, 2%] |
-| Gated ratio | ρ | Spearman +0.83 with ρ; median 1.19 ρ |
-| Ungated ratio | −1 | median −0.45 |
-| Anti-gated ratio | 1/ρ | unrelated to 1/ρ (Spearman +0.14) |
-| Gated ratio from duration and adaptation rate alone | exp(−γ*T*) | Spearman +0.85 on 195 configurations; median 1.17 exp(−γ*T*) |
-| Configurations the gate drives out of rivalry | those with increment shift δ near margin *L* − *c* | AUC 0.91 for δ/(*L* − *c*); 4 exclusions rising to 12 as the increment doubles |
+| Episode duration from (*c*, *L*) | tracks observed | Spearman +0.90 on 200 configurations; predicted/observed 1.04 |
+| Competitor under gated increment | lengthens | lengthens in 181/200 [86%, 94%] |
+| Competitor under ungated increment | shortens | shortens in 189/200; lengthens in 11 [3%, 10%] |
+| Competitor under anti-gated increment | shortens | shortens in 200/200; lengthens in 0 [0%, 2%] |
+| Gated ratio | ρ | Spearman +0.81 with ρ; median 1.13 ρ |
+| Ungated ratio | −1 | median −0.56 |
+| Anti-gated ratio | 1/ρ | unrelated to 1/ρ (Spearman +0.24) |
+| Gated ratio from duration and adaptation rate alone | exp(−γ*T*) | Spearman +0.84 on 200 configurations; duration alone +0.85 |
+| Configurations the gate drives out of rivalry | those with increment shift δ near margin *L* − *c* | AUC 0.92 for δ/(*L* − *c*); 0 exclusions at the smaller increment, 11 at the larger |
 
 The reduction describes these dynamics. Switching thresholds and asymptotes measured from
-unmanipulated traces predict mean episode duration at Spearman +0.89, and it gives the observed
+unmanipulated traces predict mean episode duration at Spearman +0.90, and it gives the observed
 sign under all three schedules. It also predicts the size of the gated coupling ratio, which it
-was not constructed to do: across 199 configurations the ratio follows ρ at Spearman +0.83 and
-sits at about 1.2 ρ. It does not predict the other two magnitudes. The ungated ratio is −0.45
+was not constructed to do: across 200 configurations the ratio follows ρ at Spearman +0.81 (Figure 5B) and
+sits at about 1.1 ρ. It does not predict the other two magnitudes. The ungated ratio is −0.56
 rather than −1, and the anti-gated ratio bears no relation to 1/ρ.
 
 That split is what the geometry leads one to expect. A gated increment moves only the threshold
@@ -812,11 +785,11 @@ Because the reduction also gives *T* = ln(1/ρ)/γ, it implies ρ ≈ exp(−*T*
 mean dominance duration *T* and adaptation time constant τ<sub>a</sub>, and the model bears this
 out directly. Computed from each configuration's adaptation rate and observed mean dominance
 duration, with no reference to the manipulation, exp(−γ*T*) predicts the gated coupling ratio at
-Spearman +0.85 across 195 configurations, the observed ratio sitting at 1.17 times the
-prediction (Table 5). Within this architecture most of that power comes from duration alone,
-which predicts the ratio at +0.83, because γ takes only three values on the grid. Pairing each
-configuration's own γ with its own *T* still matters: permuting γ across configurations drops
-the correlation to a null median of +0.73 (95th percentile +0.77, *p* = .0002). Where γ varies
+Spearman +0.84 across 200 configurations (Table 5). Within this architecture duration alone does
+as well, at +0.85: γ takes only three values on the grid, so the grid cannot separate the two.
+Permuting γ across configurations lowers the correlation to a null median of +0.74 (95th
+percentile +0.78, *p* = .0002), so the pairing is not arbitrary, but within this grid the
+adaptation rate adds nothing measurable beyond duration. Where γ varies
 continuously, in the subtractive family of Section 4.5, the combination clearly outperforms both
 of its parts, at +0.86 against +0.74 for duration and +0.65 for γ. A gated coupling ratio
 measured in an observer should therefore be
@@ -830,10 +803,22 @@ of Chong et al.'s observers.
 the attended channel's handover threshold from *c* towards *c* + δ, with δ ≈ Δ/α. If that
 reaches the asymptote the attended channel never hands over. The configurations excluded from
 the gated counts should therefore be those in which δ is large relative to the margin *L* − *c*,
-and they are. δ/(*L* − *c*) identifies them at AUC 0.91; doubling the increment triples the
-exclusions, from 4 to 12; and at the larger increment all twelve have δ/(*L* − *c*) ≥ 0.5,
-against none of the 114 configurations below it. The exclusion stated in Sections 4.3.3 and 4.3.5
+and they are. δ/(*L* − *c*) identifies them at AUC 0.92 (Figure 5C).
+At the smaller increment the gate excludes none of 200 configurations, and at the larger one it
+excludes 11, all of them with δ/(*L* − *c*) ≥ 0.5, against none of the 112
+configurations below that value. The exclusion stated in Sections 4.3.3 and 4.3.5
 is a consequence of the mechanism, not an unexplained loss.
+
+![Figure 5](figures/figure_mechanism.pdf)
+
+**Figure 5.** Switching-threshold geometry. (A) The competitor's episode from the handover that
+begins it, in units of the asymptote *L* and of 1/γ, unmanipulated and under the three
+schedules (closed form, Section S4). An increment present at the handover that begins the
+episode raises its starting point; one present at the handover that ends it lowers its end
+point. The episode ends near its asymptote, where the second shift matters more. (B) Gated
+coupling ratio against ρ measured from each configuration's unmanipulated trace; dashed line,
+ratio = ρ. (C) Proportion of configurations that a gated increment drives out of rivalry, by the
+increment's threshold shift δ relative to the margin *L* − *c*.
 
 Two consequences carry into what follows. A continuous increment trades the two channels off
 almost symmetrically, which is why the model cannot reach Levelt's second proposition (Section
@@ -846,7 +831,7 @@ which is the pattern Section 4.5 finds across architectures.
 Every result above is obtained in one architecture: subtractive mutual inhibition with
 adaptation subtracted from the accumulator and driven by each channel's own output. Whether
 the gate-timing result belongs to that accumulator or to competitive networks with adaptation
-generally determines what the central claim is about. The gate-timing series was therefore reimplemented (Figure 5) in three further architectures (Table 6), each a generic representative
+generally determines what the central claim is about. The gate-timing series was therefore reimplemented (Figure 6) in three further architectures (Table 6), each a generic representative
 of a family:
 **B**, divisive, with the competitor entering the denominator of a normalised drive (Wilson,
 2003; Li et al., 2017); **C**, subtractive with a sigmoid transfer on the net input (Laing &
@@ -870,71 +855,46 @@ family, twelve seeds, 20,000 timesteps.
 
 **The sign reversal is established in three of the four families and directionally consistent
 in the fourth.** In the subtractive, divisive and input-adaptation families the gated
-proportion's 95% interval lies above chance and the ungated proportion's lies below it, with no
-overlap. In the sigmoid family the medians have opposite signs and ungated delivery shortens the
-competitor in 38 of 40 configurations, but the gated proportion's interval reaches down to
-chance, so the reversal is not established there. An earlier run of the same comparison, whose
+proportion's 95% interval lies above chance and the ungated proportion's lies below it. In the
+sigmoid family the medians have opposite signs and ungated delivery shortens the competitor in
+38 of 40 configurations, but the gated interval reaches down to chance. An earlier run, whose
 seeding was not reproducible, reported the sigmoid family as clearing the bar; we report the
-reproducible run.
+reproducible one. The divisive case is the one Section 1.2 exempts from the input-gain argument,
+so the gate-timing result does not depend on that exemption; the input-adaptation case moves
+adaptation to the input and the result survives that too. The sigmoid family is where it is
+weakest: gating lengthens the attended channel there by over 50% but transfers very little to
+the competitor.
 
-Three of these bear on earlier claims. The divisive case is the one Section 1.2 exempts from the
-input-gain argument: that exemption stands, and the gate-timing result does not depend on it.
-The input-adaptation case changes the locus of adaptation rather than the form of suppression,
-which is the more demanding variation, since the mechanism of Section 4.3.2 runs through the
-competitor's de-adaptation and survives moving adaptation to the input. The sigmoid case is the
-family whose analyses Section S2 relies on for the increasing-duration regime, and it is where
-the result is weakest: gating lengthens the attended channel there by over 50% but transfers
-very little of that to the competitor.
+**The magnitudes do not generalise, and Section 4.4 accounts for part of why.** The gated
+coupling ratio is +0.463, +0.537, +0.026 and +0.749 across the four families, a roughly
+thirtyfold spread. Within the subtractive and divisive families exp(−γ*T*) predicts the ratio
+at +0.86 and +0.48, both beating a permutation of γ within the family, with observed ratios at
+1.06 and 1.60 times the prediction. It does not transfer to the other two: +0.55 in the sigmoid
+family (*p* = .10), where it overestimates the ratio fourfold, and +0.16 in the
+input-adaptation family (*p* = .22). The division follows the reduction's assumptions, which
+treat adaptation as driven by a channel's own output and subtracted from its drive through a
+near-linear transfer; the sigmoid family saturates and the input-adaptation family moves
+adaptation to the input. Across families the medians put the extremes in the right order but
+swap the middle two, so the spread is partly accounted for rather than explained.
 
-**The magnitudes do not generalise.** The gated coupling ratio is +0.463, +0.537, +0.026 and
-+0.749 across the four families, a roughly thirtyfold spread. Section 4.3.5 withdraws the
-quantitative match to Chong et al.'s 0.310 because the ratio is 90% predictable from the model's
-own parameters; it is not architecture-invariant either, so a measured coupling ratio
-constrains an architecture and its parameters jointly and cannot adjudicate between mechanisms.
+**Nor does the ramp-speed crossover generalise.** Setting the ramp time constant per
+configuration as a fraction of its own mean duration, the median zero crossing is 0.60, 0.45 and
+0.70 in the subtractive, divisive and input-adaptation families but 0.17 in the sigmoid family,
+with wide interquartile ranges within each. A pure delay, which is what a report-contingent gate
+adds, leaves it essentially unchanged (0.59, 0.52, 0.18 and 0.60). The crossover is a magnitude
+rather than a structural constant: Section S4.5 derives why it is of order one and falls earlier
+where ρ is small, which is the sigmoid family's position. The prediction of Section 4.3.5 is
+therefore directional, and a test should sweep τ / duration from about 0.1 to 1.5 rather than
+target a point.
 
-**Nor does the ramp-speed crossover.** Setting the ramp time constant per configuration as a
-fraction of that configuration's own mean duration and locating the downward zero crossing per
-configuration gives medians of 0.60, 0.45 and 0.70 in the subtractive, divisive and
-input-adaptation families, bracketing the 0.59 of Section 4.3.5, but 0.17 in the sigmoid family,
-a spread of 4.1. Interquartile ranges within families are wide, [0.21, 1.27], [0.23, 0.86],
-[0.07, 0.32] and [0.22, 1.19]. Replacing the first-order lag with a pure delay, which is what a
-report-contingent gate adds, leaves the crossover essentially where it was: 0.59, 0.52, 0.18 and
-0.60. The crossover is therefore a magnitude rather than a structural constant, and the
-prediction of Section 4.3.5 is directional: lengthening the gate far enough inverts the sign,
-somewhere between about a fifth and three-quarters of a dominance episode depending on the
-architecture. A test should sweep τ / duration from about 0.1 to 1.5 rather than target a point.
+The sigmoid family rivalled in only 1.2% of draws, so its forty configurations sample a narrow
+corner. The anti-gated condition leaves the rivalry regime in this accumulator (coefficient of
+variation 1.109) but not in the other three (0.599 to 0.649), so that departure, reported in
+Section 4.3.2, is specific to this architecture.
 
-**Where the prediction of Section 4.4 transfers.** Within the subtractive and divisive families,
-exp(−γ*T*) predicts the gated coupling ratio at +0.86 and +0.48, both above the level reached by
-permuting γ within the family, and with observed ratios at 1.06 and 1.60 times the prediction. It
-does not transfer to the other two. In the sigmoid family the correlation of +0.55 does not beat
-the permutation (*p* = .10) and the prediction overestimates the ratio fourfold; in the
-input-adaptation family the correlation is +0.16 (*p* = .22). The division follows the
-reduction's assumptions. It treats adaptation as driven by the channel's own output and
-subtracted from its drive, with a transfer close to linear, which describes the subtractive and
-divisive families; the sigmoid family saturates, and the input-adaptation family moves
-adaptation to the input. Across families the medians put the extremes in the right order, the
-sigmoid family lowest and the input-adaptation family highest, but swap the middle two, so the
-spread in coupling ratio between architectures is partly accounted for rather than explained.
+![Figure 6](figures/figure8.pdf)
 
-**Why the crossover is of order one.** A gate with time constant τ continues delivering for about
-τ after the attended channel loses dominance, so the contaminated fraction of the competitor's
-episode is of order τ / D, and gating is lost as that fraction approaches unity. That fixes the
-scale, not the value, which is why the crossover lands between 0.17 and 0.70 rather than at a
-single number.
-
-**Caveats.** These are family representatives with parameters found by search, not
-reimplementations of published models, so what is established is robustness to architectural
-kind rather than reproduction of any author's parameter set; testing the published models
-directly would be stronger. The sigmoid family rivalled in only 1.2% of draws at the ranges
-used, so its forty configurations sample a narrow corner. The anti-gated condition's
-coefficient of variation reaches 0.993 here but stays between 0.568 and 0.625 in the other
-three, so the departure from the rivalry regime reported in Section 4.3.2 is specific to this
-accumulator rather than general.
-
-![Figure 5](figures/figure8.pdf)
-
-**Figure 5.** The result is architectural. (A) Proportion of configurations in which the competitor lengthens under gated and ungated delivery in four architectural families, with 95% Wilson intervals; the dotted line marks chance. (B) Median gated coupling ratio per family. (C) Median ramp-speed crossover in τ / D per family, with interquartile ranges.
+**Figure 6.** The sign reversal across architectures. (A) Proportion of configurations in which the competitor lengthens under gated and ungated delivery in four architectural families, with 95% Wilson intervals; the dotted line marks chance. (B) Median gated coupling ratio per family. (C) Median ramp-speed crossover in τ / D per family, with interquartile ranges.
 
 ### 4.6 The model cannot reproduce Levelt's second proposition
 
@@ -999,142 +959,88 @@ increment's side of the coupling variable exactly as Section 4.3.1 predicts.
 
 ### 4.7 A superlinear adaptation law repairs both structural failures
 
-Section 4.6 reports that no configuration reproduces Levelt's second proposition at any
-increment magnitude, and attributes it to the adaptation law: adaptation proportional to
-activation scales with the increment-induced gain rather than cancelling it. That diagnosis
-predicts a repair. Replacing κ·*x* in Equation 2 with κ′·*x*<sup>*p*</sup>, renormalising
-κ′ = κ / *x̄*<sup>*p*−1</sup> so the baseline adaptation drive is matched, varies the
-curvature of the law without changing its level. Eligibility was re-derived under each
-exponent rather than inherited (Table 7, Figure 6A and 6B): eligible counts rise from 946 of 6,814 at *p* = 1 to 1,655 at
-*p* = 3, while the median CV *of that pool* falls from 0.556 at *p* = 1 to 0.443 before
-recovering, distinct from the grid-wide median of 0.563 in Section S2, since superlinear
-adaptation makes durations more regular and draws the grid's high-CV tail into the registered
-window. Rivalry is retained in 200 of 200 sampled configurations at every exponent.
-
-Proposition IV figures below are from 30 seeds × 20,000 timesteps and are unchanged from a
-10-seed run to within three configurations in any cell.
+Section 4.6 attributes both structural failures to the adaptation law, and Section 4.4 says
+why: adaptation proportional to activation scales with an increment's gain instead of cancelling
+it, so a continuous increment trades the two channels off almost symmetrically. That predicts a
+repair. Replacing κ·*x* in Equation 2 with κ′·*x*<sup>*p*</sup>, renormalising
+κ′ = κ / *x̄*<sup>*p*−1</sup> so that the baseline adaptation drive is matched, changes the
+curvature of the law without changing its level. Eligibility was re-derived at each exponent,
+and rivalry is retained in all 200 sampled configurations at every exponent (Table 7, Figure 7A
+and 7B).
 
 **Table 7.** Levelt's second proposition and Modified Proposition IV against the adaptation exponent.
 
 | *p* | Levelt II reachable | Wilson 95% | Prop IV recovered (filtered) | median ρ |
 |---|---|---|---|---|
 | 1.00 | 3 / 200 | [0.5%, 4.3%] | 0 / 200 | −1.000 |
-| 1.25 | 6 / 200 | [1.4%, 6.4%] | 108 / 200 | +0.086 |
-| 1.50 | 9 / 200 | [2.4%, 8.3%] | 194 / 200 | +0.943 |
-| 1.75 | 20 / 200 | [6.6%, 14.9%] | **200 / 200** | **+1.000** |
-| 2.00 | 44 / 200 | [16.8%, 28.2%] | 200 / 200 | +1.000 |
-| 2.50 | 78 / 200 | [32.5%, 45.9%] | 200 / 200 | +1.000 |
-| 3.00 | 91 / 200 | [38.7%, 52.4%] | 200 / 200 | +1.000 |
+| 1.25 | 5 / 200 | [1.1%, 5.7%] | 112 / 200 | +0.086 |
+| 1.50 | 6 / 200 | [1.4%, 6.4%] | 194 / 200 | +0.943 |
+| 1.75 | 14 / 200 | [4.2%, 11.4%] | **200 / 200** | **+1.000** |
+| 2.00 | 39 / 200 | [14.6%, 25.5%] | 200 / 200 | +1.000 |
+| 2.50 | 71 / 200 | [29.2%, 42.3%] | 200 / 200 | +1.000 |
+| 3.00 | 100 / 200 | [43.1%, 56.9%] | 200 / 200 | +1.000 |
 
-**Both failures are repaired by the same change.** Levelt II reachability is monotone in *p*
-with the interval at *p* = 1 disjoint from those at *p* ≥ 1.75. Modified Proposition IV
-recovers completely from *p* = 1.75 under the registered 5-timestep filter, against 0 of 200
-at *p* = 1, which reproduces Section S2. The mechanism is the one predicted: at matched
-increment the attended channel's own gain falls from +41.2% at *p* = 1 to +11.8% at *p* = 3 as
-adaptation increasingly cancels the drive increase, while inhibition continues to compress the
-competitor. Against the remedy Section S2 demonstrates this one is markedly stronger, signal-dependent noise recovers Proposition IV in 28 of 30 configurations unfiltered but falls
-to a median ρ of +0.299 under the same filter, where the superlinear law holds at +1.000, and
-it acts on the deterministic dynamics, where the existing literature's modifications live
-(Seely & Chow, 2011). The raw transition count also rises with *p*, from 0 to 138 of 200,
-though it diverges from the filtered count between *p* = 1.25 and 2.5: higher drive widens
-channel separation and suppresses the margin crossings of Section S2, so raw counts fall,
-while superlinear adaptation shortens sustained episodes, so filtered counts rise. The
-filtered measure is the one corresponding to perceptual alternation, for the reason Section
-4.3.1 gives when withdrawing a claim built on raw counts.
+**Both failures are repaired by the same change.** Levelt II reachability rises monotonically
+with *p*, from 3 of 200 at *p* = 1 to 100 at *p* = 3, with the interval at *p* = 1 disjoint from
+those at *p* ≥ 2. Modified Proposition IV recovers completely from *p* = 1.75 under the
+registered 5-timestep filter, against 0 of 200 at *p* = 1. The mechanism is the one Section 4.4
+predicts. At matched increment the attended channel's own gain falls from +42.6% at *p* = 1 to
++12.2% at *p* = 3 while inhibition continues to compress the competitor, so the ungated
+coupling ratio moves from −0.82 to −1.76 and the symmetric trade-off is broken. The repair is
+stronger than signal-dependent noise (Section S2), which recovers Proposition IV unfiltered but
+reaches a median ρ of only +0.299 under the same filter, against +1.000 here, and it acts on
+the deterministic dynamics, where the modifications enumerated by Seely and Chow (2011) also act.
 
-The three hits at *p* = 1 are consistent with the null in Section 4.6, obtained on 100
-configurations: the Wilson intervals overlap and a true rate of 1.5% yields no hits in 100
-draws with probability 0.22. The pool used here is also more permissive (see the deviation
-note below).
-
-**The gate-timing result survives the repair and strengthens.** The series was repeated at three exponents (Table 8).
+**The gate-timing result survives the repair and strengthens** (Table 8). At *p* ≥ 2 the gated
+increment lengthens the competitor in every configuration and the ungated increment shortens it
+in 195 or more of 200; the contrast survives the registered filter, with the filtered effect
+growing with the exponent (+4.5%, +7.8% and +9.3% at 1×), and the live-versus-yoked separation grows likewise.
+Where the stimulus-strength arm is quantitatively correct, the coupling result is stronger, not
+weaker.
 
 **Table 8.** The gate-timing series under each adaptation exponent.
 
 | *p* | gated 1× | gated 2× | ungated 1× | competitor > 0, gated 2× | live − yoked, difference criterion |
 |---|---|---|---|---|---|
-| 1.0 | +10.7% | +17.1% | −14.1% | 158/170 | 10.5 pp |
-| 2.0 | +16.2% | +26.3% | −8.5% | 195/195 | 14.2 pp |
-| 3.0 | +14.2% | +27.2% | −7.4% | 200/200 | 19.7 pp |
+| 1.0 | +10.7% | +16.7% | −15.6% | 158/168 | 10.8 pp |
+| 2.0 | +16.3% | +25.5% | −7.8% | 196/196 | 15.1 pp |
+| 3.0 | +14.7% | +27.9% | −6.7% | 200/200 | 20.2 pp |
 
-The sign contrast is total at *p* ≥ 2 in both directions, the competitor lengthens under
-gated delivery in 200 of 200 and shortens under ungated in 194 of 200, it survives the
-registered filter with the filtered effect *growing* with the exponent (+4.8%, +7.8%, +9.3%
-at 1×), and the live-versus-yoked separation grows likewise. In the regime where the
-stimulus-strength arm is quantitatively correct, the coupling result is stronger than where it
-is not, which answers the concern of Section 4.6 more directly than the structural argument
-given there.
-
-**What the repair costs, and how much of the space satisfies everything.** The gated coupling
-ratio moves with the exponent, from 0.318 pooled at *p* = 1 to 0.746 at *p* = 2 and 1.502 at
-*p* = 3, while Chong et al.'s observed 0.310 sits on *p* = 1. Conditional on
-reproducing Levelt II, the fraction of configurations also matching the ratio within ±0.10
-declines monotonically: 4/6, 2/5, 4/13, 3/18, 3/31, 1/71, 1/97 across the exponents above,
-with Wilson intervals of [20%, 81%] at *p* = 1 and [0.2%, 5.6%] at *p* = 3 that do not
-overlap. The count satisfying both never exceeds 4 of 200 and does not grow as reachability
-rises sixteenfold; the marginal count near the observed ratio falls from 23 to 8. No
-configuration satisfies both at every exponent and only two of eighteen recur at any second
-exponent, so the set is largely reconstituted as the exponent moves. Taking all four criteria
-together, eligibility, Proposition IV, Levelt II, and the ratio, **one configuration in 200
-satisfies all four**, at an exponent between 1.75 and 2. A Wilson interval on 1 of 200 is
-[0.05%, 2.8%], so the honest statement is not that a solution exists but that **no
-configuration robustly satisfies all four**, and the count at the ±0.05 and ±0.15 tolerances
-is 0 and 1 respectively. We report the count for completeness and draw no conclusion from it.
-
-Two of the three constraints are structural properties the literature treats as diagnostic and
-both are repaired; the third is a quantitative match that Section 4.3.5 shows is 90%
-predictable from the model's own parameters and Section 4.5 shows is not even
-architecture-invariant. This is not an even trade. Section S8 reports
-four mechanisms tested for recovering the ratio and why all four fail.
-
-**The effect is behavioural, not a change in which configurations are tested.** Because
-eligibility is re-derived at each exponent and the eligible count rises from 946 to 1,655, the
-monotone trend above could in principle reflect a shifting population rather than a change in
-behaviour at fixed configuration. The same criterion applied to different dynamics selects
-different regions of parameter space, so applying it throughout is not by itself a defence. We
-therefore repeated the sweep on two sets that do not change with the exponent (Table 9).
+**The trend belongs to the dynamics, not to which configurations are tested.** Because
+eligibility is re-derived at each exponent, the trend could in principle reflect a shifting
+population. It persists on two sets that do not change with the exponent (Table 9, Figure 7C):
+the 600 configurations eligible at every exponent, and 200 rivalry-producing configurations drawn
+with no coefficient-of-variation and no Levelt criterion at all. Reachability rises
+monotonically on both, and Modified Proposition IV recovers completely on both. The unfiltered
+set is the unbiased test. It gives about two thirds of the re-derived rate at every exponent,
+which is the figure to quote for how much of the trend survives without selection, and its
+*p* = 1 row reproduces the zero of Section 4.6 on a pool that section never used.
 
 **Table 9.** Levelt II reachability on sets that do not change with the exponent.
 
 | *p* | eligibility re-derived | fixed intersection | unfiltered |
 |---|---|---|---|
 | 1.00 | 3 / 200 | 2 / 200 [0.3%, 3.6%] | **0 / 200** [0.0%, 1.9%] |
-| 1.25 | 6 / 200 | 5 / 200 | 1 / 200 |
-| 1.50 | 9 / 200 | 8 / 200 | 1 / 200 |
-| 1.75 | 20 / 200 | 24 / 200 [8.2%, 17.2%] | 13 / 200 [3.8%, 10.8%] |
-| 2.00 | 44 / 200 | 53 / 200 [20.9%, 33.0%] | 28 / 200 [9.9%, 19.5%] |
-| 2.50 | 78 / 200 | 90 / 200 | 46 / 200 |
-| 3.00 | 91 / 200 | **124 / 200** [55.1%, 68.4%] | **62 / 200** [25.0%, 37.7%] |
+| 1.25 | 5 / 200 | 6 / 200 | 1 / 200 |
+| 1.50 | 6 / 200 | 8 / 200 | 1 / 200 |
+| 1.75 | 14 / 200 | 24 / 200 [8.2%, 17.2%] | 13 / 200 [3.8%, 10.8%] |
+| 2.00 | 39 / 200 | 52 / 200 [20.4%, 32.5%] | 28 / 200 [9.9%, 19.5%] |
+| 2.50 | 71 / 200 | 89 / 200 | 46 / 200 |
+| 3.00 | 100 / 200 | **123 / 200** [54.6%, 68.0%] | **62 / 200** [25.0%, 37.7%] |
 
-The fixed intersection is the 603 configurations eligible at every exponent, of which 200 were
-sampled. The unfiltered set is 200 rivalry-producing configurations drawn with no
-coefficient-of-variation and no Levelt criterion at all. Reachability rises monotonically on
-both, with the interval at *p* = 1 disjoint from those at *p* ≥ 1.75 in each case, and
-Modified Proposition IV recovers completely on both (2 to 200 of 200 on the intersection, 23 to
-200 on the unfiltered set). The trend is therefore a property of the dynamics at fixed
-configuration.
+**What the repair costs.** The gated coupling ratio moves with the exponent, from 0.306 pooled at
+*p* = 1 to 0.718 at *p* = 2 and 1.475 at *p* = 3, while Chong et al.'s observed 0.310 sits at
+*p* = 1, and no configuration robustly satisfies eligibility, both structural constraints and the
+ratio together (Section S15). Two of the three constraints are structural properties that the
+literature treats as diagnostic, and both are repaired. The third is a quantitative match, and
+Section 4.4 shows that the gated ratio estimates a property of the observer's dynamics rather
+than testing the account. The exponent scan was not pre-registered and its pool is more
+permissive than the registered one (Table 1); because the trend reproduces on both fixed sets,
+that affects the absolute rates but not the direction or the significance of the trend.
 
-The two fixed sets bracket the re-derived figures in a way worth stating. On the intersection
-the effect is *stronger* than with eligibility re-derived, which is unsurprising since that set
-is selected on being robust to the exponent and so carries its own filter. The unfiltered set is
-the unbiased test and gives the smaller effect, roughly two thirds of the re-derived rate at
-every exponent, which is the number to quote when asked how much of the trend survives without
-any selection. Its *p* = 1 row also reproduces the zero of Section 4.6 on a pool that section
-never used.
+![Figure 7](figures/figure7.pdf)
 
-**Deviations specific to this analysis.** Eligibility was re-derived with a five-level,
-three-seed sweep for the Levelt-ρ criterion rather than the eleven-level, eight-seed sweep of
-the original grid, which is too coarse to discriminate (median ρ = 1.000) and yields 946
-eligible configurations at *p* = 1 against the registered 762. The same criterion is applied
-at every exponent so the across-exponent comparison is internally consistent, but the pool is
-more permissive and these results should not be pooled with analyses using the registered one.
-The exponent scan was not pre-registered and is exploratory. Because the trend reproduces
-on both fixed sets above, the permissive pool affects the absolute rates but not the direction
-or the significance of the trend, and the unfiltered figures are the conservative ones.
-
-![Figure 6](figures/figure7.pdf)
-
-**Figure 6.** Superlinear adaptation repairs both structural failures. (A) Configurations of 200 in which Levelt's second proposition is reachable, against the adaptation exponent *p*, with eligibility re-derived at each *p*. (B) Configurations recovering Modified Proposition IV, under the registered 5-timestep filter and on raw transitions. (C) Levelt II reachability on two sets fixed across *p*: the intersection of the eligible sets and an unfiltered rivalry-producing sample (Table 9).
+**Figure 7.** Superlinear adaptation repairs both structural failures. (A) Configurations of 200 in which Levelt's second proposition is reachable, against the adaptation exponent *p*, with eligibility re-derived at each *p*. (B) Configurations recovering Modified Proposition IV, under the registered 5-timestep filter and on raw transitions. (C) Levelt II reachability on two sets fixed across *p*: the intersection of the eligible sets and an unfiltered rivalry-producing sample (Table 9).
 
 ## 5. Discussion
 
@@ -1153,11 +1059,12 @@ attended channel. Decomposed at matched amplitude, duty cycle and dose, intermit
 contributes nothing, since a regular square wave reproduces continuous delivery at every period
 from 0.07 to 6.7 mean episodes. What carries the effect is that the
 burst durations are drawn from the dominance duration distribution and are therefore variable,
-worth +20.5 percentage points, together with contingency on the present trial, worth a further
-+14.9. Schedule statistics flip the sign; contingency sets the size.
-Shuffling those durations into a random order changes nothing, and no phase term is
-distinguishable from zero. The sign reversal holds in four
-architectural families; the magnitudes hold in none (Section 4.5).
+worth +20.0 percentage points, together with contingency on the present
+trial, worth a further +14.7. Schedule statistics flip the sign; contingency sets the size.
+Shuffling those durations into a random order changes the response only slightly, and no
+phase term is separable from contingency. The sign reversal is established in three
+architectural families and directionally consistent in a fourth; the magnitudes hold in none
+(Section 4.5).
 
 Two quantities divide the labour. Timing sets the sign of the coupling. Adaptation gain sets
 how much transfers: coupling ratio is predicted principally by κ, with 90% of its variance
@@ -1206,8 +1113,9 @@ unattended one unchanged (Chong et al., 2005), contrary to Levelt's second propo
 **What the human evidence actually establishes, and what it does not.** The target phenomenon
 needs stating carefully, because the paper's central result is a *positive* change in the
 competitor and the evidence for a positive change is thin. Chong et al.'s Experiment 1 gives
-+5.0% on the unattended percept at *t*(3) = 0.54, *p* = .63. Experiment 3 gives +9.0% with no
-test reported at *n* = 4. Paffen et al.'s rival effect is null at *n* = 6. What has been
++5.0% on the unattended percept at *t*(3) = 0.54, *p* = .63. Experiment 3, the gated contrast
+increment, gives +9.0% at *n* = 3, *t*(2) = 2.88, *p* = .10, and Mueller and Blake (1989) report a similar
+lengthening of the gated stimulus under the same manipulation. Paffen et al.'s rival effect is null at *n* = 6. What has been
 demonstrated across these studies is the **absence of Levelt-type shortening**, which is a real
 and consequential finding, since Levelt's second proposition predicts shortening and attention
 does not produce it. What has not been demonstrated at conventional power is that the competitor
@@ -1219,6 +1127,18 @@ the **sign of departure from Levelt**, and its positive coupling magnitude is a 
 a branch of the phenomenon that the existing data do not establish. This is also the strongest
 argument for the ramp-speed experiment of Section 4.3.5, which would be the first adequately
 powered test of whether the positive branch exists at all.
+
+We attempted a test on existing human data. Using the open dataset of Einhäuser, Sandrock and
+Schütz (2021a, 2021b), in which observers performed a task on one of two rival stimuli and dominance was
+measured from eye movements, we pre-registered two predictions of the account before opening the
+data (osf.io/3rthv). The registered test could not be conducted as intended: performing the task
+shortened both stimuli's dominance durations by around 15%, so the precondition that the attended
+stimulus lengthens was not met, and exploratory analyses did not support the account
+(Section S16). The paradigm differs from the conditions the account addresses, since its task
+speeds rivalry as a whole, as attention to a rival display is known to do (Paffen, Alais, &
+Verstraten, 2006), rather than strengthening one stimulus only while it is visible; that
+explanation came after the data and is not offered as support.
+
 Returning to the disagreement: manipulations of stimulus strength produce the opposite of the
 attentional pattern (Levelt, 1965; Mueller & Blake,
 1989), and attentional manipulations delivered by cue or prior exposure fall on the strength
@@ -1229,7 +1149,7 @@ Chong et al.'s third experiment is the pivot, because it applies one physical ma
 two ways: doubling contrast *only while the attended grating was dominant* reproduced the
 attentional signature, where ungated increments produce the Levelt pattern. Section 4.3.5
 implements their gate and reproduces the direction, with the competitor lengthening under
-gated delivery in 182 of 188 configurations and shortening under ungated in 183 of 189; the
+gated delivery in 179 of 188 configurations and shortening under ungated in 182 of 190; the
 magnitudes are not informatively reproduced, and Section S8 explains why they cannot be.
 
 The account gives the two literatures a common variable. We do not claim that attention
@@ -1278,7 +1198,7 @@ Several accounts proposed in the course of this work were tested and withdrawn, 
 records each with the control that defeated it. Two groups bear on how the main text should be
 read. Six candidate mechanisms for the schedule-statistics term of Section 4.3.3 were excluded,
 so that term is reported without a mechanism. And four mechanisms for recovering Chong et al.'s
-quantitative coupling ratio in the repaired model fail (Section S8). The most informative of
+quantitative coupling ratio in the repaired model fail (Section S8, Table S6). The most informative of
 them blocks the competitor's de-adaptation and removes the ratio and the coupling together: in
 this architecture the ratio and the qualitative effect are one phenomenon at two magnitudes, so
 the ratio cannot be matched without losing the effect.
@@ -1292,133 +1212,83 @@ are in Section S9.
 
 ## 6. Limitations
 
-**The stimulus-strength arm is quantitatively wrong.** The model reproduces Levelt's second
-proposition in no configuration at any increment magnitude (Section 4.6), and fitted to the
-observed 30% compression of the competitor it predicts a 39% increase in the manipulated
-channel where approximately 0% is observed (Section S5). A saturating input transfer changes
-the prediction by roughly one percentage point. Section 4.7 repairs the failure through the
-adaptation law; Section 4.6 gives the structural reason the gate-timing result does not depend
-on the arm being correct.
+**The stimulus-strength arm is quantitatively wrong in the base model.** It reproduces Levelt's
+second proposition in no configuration (Section 4.6), and fitted to the observed 30% compression
+of the competitor it predicts a 39% increase in the manipulated channel where about 0% is
+observed (Section S5). Section 4.7 repairs the structural failure through the adaptation law,
+but the exponent that does so is fitted to phenomena rather than derived, and it moves the gated
+coupling ratio away from the observed value. One free parameter repairing two failures suggests
+a common cause; it is not a corrected model. Four mechanisms for recovering the ratio in the
+repaired model all fail (Section S8).
 
-**The adaptation exponent is fitted, and two candidate repairs for the coupling ratio failed.**
-Nothing in the architecture or the physiology selects the exponent; it is tuned to phenomena
-rather than derived, the value recovering two structural properties displaces a published
-quantitative measurement, and eligibility shifts with it. One free parameter repairing two
-failures is suggestive of a common cause, but it is not a corrected
-model. Of the four mechanisms tested for recovering the ratio (Section S8) and summarised in Table S6, none improves on
-its own null across the five criteria, and two fail in opposite directions, driving the
-coefficient of variation to 0.06 and to 1.13 against a registered window of [0.35, 0.65]. Two
-failures do not exhaust the space, but they close the two obvious routes.
+**Magnitudes are not the claim.** The coupling predictor of Section 4.3.1 is measured on the same
+traces as the outcome, which is why Section 4.3.2 sets gate timing experimentally instead. The
+sign survives every control, but the gated effect retains only 23–38% of its size under a
+criterion that does not reference the attended channel, so only the sign and the
+live-versus-yoked contrast should be read quantitatively. In a two-channel mutually inhibitory
+model no manipulation of one channel is independent of the other, and the anti-gated condition
+is architecturally forced and reported as a control. Configurations in which the gate drives the
+attended channel to near-exclusive dominance, about one in eight, are excluded from the sign
+counts. Section 4.4 shows they are the ones the geometry predicts, but they are responses of
+neither sign.
 
-**The coupling variable is entangled with the outcome measure, and the magnitudes largely
-are.** The predictor in Section 4.3.1 is measured on the same traces as the outcome and related
-to it by the extraction rule. Section 4.3.2 addresses this by setting gate timing
-experimentally, and three controls indicate the sign reversal is not a measurement artefact, but the magnitudes are: the gated arm retains only 23–38% of its measured effect under a
-criterion that does not reference the attended channel, and its apparent dose-response
-disappears there. Only the sign and the live-versus-yoked contrast should be read
-quantitatively. In a two-channel mutually inhibitory model no manipulation of one channel is
-independent of the other, which bounds any claim of this kind, and the anti-gated condition is
-architecturally forced and reported as a control rather than a result.
+**Four generic architectures, and a quantitative prediction scoped to two of them.** The sign
+reversal is established in three architectural families and directionally consistent in a
+fourth (Section 4.5). These are family representatives with parameters found by search, not
+reimplementations of Li et al. (2017) or another published model, so what is established is
+robustness to architectural kind. A public implementation of Li et al.'s model exists, and
+running the series in it would be stronger. The prediction of Section 4.4, that the gated
+coupling ratio follows exp(−γ*T*), holds in the two families whose adaptation is driven by a
+channel's own output through a near-linear transfer and fails in the other two, so it is a
+property of that class of model rather than of rivalry models generally. Within the paper's own
+grid duration alone predicts the ratio as well, so the case that the adaptation rate
+contributes rests on the subtractive family of Section 4.5.
 
-**Four architectures, and generic ones.** The comparison of five *formulations* in Section
-4.3.1 is within a single model, and normalisation models of attention are represented there only
-by response gain because that architecture has no divisive term to modulate. The gate-timing
-result itself is established in three of four architectures (Section 4.5), including a
-divisive-normalisation family and one where adaptation acts on the input, and is directionally
-consistent but not established in the fourth, a sigmoid firing-rate family. But those are generic
-family representatives with parameters found by search, not reimplementations of Li et al.
-(2017) or any other published model, so what is established is robustness to architectural kind
-rather than reproduction of a specific model. Running the series inside a published
-normalisation model would be stronger and has not been done. The sigmoid family rivalled in
-only 1.2% of draws at the ranges used. The quantitative prediction of Section 4.4, that the gated coupling ratio follows exp(−γ*T*), is narrower still: it holds in the two families whose adaptation is driven by a channel's own output through a near-linear transfer and fails in the other two, so it should be read as a property of that class of model rather than of rivalry models generally.
+**The pre-registered core is null and the substantive results are exploratory.** Both registered
+regime contrasts were null. The gate-timing series, the threshold-geometry analysis, the
+exponent scan and the cross-architecture comparison are exploratory, and the central claim is
+among them. A confirmatory replication, with delivery timing as the manipulation and the gated
+ratio predicted in advance from dominance duration and adaptation rate, has not been run and is
+what this study warrants next; a pre-registered test on an existing dataset was uninformative
+because the dataset did not meet its precondition (Section S16). The eligibility filter is not independent of the effect, since it
+selects on the adaptation-noise balance that carries it, though the central result holds without
+it (Section 4.3.5). A future pre-registration should define eligibility on a measured quantity
+such as residual suppressed activation.
 
-**Generality within the parameter space is limited, in two ways.** The sign contrast is
-near-total inside the eligible pool but the attentional side is only weakly better than chance
-outside it (61 of 100, CI [51%, 70%]) while the increment side remains absolute (0 of 100). The
-eligibility filter selects on coefficient of variation, which is set by the adaptation-noise
-balance carrying the coupling, so it is not independent of the effect; nor is it independent of
-the discretisation, since the pool defined under the lagged form of Equation 2 overlaps this one
-by only 71.3% (Section S9). The discretisation does not affect the central result, which reproduces under the published
-form of Equation 2 in both selection and simulation (Section S9). Nor does the eligibility filter. On
-200 configurations drawn from all rivalry-producing ones with no coefficient-of-variation and no
-Levelt criterion, the gated increment lengthens the competitor in 158 of 168 [89%, 97%] and the
-ungated increment in 1 of 164 [0%, 3%]. The gated increment therefore does not share the goal
-signal's weakness outside the filter, where the goal signal's same-sign coupling reaches only 61
-of 100 (Section 4.3.1). The median magnitude roughly halves, to +5.5% against −13.6% for
-ungated delivery, but the sign contrast is intact. A future pre-registration should define eligibility on a quantity
-less sensitive to both. Measured residual suppressed activation is the obvious candidate, and it
-should assign regimes by measurement rather than by the fixed multipliers used here, which do
-not generalise.
-
-**The pre-registered core is null and the substantive results are exploratory.** Both regime
-contrasts returned null. The gate-timing series and its controls, the gating analysis, the
-rectifier sweep, the one-parameter fits, the exponent scan, the cross-architecture comparison
-and the noise-scaling test are all exploratory, and the paper's central claim is among them. We
-identify mechanism where we can and withdraw it where a control defeats it rather than
-attributing nulls to power, but a confirmatory replication, with delivery timing as the
-manipulation and *G* · *x*<sub>suppressed</sub>/σ pre-specified as the gating variable, has not
-been run and is what this study warrants next. The empirical mapping in Section 5.3 is likewise
-post hoc: the studies compared differ in stimuli, task and observers.
-
-**Measurement and scope.** The gating variable does not transfer as a single global threshold
-across regimes and we do not establish how a regime-appropriate cutoff should be set a priori.
-The weaker-side test of Proposition II partly measures strength-sensitivity rather than the
-proposition. The model should not be used to predict effects of bilateral contrast manipulation.
-The architecture is two-channel and cannot address piecemeal dominance or travelling waves. The
-attractor analysis is a reduced two-dimensional treatment of a four-dimensional system and does
-not describe the strongly adapting cells, which do not alternate in the deterministic limit
-(Section S6). Integration is discrete-time and semi-implicit in the adaptation variable,
-timesteps are not calibrated to real time so latencies are ordinal only, and the results are
-specific to that discretisation to the extent set out in Section S9. The stimulus-size
-prediction in Section 5.4 remains untested despite existing data that bear on it.
+**Scope.** The architecture is two-channel and cannot address piecemeal dominance or travelling
+waves. Integration is discrete-time and semi-implicit in the adaptation variable; the central
+result reproduces under the published form of Equation 2 (Section S9), but timesteps are not
+calibrated to real time, so latencies are ordinal only. The model should not be used to predict
+the effects of bilateral contrast manipulation, and the stimulus-size prediction of Section 5.4
+remains untested despite existing data that bear on it.
 
 ## 7. Conclusion
 
-Attention and stimulus strength are routinely treated as interchangeable routes to
-biasing binocular rivalry. They are not, and what separates them is when the
-modulation acts relative to the competitor's dominance. An increment delivered only
-while the attended percept is visible lengthens the competitor's episodes; the same
-increment delivered throughout shortens them; delivered only while the attended
-percept is suppressed it shortens them further, though at the amplitude required that
-condition leaves the rivalry regime and is reported as a directional control rather than a
-magnitude. The first is not
-forced, is the direction the empirical attentional literature reports, and requires
-the modulation being structured on the timescale of the alternation and
-tracking it: chopping the same dose far below that timescale reproduces continuous delivery,
-and a schedule with the right episode structure but tracking a different trial produces about a third of the live
-value.
+Attention and stimulus strength are routinely treated as interchangeable routes to biasing
+binocular rivalry. In a competitive network with adaptation they are not, and what separates
+them is when a modulation acts relative to the competitor's dominance. An increment delivered
+only while the attended percept is visible lengthens the competitor's episodes; the same
+increment delivered throughout shortens them. Chong, Tadin and Blake (2005) obtained the
+attentional signature this way without a model. What the present account adds is why.
 
-Chong, Tadin and Blake (2005) demonstrated this without a model, by gating a contrast
-increment on dominance and obtaining the attentional signature from a pure contrast change.
-What the present account adds is why. Reduced to one slow variable travelling between two
-switching thresholds, a modulation present at the handover that begins the competitor's episode
-lengthens it and one present at the handover that ends it shortens it, by more, because episodes
-end near their asymptote. That single ordering gives the sign of all three schedules, why a
-continuous increment trades the channels off almost symmetrically and so cannot reproduce
-Levelt's second proposition, and why an adaptation law that cancels the attended channel's own
-gain repairs it. The reduction predicts episode durations, every sign we observe and the size of the gated
-coupling ratio, though not the ungated or anti-gated magnitudes. A gated coupling ratio of the
-kind Chong et al. measured therefore estimates how close to their adaptation asymptote an
-observer's switches occur, and should be predictable from that observer's dominance durations
-and adaptation time constant, as it is in the model's subtractive and divisive forms though not
-where adaptation acts on the input or the transfer saturates.
+Reduced to one slow variable travelling between two switching thresholds, a modulation present
+at the handover that begins the competitor's episode lengthens it, and one present at the
+handover that ends it shortens it, by more, because episodes end near their asymptote. That
+single ordering gives the sign under all three schedules, explains why a continuous increment
+trades the channels off almost symmetrically and so cannot reproduce Levelt's second
+proposition, and explains why an adaptation law that cancels the attended channel's own gain
+repairs it. The reduction also predicts which configurations a gate drives out of rivalry and
+the size of the gated coupling ratio. A gated ratio of the kind Chong et al. measured therefore
+estimates how close to its adaptation asymptote an observer's switching occurs, and in models
+whose adaptation is driven by a channel's own output it is predictable from dominance duration
+and adaptation rate before the attention experiment is run.
 
-How far this generalises is bounded by what we tested, and that boundary is wider than
-we first supposed. The sign reversal is established in three architectures spanning subtractive and
-divisive suppression and adaptation applied to a channel's output or to its input, and is
-directionally consistent in a fourth with a sigmoid transfer. The magnitudes hold in none of
-them, varying roughly thirtyfold across the four. So the claim is about competitive networks with adaptation, and it is a
-claim about sign: the direction of the effect is set by an experimental variable rather
-than a measured one, and the size of it is set by parameters and architecture jointly and
-identifies neither.
-
-What remains specific to the model developed here is its account of stimulus strength,
-which is demonstrably wrong, together with the two repairs and the two failed repairs
-reported for it. The study's pre-registered contrasts were null, so the results that
-survive are exploratory ones that survived controls rather than confirmations of what was
-registered. Top-down goals modulate ongoing dynamics; what they do to a competitor depends on how
-much they raise the attended channel while that competitor is winning, and delivery timing is
-how an experimenter changes that.
+The sign reversal is established in three architectural families and directionally consistent
+in a fourth; the magnitudes vary roughly thirtyfold across them. The claim is therefore one of
+sign, about competitive networks with adaptation. The registered contrasts were null, so what
+survives is exploratory and controlled rather than confirmed, and the two predictions here, that
+lengthening Chong et al.'s ramp inverts the sign and that the gated ratio follows from an
+observer's own dynamics, are where a confirmatory test should start.
 
 ---
 
@@ -1428,7 +1298,9 @@ All simulation data are available on the Open Science Framework at
 https://osf.io/d975z/. The reproducible pipeline is available at
 https://github.com/synthiumjp/rivalry and requires Python 3.12 with NumPy, SciPy,
 Numba and Matplotlib. The study design and analysis plan were pre-registered prior
-to data generation.
+to data generation. The secondary analysis of human data was pre-registered separately at
+https://osf.io/3rthv/; its analysis code was committed before the data were opened (commit
+`8eaee4a`), and the data are those of Einhäuser, Sandrock and Schütz (2021b).
 
 **Deviations from the pre-registered plan.** The full 9,000-configuration grid was
 executed in a single run rather than in two stages. The minimum-duration filter
@@ -1480,118 +1352,108 @@ unreported and are now stated in Section 2.2.
 
 ---
 
+## Author contributions (CRediT)
+
+**Jon-Paul Cacioli:** Conceptualization, Methodology, Software, Formal analysis, Investigation,
+Data curation, Visualization, Writing – original draft, Writing – review and editing.
+**Chris Marmo:** [TO SUPPLY: agree with Chris. On the record of his review, which corrected
+interpretive claims and checked the arithmetic, Validation and Writing – review and editing are
+supported; add Resources or Software if the RMIT infrastructure contributed.]
+
+## Declaration of competing interest
+
+The authors declare that they have no known competing financial interests or personal
+relationships that could have appeared to influence the work reported in this paper.
+
+## Funding
+
+This research did not receive any specific grant from funding agencies in the public,
+commercial, or not-for-profit sectors.
+
+## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+
+During the preparation of this work the authors used Claude (Anthropic) to assist with drafting
+and editing the text, writing and reviewing analysis and plotting code, and checking the
+manuscript for internal consistency. After using this tool, the authors reviewed and edited the
+content as needed and take full responsibility for the content of the published article.
+
+## Acknowledgements
+
+[TO SUPPLY: for example, David Crewther for reading the manuscript, if he agrees to be named.]
+
 ## References
 
-Blake, R. (1988). Dichoptic reading: The role of meaning in binocular rivalry.
-*Perception & Psychophysics*, 44, 133–141.
+Blake, R. (1988). Dichoptic reading: The role of meaning in binocular rivalry. *Perception & Psychophysics*, 44, 133–141. https://doi.org/10.3758/BF03208705
 
-Brascamp, J. W., & Blake, R. (2012). Inattention abolishes binocular rivalry:
-Perceptual evidence. *Psychological Science*, 23, 1159–1167.
+Brascamp, J. W., & Blake, R. (2012). Inattention abolishes binocular rivalry: Perceptual evidence. *Psychological Science*, 23, 1159–1167.
 
-Brascamp, J. W., Klink, P. C., & Levelt, W. J. M. (2015). The 'laws' of binocular
-rivalry: 50 years of Levelt's propositions. *Vision Research*, 109, 20–37.
+Brascamp, J. W., Klink, P. C., & Levelt, W. J. M. (2015). The 'laws' of binocular rivalry: 50 years of Levelt's propositions. *Vision Research*, 109, 20–37. https://doi.org/10.1016/j.visres.2015.02.019
 
-Brascamp, J. W., van Ee, R., Pestman, W. R., & van den Berg, A. V. (2005). Distributions
-of alternation rates in various forms of bistable perception. *Journal of Vision*, 5(4):1,
-287–298.
+Brascamp, J. W., van Ee, R., Pestman, W. R., & van den Berg, A. V. (2005). Distributions of alternation rates in various forms of bistable perception. *Journal of Vision*, 5(4):1, 287–298.
 
-Braun, J., & Mattia, M. (2010). Attractors and noise: twin drivers of decisions and
-multistability. *NeuroImage*, 52, 740–751.
+Braun, J., & Mattia, M. (2010). Attractors and noise: twin drivers of decisions and multistability. *NeuroImage*, 52, 740–751. https://doi.org/10.1016/j.neuroimage.2009.12.126
 
-Cao, R., Braun, J., & Mattia, M. (2014). Stochastic accumulation by cortical columns may
-explain the scalar property of multistable perception. *Physical Review Letters*, 113, 098103.
+Cao, R., Braun, J., & Mattia, M. (2014). Stochastic accumulation by cortical columns may explain the scalar property of multistable perception. *Physical Review Letters*, 113, 098103. https://doi.org/10.1103/PhysRevLett.113.098103
 
-Chong, S. C., Tadin, D., & Blake, R. (2005). Endogenous attention prolongs
-dominance durations in binocular rivalry. *Journal of Vision*, 5(11):6, 1004–1012.
+Chong, S. C., Tadin, D., & Blake, R. (2005). Endogenous attention prolongs dominance durations in binocular rivalry. *Journal of Vision*, 5(11):6, 1004–1012. https://doi.org/10.1167/5.11.6
 
-Curtu, R., Shpiro, A., Rubin, N., & Rinzel, J. (2008). Mechanisms for frequency
-control in neuronal competition models. *SIAM Journal on Applied Dynamical
-Systems*, 7, 609–649.
+Curtu, R., Shpiro, A., Rubin, N., & Rinzel, J. (2008). Mechanisms for frequency control in neuronal competition models. *SIAM Journal on Applied Dynamical Systems*, 7, 609–649. https://doi.org/10.1137/070705842
 
-Dieter, K. C., & Tadin, D. (2011). Understanding attentional modulation of
-binocular rivalry: A framework based on biased competition. *Frontiers in Human
-Neuroscience*, 5, 155.
+Dieter, K. C., & Tadin, D. (2011). Understanding attentional modulation of binocular rivalry: A framework based on biased competition. *Frontiers in Human Neuroscience*, 5, 155. https://doi.org/10.3389/fnhum.2011.00155
 
-Dieter, K. C., Melnick, M. D., & Tadin, D. (2016). Perceptual training profoundly
-alters binocular rivalry through both sensory and attentional enhancements.
-*Proceedings of the National Academy of Sciences*, 113, 12874–12879.
+Dieter, K. C., Melnick, M. D., & Tadin, D. (2016). Perceptual training profoundly alters binocular rivalry through both sensory and attentional enhancements. *Proceedings of the National Academy of Sciences*, 113, 12874–12879. https://doi.org/10.1073/pnas.1602722113
 
-Hancock, S., & Andrews, T. J. (2007). The role of voluntary and involuntary
-attention in selecting perceptual dominance during binocular rivalry.
-*Perception*, 36, 288–298.
+Einhäuser, W., Sandrock, A., & Schütz, A. C. (2021a). Perceptual difficulty persistently increases dominance in binocular rivalry, even without a task. *Perception*, 50(4), 343–366. https://doi.org/10.1177/0301006621999929
 
-Hugrass, L., & Crewther, D. (2012). Willpower and conscious percept: Volitional
-switching in binocular rivalry. *PLoS ONE*, 7, e35963.
+Einhäuser, W., Sandrock, A., & Schütz, A. C. (2021b). Data supplementing the publication "Perceptual difficulty persistently increases dominance in binocular rivalry – even without a task" [Data set]. Zenodo. https://doi.org/10.5281/zenodo.4575552
 
-Kang, M.-S. (2009). Size matters: A study of binocular rivalry dynamics. *Journal
-of Vision*, 9(1):17, 1–11.
+Hancock, S., & Andrews, T. J. (2007). The role of voluntary and involuntary attention in selecting perceptual dominance during binocular rivalry. *Perception*, 36, 288–298.
 
-Levelt, W. J. M. (1965). *On binocular rivalry*. Soesterberg: Institute for
-Perception RVO-TNO.
+Hugrass, L., & Crewther, D. (2012). Willpower and conscious percept: Volitional switching in binocular rivalry. *PLoS ONE*, 7, e35963. https://doi.org/10.1371/journal.pone.0035963
 
-Li, H.-H., Rankin, J., Rinzel, J., Carrasco, M., & Heeger, D. J. (2017). Attention
-model of binocular rivalry. *Proceedings of the National Academy of Sciences*, 114,
-E6192–E6201.
+Kang, M.-S. (2009). Size matters: A study of binocular rivalry dynamics. *Journal of Vision*, 9(1):17, 1–11. https://doi.org/10.1167/9.1.17
 
-Meng, M., & Tong, F. (2004). Can attention selectively bias bistable perception?
-Differences between binocular rivalry and ambiguous figures. *Journal of Vision*,
-4(7):2, 539–551.
+Laing, C. R., & Chow, C. C. (2002). A spiking neuron model for binocular rivalry. *Journal of Computational Neuroscience*, 12, 39–53.
 
-Mitchell, J. F., Stoner, G. R., & Reynolds, J. H. (2004). Object-based attention
-determines dominance in binocular rivalry. *Nature*, 429, 410–413.
+Levelt, W. J. M. (1965). *On binocular rivalry*. Soesterberg: Institute for Perception RVO-TNO.
 
-Moreno-Bote, R., Rinzel, J., & Rubin, N. (2007). Noise-induced alternations in an
-attractor network model of perceptual bistability. *Journal of Neurophysiology*, 98,
-1125–1139.
+Li, H.-H., Rankin, J., Rinzel, J., Carrasco, M., & Heeger, D. J. (2017). Attention model of binocular rivalry. *Proceedings of the National Academy of Sciences*, 114, E6192–E6201. https://doi.org/10.1073/pnas.1620475114
 
-Moreno-Sánchez, M., Aznar-Casanova, J. A., & Valle-Inclán, F. (2019). Attention to
-monocular images bias binocular rivalry. *Frontiers in Systems Neuroscience*, 13,
-12.
+Meng, M., & Tong, F. (2004). Can attention selectively bias bistable perception? Differences between binocular rivalry and ambiguous figures. *Journal of Vision*, 4(7):2, 539–551.
 
-Mueller, T. J., & Blake, R. (1989). A fresh look at the temporal dynamics of
-binocular rivalry. *Biological Cybernetics*, 61, 223–232.
+Mitchell, J. F., Stoner, G. R., & Reynolds, J. H. (2004). Object-based attention determines dominance in binocular rivalry. *Nature*, 429, 410–413. https://doi.org/10.1038/nature02584
 
-Paffen, C. L. E., Alais, D., & Verstraten, F. A. J. (2006). Attention speeds
-binocular rivalry. *Psychological Science*, 17, 752–756.
+Moreno-Bote, R., Rinzel, J., & Rubin, N. (2007). Noise-induced alternations in an attractor network model of perceptual bistability. *Journal of Neurophysiology*, 98, 1125–1139.
 
-Paffen, C. L. E., Verstraten, F. A. J., & Vidnyánszky, Z. (2008). Attention-based
-perceptual learning increases binocular rivalry suppression of irrelevant visual
-features. *Journal of Vision*, 8(4):25, 1–11.
+Moreno-Sánchez, M., Aznar-Casanova, J. A., & Valle-Inclán, F. (2019). Attention to monocular images bias binocular rivalry. *Frontiers in Systems Neuroscience*, 13, 12. https://doi.org/10.3389/fnsys.2019.00012
 
-Pastukhov, A., García-Rodríguez, P. E., Haenicke, J., Guillamon, A., Deco, G., &
-Braun, J. (2013). Multi-stable perception balances stability and sensitivity. *Frontiers in
-Computational Neuroscience*, 7, 17.
+Mueller, T. J., & Blake, R. (1989). A fresh look at the temporal dynamics of binocular rivalry. *Biological Cybernetics*, 61, 223–232.
 
-Platonov, A., & Goossens, J. (2013). Influence of contrast and coherence on the
-temporal dynamics of binocular motion rivalry. *PLoS ONE*, 8, e71931.
+Paffen, C. L. E., Alais, D., & Verstraten, F. A. J. (2006). Attention speeds binocular rivalry. *Psychological Science*, 17(9), 752–756. https://doi.org/10.1111/j.1467-9280.2006.01777.x
 
-Reynolds, J. H., & Heeger, D. J. (2009). The normalization model of attention.
-*Neuron*, 61, 168–185.
+Paffen, C. L. E., Verstraten, F. A. J., & Vidnyánszky, Z. (2008). Attention-based perceptual learning increases binocular rivalry suppression of irrelevant visual features. *Journal of Vision*, 8(4):25, 1–11. [TO SUPPLY: confirm volume and article number; the article and year are confirmed.]
 
-Seely, J., & Chow, C. C. (2011). Role of mutual inhibition in binocular rivalry.
-*Journal of Neurophysiology*, 106, 2136–2150.
+Pastukhov, A., García-Rodríguez, P. E., Haenicke, J., Guillamon, A., Deco, G., & Braun, J. (2013). Multi-stable perception balances stability and sensitivity. *Frontiers in Computational Neuroscience*, 7, 17. https://doi.org/10.3389/fncom.2013.00017
 
-Shpiro, A., Curtu, R., Rinzel, J., & Rubin, N. (2007). Dynamical characteristics
-common to neuronal competition models. *Journal of Neurophysiology*, 97, 462–473.
+Platonov, A., & Goossens, J. (2013). Influence of contrast and coherence on the temporal dynamics of binocular motion rivalry. *PLoS ONE*, 8, e71931. https://doi.org/10.1371/journal.pone.0071931
 
-Stuit, S. M., Paffen, C. L. E., Van der Smagt, M. J., & Verstraten, F. A. J.
-(2014). Suppressed images selectively affect the dominant percept during binocular
-rivalry. *Journal of Vision*, 14(5):9, 1–13.
+Reynolds, J. H., & Heeger, D. J. (2009). The normalization model of attention. *Neuron*, 61, 168–185. https://doi.org/10.1016/j.neuron.2009.01.002
 
-Usher, M., & McClelland, J. L. (2001). The time course of perceptual choice: The
-leaky, competing accumulator model. *Psychological Review*, 108, 550–592.
+Seely, J., & Chow, C. C. (2011). Role of mutual inhibition in binocular rivalry. *Journal of Neurophysiology*, 106, 2136–2150. https://doi.org/10.1152/jn.00228.2011
 
-van Ee, R. (2009). Stochastic variations in sensory awareness are driven by noisy neuronal
-adaptation: evidence from serial correlations in perceptual bistability. *Journal of the
-Optical Society of America A*, 26, 2612–2622.
+Shpiro, A., Curtu, R., Rinzel, J., & Rubin, N. (2007). Dynamical characteristics common to neuronal competition models. *Journal of Neurophysiology*, 97, 462–473. https://doi.org/10.1152/jn.00604.2006
 
-Van Ee, R., van Dam, L. C. J., & Brouwer, G. J. (2005). Voluntary control and the
-dynamics of perceptual bi-stability. *Vision Research*, 45, 41–55.
+Stuit, S. M., Paffen, C. L. E., van der Smagt, M. J., & Verstraten, F. A. J. (2011). Suppressed images selectively affect the dominant percept during binocular rivalry. *Journal of Vision*, 11(10):7, 1–11.
 
-Wang, X.-J., & Rinzel, J. (1992). Alternating and synchronous rhythms in reciprocally inhibitory model neurons. *Neural Computation*, 4, 84–97.
+Usher, M., & McClelland, J. L. (2001). The time course of perceptual choice: The leaky, competing accumulator model. *Psychological Review*, 108, 550–592. https://doi.org/10.1037/0033-295X.108.3.550
 
-Zhang, P., Jamison, K., Engel, S., He, B., & He, S. (2011). Binocular rivalry
-requires visual attention. *Neuron*, 71, 362–369.
+van Ee, R. (2009). Stochastic variations in sensory awareness are driven by noisy neuronal adaptation: evidence from serial correlations in perceptual bistability. *Journal of the Optical Society of America A*, 26, 2612–2622. [TO SUPPLY: confirm pages 2612–2622 against the DOI; volume 26(12) is confirmed.]
+
+Van Ee, R., van Dam, L. C. J., & Brouwer, G. J. (2005). Voluntary control and the dynamics of perceptual bi-stability. *Vision Research*, 45, 41–55. https://doi.org/10.1016/j.visres.2004.07.030
+
+Wang, X.-J., & Rinzel, J. (1992). Alternating and synchronous rhythms in reciprocally inhibitory model neurons. *Neural Computation*, 4, 84–97. https://doi.org/10.1162/neco.1992.4.1.84
+
+Zhang, P., Jamison, K., Engel, S., He, B., & He, S. (2011). Binocular rivalry requires visual attention. *Neuron*, 71, 362–369. https://doi.org/10.1016/j.neuron.2011.05.035
 
 ## Figures
 
@@ -1604,5 +1466,6 @@ supplementary material.
 | 2 | 4.3.1 | What the coupling sign tracks |
 | 3 | 4.3.2 | Gate timing as an independent variable |
 | 4 | 4.3.5 | Chong et al.'s manipulation reproduced in direction |
-| 5 | 4.5 | The sign reversal across architectures |
-| 6 | 4.7 | Superlinear adaptation repairs both structural failures |
+| 5 | 4.4 | Switching-threshold geometry |
+| 6 | 4.5 | The sign reversal across architectures |
+| 7 | 4.7 | Superlinear adaptation repairs both structural failures |

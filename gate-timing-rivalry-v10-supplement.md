@@ -256,10 +256,10 @@ Six schedules
 separate the components (Tables S1 to S3, Figure 3B and 3C), all at matched amplitude and duty cycle, replayed at the same seed as
 the live gate they derive from so the noise is identical. A zero-delay replay reproduces the
 live condition to 0.00 percentage points, which is the validity check for the comparison. All
-figures below are on the 156 of 200 configurations complete on every condition, and the mean
+figures below are on the 155 of 200 configurations complete on every condition, and the mean
 dominance episode in this sample is 30 timesteps.
 
-Values below are from the schedule campaign, 156 configurations complete on every condition.
+Values below are from the schedule campaign, 155 configurations complete on every condition.
 
 **Table S1.** Competitor response to six schedules at matched amplitude, duty cycle and dose.
 
@@ -275,17 +275,17 @@ Values below are from the schedule campaign, 156 configurations complete on ever
 The schedules are not nested, so the terms below are a chain rather than a partition of
 independent effects, and they sum to the full span exactly.
 
-**Table S2.** Decomposition of the difference between continuous and gated delivery. The terms are a chain rather than a partition and sum to the full span exactly.
+**Table S2.** Decomposition of the difference between continuous and gated delivery. Differences of medians on configurations with all four conditions; 95% intervals from a paired bootstrap over configurations (10,000 resamples). The terms are a chain rather than a partition and sum to the full span exactly.
 
 | Step | Contrast | pp | 95% CI |
 |---|---|---|---|
-| Schedule statistics | yoked − continuous | **+20.5** | [+15.3, +23.8] |
-| Ordering of the bursts | shuffled − yoked | −2.3 | [−5.0, +1.0] |
-| Contingency with the present trial | live − shuffled | **+14.9** | [+11.4, +17.8] |
-| | **full span, live − continuous** | **+33.1** | [+27.7, +36.5] |
+| Schedule statistics | yoked − continuous | **+20.0** | [+15.3, +23.9] |
+| Ordering of the bursts | shuffled − yoked | −2.1 | [−3.0, −1.0] |
+| Contingency with the present trial | live − shuffled | **+14.7** | [+12.5, +17.3] |
+| | **full span, live − continuous** | **+32.6** | [+27.0, +37.7] |
 
 Percentage points are reported rather than shares. Two of the three terms are substantial and one
-is not distinguishable from zero, so shares would divide an ill-defined total between
+is small, so shares would divide an ill-defined total between
 non-independent quantities, which is the ratio-summary hazard of Section S9. The summary that
 survives is two-part: **schedule statistics flip the sign, and contingency with the present
 trial sets the size.** Everything with episode-derived duration statistics that does not track
@@ -323,10 +323,10 @@ table above by one to two percentage points.
 
 | Schedule | Attended | Competitor | Ratio |
 |---|---|---|---|
-| Continuous, dose-matched | +17.8% | −17.9% | −1.01 |
-| Yoked | +41.2% | +4.7% | +0.11 |
-| Duration-shuffled | +40.4% | +3.9% | +0.10 |
-| **Live gate** | **+63.0%** | **+18.6%** | **+0.30** |
+| Continuous, dose-matched | +19.5% | −19.2% | −0.98 |
+| Yoked | +40.3% | +4.2% | +0.10 |
+| Duration-shuffled | +40.5% | +3.9% | +0.10 |
+| **Live gate** | **+62.0%** | **+18.6%** | **+0.30** |
 
 The two columns move together and in the same order, which is what Section 4.3.2's
 adaptation-recovery account requires: a schedule that lengthens the attended channel more gives
@@ -336,7 +336,7 @@ and a correspondingly smaller competitor response. Attended lengthening is there
 the work the account assigns it.
 
 The ratio column shows that this is not the whole story. Contingency raises the
-competitor-to-attended ratio from 0.11 to 0.30, so tracking the present trial does not merely
+competitor-to-attended ratio from 0.10 to 0.30, so tracking the present trial does not merely
 lengthen the attended channel further, it makes each unit of attended lengthening transfer
 about three times as effectively. The natural reading is that a contingent gate extends
 precisely those attended episodes during which the competitor is suppressed, giving it longer
@@ -350,13 +350,13 @@ period tested, from 2 to 200 timesteps, which is 0.07 to 6.7 mean episodes in th
 −9.1% that never approaches the +6.3% of an irregular schedule. A fixed period matching the
 mean episode length does no better than one far below it. What distinguishes the schedules that
 work is that their burst durations are drawn from the dominance duration distribution and are
-therefore highly variable; shuffling those durations into a random order changes nothing, so
-the distribution is sufficient and its sequence is irrelevant.
+therefore highly variable; shuffling those durations into a random order changes the response only
+slightly, so the distribution carries the effect and its sequence matters little.
 
 **Four mechanisms proposed for the schedule-statistics term, and four withdrawn.** We
 attributed it first to partial self-gating by the rectifier, a burst arriving while the
 attended channel sits near the floor being absorbed. That predicts the term should grow with
-floor occupancy; across 170 configurations it correlates at ρ = −0.777, and splitting at the
+floor occupancy; across 169 configurations it correlates at ρ = −0.794, and splitting at the
 median gives +29.5 points in low-floor configurations against +6.8 in high-floor ones, a
 fourfold difference in the direction the account forbids. We then attributed it to the
 adaptation integration window, a schedule modulated faster than 1/γ being invisible to the
@@ -374,10 +374,10 @@ where the channel is floored and there is no barrier to modulate. It fails two t
 
 Drawing burst durations from gamma distributions at fixed mean and matched duty cycle, and
 sweeping the shape from near-deterministic to strongly skewed, the competitor's response does
-rise with variability, from −23.0% at a coefficient of variation of 0.14 to −9.8% at 0.51
-(ρ = +0.600 across the sweep). But it **saturates there and never becomes positive**, while the
+rise with variability, from −20.2% at a coefficient of variation of 0.14 to −9.4% at 0.51
+(ρ = +0.829 across the sweep). But it **saturates there and never becomes positive**, while the
 yoked schedule, whose bursts are actual dominance episodes with a coefficient of variation near
-0.5, reaches +5.8%. A schedule matched on mean, duty cycle and variability falls fifteen points
+0.5, reaches +7.0%. A schedule matched on mean, duty cycle and variability falls fifteen points
 short of one drawn from the system's own episodes. Variability is necessary and not sufficient.
 
 The single-burst response itself was measured by triggering one burst at the onset of every
@@ -385,19 +385,19 @@ fourth attended-dominance episode and comparing the episodes that received it wi
 did not in the same run, on 200 configurations. An earlier version, placed at a fixed time and
 read as a run-wide mean, averaged one perturbed episode against roughly a hundred unperturbed
 ones and returned a flat function; that result was a dilution artefact. Phase-locked, the burst
-does move the following competitor episode, by +1.8%, +2.3%, +3.6%, +5.5% and +0.5% for bursts
+does move the following competitor episode, by +2.1%, +2.2%, +3.3%, +5.0% and +0.9% for bursts
 of 5, 10, 20, 40 and 80 timesteps against a mean episode of 36. The response rises to a peak
 near one episode's length and falls beyond it. It is not convex, so the fourth account stays
 withdrawn on this evidence too. Even at its peak a single burst produces under a third of the
 live gate's effect, so most of the effect accumulates across successive bursts rather than
 superposing from independent ones. The containing attended episode is shortened slightly by
-bursts shorter than an episode (−0.9% to −4.1%) and lengthened by longer ones (+6.0% and
-+10.4%), consistent with a brief increment at onset hastening the attended channel's own
+bursts shorter than an episode (−0.9% to −3.7%) and lengthened by longer ones (+5.4% and
++10.0%), consistent with a brief increment at onset hastening the attended channel's own
 adaptation.
 
 One prediction of the account holds, and it is the one we had nominated as the falsification.
 The attended channel's own gain rises monotonically and steeply with burst variability, from
-+2.2% to +17.5% across the same sweep (ρ = +0.943), more strongly than the competitor's response
++1.4% to +15.3% across the same sweep (ρ = +0.943), more strongly than the competitor's response
 does. Variability acts on the attended channel much as convexity would predict; what fails is
 the transfer from that gain to the competitor. **That dissociation is the residue of this
 investigation.** Variability in the schedule reliably lengthens the attended percept, only part
@@ -416,11 +416,25 @@ synthetic one matched on mean and variability; and must vanish as the suppressed
 approaches the floor. The fourth has been narrowed further. Our first synthetic schedules tied each gap
 deterministically to the burst before it, which the yoked schedule does not. Drawing gaps
 independently from their own gamma distribution at matched duty cycle leaves the competitor at
-−21.1%, −10.5% and −10.1% for shape parameters of 50, 3.8 and 1.0, against +5.7% for yoked and
-−12.8% for continuous delivery. The duration-shuffled schedule already permutes bursts and gaps
-independently, drawing both from their empirical distributions, and matches yoked. So what
+−23.1%, −12.6% and −11.8% for shape parameters of 50, 3.8 and 1.0, against +4.7% for yoked and
+−17.0% for continuous delivery. The duration-shuffled schedule already permutes bursts and gaps
+independently, drawing both from their empirical distributions, and comes within a few points of yoked. So what
 separates a working schedule from a synthetic one is not the joint structure of bursts and gaps
 or their first two moments but the shape of the empirical duration distributions themselves.
+
+**The anti-gated condition in detail.** Raising the attended
+channel while its competitor is winning must shorten that competitor's episode, so this
+condition is architecturally guaranteed in direction and its function is only to establish
+that the manipulation reaches the competitor. It also departs from the regime: both channels'
+episodes shorten together and the coefficient of variation rises to 1.17 against a baseline of
+0.54, outside the [0.35, 0.65] window by which every configuration here was admitted, while
+filtered switch count does not rise (413 against 418), so most of the trace has become
+indeterminate. Recomputing with exclusions logged excludes none of 200 and gives the
+anti-gated 1× row as −29.0% attended and −52.1% competitor at a coefficient of variation of
+0.824, against −68.9% and −86.4% at a coefficient of variation of 1.209 for 2×. The 2×
+competitor value of −86.4% here and −76.1% in Table 3 of the main text come from different campaigns,
+and we quote the canonical one in the table; the difference does not bear on the conclusion,
+which is that the condition has left the rivalry regime at both amplitudes. **−76.1% is therefore not reported as a coupling magnitude.**
 
 ## S4 Derivation of the threshold-geometry account
 
@@ -469,7 +483,7 @@ B-to-A handovers). Only c<sub>A</sub> moves:
 $$\Delta T_B = \frac{\delta}{\gamma\,(U_B + c_A)} > 0, \qquad
   \Delta T_A = \frac{\delta}{\gamma\,(U_A - c_A)} > 0.$$
 
-The competitor's episode starts further from its own end point and lengthens. If the shift is large enough that c<sub>A</sub> + δ ≥ U<sub>A</sub>, the imbalance can no longer reach the handover threshold during A's dominance and, in the deterministic limit, A never hands over; with noise, handovers become rare. This predicts which configurations a gated increment removes from rivalry: those with δ large relative to the margin U − c. Section 4.4 tests it (AUC 0.91).
+The competitor's episode starts further from its own end point and lengthens. If the shift is large enough that c<sub>A</sub> + δ ≥ U<sub>A</sub>, the imbalance can no longer reach the handover threshold during A's dominance and, in the deterministic limit, A never hands over; with noise, handovers become rare. This predicts which configurations a gated increment removes from rivalry: those with δ large relative to the margin U − c. Section 4.4 tests it.
 
 **Ungated** (present at both handovers). Both thresholds move:
 
@@ -496,7 +510,7 @@ asymptote, which Section 4.4 tests directly.
 
 In the symmetric case, U<sub>A</sub> = U<sub>B</sub> = L and c<sub>A</sub> = c<sub>B</sub> = c,
 so T<sub>A</sub> = T<sub>B</sub> and percentage changes stand in the same ratio as absolute ones.
-Writing ρ = (L − c)/(L + c), the competitor-to-attended ratios are
+Writing ρ = (L − c)/(L + c), the competitor-to-attended ratios are those in Table S4
 
 **Table S4.** First-order competitor-to-attended ratios in the symmetric case.
 
@@ -508,8 +522,8 @@ Writing ρ = (L − c)/(L + c), the competitor-to-attended ratios are
 
 These are first-order statements. They neglect the increment's effect on the asymptote, since
 an increment present during A's dominance raises x<sub>A</sub><sup>+</sup> and so U<sub>A</sub>;
-they treat switching as deterministic; and they assume the two channels are symmetric. On 199 configurations from the eligible pool (Section 4.4, Table 5) the gated ratio follows ρ
-closely, at Spearman +0.83 to +0.87 and 1.1 to 1.2 times ρ. The ungated ratio is about −0.45
+they treat switching as deterministic; and they assume the two channels are symmetric. On 200 configurations from the eligible pool (Section 4.4, Table 5) the gated ratio follows ρ
+closely, at Spearman +0.81 to +0.87 and 1.1 times ρ. The ungated ratio is about −0.5
 rather than −1, and the anti-gated ratio is unrelated to 1/ρ. The asymmetry is expected. The
 gated result depends only on the start threshold, where U + c is large and the logarithm nearly
 linear, so the first-order expansion is accurate. The other two depend on the end threshold,
@@ -520,8 +534,10 @@ does not depend on any of this, since it follows from the ordering U − c < U +
 Because T = ln(1/ρ)/γ in the symmetric case, the gated ratio also satisfies ρ ≈ exp(−γT): it
 can be written in terms of the mean dominance duration and the adaptation rate alone. Tested
 directly, exp(−γT) computed from each configuration's adaptation rate and observed mean
-duration predicts the gated ratio at Spearman +0.85 across 195 configurations, the observed ratio
-at 1.17 times the prediction, nearly as well as ρ measured from the switching geometry itself.
+duration predicts the gated ratio at Spearman +0.84 across 200 configurations, slightly better
+than ρ measured from the switching geometry itself (+0.81). Duration alone predicts it as well
+(+0.85), because the adaptation rate takes only three values on the grid; the combination
+outperforms its parts only where the rate varies continuously (Section 4.5).
 
 ### S4.4 Why Levelt's second proposition is unreachable, and why superlinear adaptation helps
 
@@ -536,7 +552,7 @@ increment that raises x<sub>A</sub><sup>+</sup> raises U<sub>A</sub> by a factor
 p. That speeds the rise of u during A's dominance and cancels the lengthening of A's own
 episode, while leaving the competitor's threshold displacement intact, so the magnitude of the
 ungated ratio should grow with p. The gate-timing series of Section 4.7 shows exactly this: the
-ungated ratio is −0.83, −1.18 and −2.24 at p = 1, 2 and 3.
+ungated ratio is −0.82, −1.18 and −1.76 at p = 1, 2 and 3.
 
 ### S4.5 The ramp-speed crossover
 
@@ -608,10 +624,10 @@ baseline by a factor (λ + β + ακ/γ)/(β + ακ/γ), so the gain relative to
 every rank correlation below is identical under either. Earlier single draws gave ρ = +0.774
 and +0.722; configurations that reach a 50% increase have a median
 bound of 0.245 against 0.150 for those that do not. Across four independent draws of roughly 195 configurations the bound predicts the maximum
-achievable duration increase at a median ρ of **+0.641**, range [+0.598, +0.676]. The composite
+achievable duration increase at a median ρ of **+0.625**, range [+0.611, +0.672]. The composite
 is not restating that high leak permits large modulation: **λ alone predicts nothing**, at a
-median ρ of +0.034 with a range of [−0.067, +0.109] that straddles zero, while the partial
-correlation of the composite controlling for λ is **+0.731**, range [+0.716, +0.736], higher
+median ρ of +0.024 with a range of [−0.028, +0.111] that straddles zero, while the partial
+correlation of the composite controlling for λ is **+0.717**, range [+0.696, +0.760], higher
 than the raw correlation. λ therefore acts as a suppressor rather than as the driver. The bound
 carries a prediction: large attentional effects on dominance duration should
 require high-leak, low-inhibition regimes.
@@ -678,9 +694,10 @@ them.** The distinction we arrive at below is established in the literature and 
 engaged with it from the outset. Moreno-Bote, Rinzel and Rubin (2007) characterised
 noise-induced alternations in attractor-network bistability, which is the regime we identify
 here; Braun and Mattia (2010) frame attractors and noise as twin drivers of multistability;
-and Pastukhov et al. (2013) and Cao, Braun and Mattia (2014) map where in parameter space
-adaptation-driven and noise-driven alternation each lives, which is exactly what the split
-below measures. Our contribution is not the distinction but the possibility of deriving the
+Pastukhov et al. (2013) place human multistable perception near the boundary between
+noise-driven and adaptation-driven alternation, which is the boundary the split below measures;
+and Cao, Braun and Mattia (2014) account for the scalar property of dominance-time distributions
+by modelling reversals as stochastic accumulation. Our contribution is not the distinction but the possibility of deriving the
 coupling sign from it, which Section 4.3.2 reports attempting and rejecting: the escape-rate argument predicts the schedule-statistics term should scale with burst-duration variance, and it does so for the attended channel but not for the competitor.
 
 At σ = 0 the strongly adapting configurations do not alternate: they settle
@@ -737,10 +754,11 @@ not because a reviewer objected, and in each case the control is named.
 | The adaptation-to-leak ratio classifies controllability in opposite directions between regimes | The regimes are constructed by multiplying that ratio's components, so within-regime AUC is computed on a truncated range of the same predictor; a stratification orthogonal to the construction shows no reversal | 4.1 |
 | ρ = −0.267 is a parametric counterpart of the timing result | One unregistered draw with no interval | S5 |
 | Contingency accounts for the majority of the live-versus-yoked difference | The three-way decomposition attributes it to schedule statistics, with phase not distinguishable from zero | S3 |
-| The schedule-statistics term is partial self-gating by the rectifier | It should then grow with floor occupancy; it correlates at ρ = −0.777, the direction the account forbids | S3 |
+| The schedule-statistics term is partial self-gating by the rectifier | It should then grow with floor occupancy; it correlates at ρ = −0.794, the direction the account forbids | S3 |
 | The schedule-statistics term is the adaptation integration window | Predicts a threshold in burst duration near 1/γ, which the fixed-period series does not show at any duration | S3 |
 | The schedule-statistics term is burst ordering, or phase | Both excluded by the shuffled and episode-shifted conditions | S3 |
 | The schedule-statistics term is convexity in burst duration | Variability at fixed mean does not reproduce the yoked value, and the phase-locked single-burst response is non-monotone in burst length rather than convex | S3 |
+| Burst ordering contributes nothing to the schedule-statistics term | A paired bootstrap, replacing an unpaired one, puts the ordering term's interval clear of zero; it is small but not zero | S3, S13 |
 | The sign reversal is established in all four architectures | A reproducible rerun puts the sigmoid family's gated proportion at 26/40 [50%, 78%], so the reversal is not established there | 4.5 |
 | The ramp-speed crossover is architecture-invariant | The reproducible rerun gives 0.60, 0.45 and 0.70 in three families and 0.17 in the sigmoid one | 4.5 |
 | Timing determines the coupling sign for any modulation | It does not for modulations carrying persistent state; the operative variable is suppressed-phase activation | 5.2 |
@@ -759,8 +777,8 @@ Section 7.
 
 Superlinear adaptation repairs both structural failures and displaces one quantitative
 agreement: conditional on reproducing Levelt's second proposition, the fraction of
-configurations also matching Chong et al.'s coupling ratio falls from four of six to one of
-ninety-seven across the exponent range (Section 4.7).
+configurations also matching Chong et al.'s coupling ratio falls from three of four to two of
+107 across the exponent range (Section 4.7).
 
 Before asking why the agreement cannot be recovered, one qualification about the repair
 itself. The exponent is not otherwise motivated, nothing in the architecture or the
@@ -777,19 +795,19 @@ Four mechanisms for recovering it were implemented and all four fail.
 |---|---|---|
 | Continuous adaptation modulation | negative, wrong sign | falls on the increment's side of the coupling variable (Section 4.3.1) |
 | Dominance-gated adaptation modulation | negative, wrong sign | gating does not move it, for the reason in Section 5.2 |
-| Dominance-phase self-gain | unmoved at *p* = 2; CV falls to 0.06 | cancelled by the same superlinear adaptation that effects the repair, since both act on the dominant channel's activation |
-| Inhibition-driven adaptation | passes through the observed 0.310 and on to +0.12, at *p* = 2 | but drives CV to 1.13 and the sign contrast from 196 of 200 to 6 |
+| Dominance-phase self-gain | no gain over its own baseline at any exponent; at *p* = 2 it moves the ratio further from 0.310, to +1.35, and the CV down to 0.30 | cancelled by the same superlinear adaptation that effects the repair, since both act on the dominant channel's activation |
+| Inhibition-driven adaptation | passes through the observed 0.310 and on to +0.11, at *p* = 2 | but drives the CV above 1.0 and the sign contrast from 195 of 200 to 6, with only 12 configurations still alternating |
 
 The fourth is diagnostic rather than merely negative, and it answers the question. Blocking
 the competitor's de-adaptation drives the ratio down *and* the sign contrast with it, because
 the coupling and the ratio are one phenomenon at two magnitudes: the competitor lengthens
 because it de-adapts, and the ratio measures how much. **This architecture cannot match the
 quantitative ratio while producing the qualitative finding.** The constraint is structural,
-not a defect awaiting repair. The first and third mechanisms also fail in opposite
-directions, driving the coefficient of variation to 0.06 and to 1.13 respectively, where the
+not a defect awaiting repair. The third and fourth mechanisms also fail in opposite
+directions, driving the coefficient of variation down to 0.22 and up to 1.46 respectively, where the
 registered window is [0.35, 0.65].
 
-Two failures do not exhaust the space of mechanisms, but they close the two obvious routes:
+Four failures do not exhaust the space of mechanisms, but they close the two obvious routes:
 nothing acting on either channel's dominance-phase gain, or on the composition of adaptation,
 will do it. A successor needs the competitor's return governed by something other than
 recovery from its own adaptation, a separate slow variable, or alternation that is not
@@ -835,7 +853,7 @@ median coefficients of variation rising from 1.01 to 1.25 across bins of increas
 **The central result is invariant to the choice, in selection and in simulation.** Rerunning the
 gate-timing series entirely under the published form, with configurations screened that way and
 simulated that way, gives the competitor lengthening in 176 of 187 configurations under gated
-delivery and in 9 of 189 under ungated, against 182 of 188 and 6 of 189 under the pipeline form.
+delivery and in 9 of 189 under ungated, against 179 of 188 and 8 of 190 under the pipeline form.
 The discretisation affects which configurations are eligible and their coefficients of
 variation; it does not affect the paper's central claim.
 
@@ -965,6 +983,15 @@ registered transient protocol.
 
 The simulation kernel was unaffected by any of these and is unchanged.
 
+*Unpaired bootstrap in the decomposition.* The intervals originally reported for the
+decomposition of Section 4.3.3 were computed by resampling each condition independently. All
+four conditions are measured on the same configurations, so the paired bootstrap, which
+resamples configurations, is correct; the unpaired version ignores the within-configuration
+correlation and overstates the width of every interval. Recomputed with the paired bootstrap,
+the ordering term is distinguishable from zero, so the earlier statement that shuffling the
+bursts changes nothing is withdrawn in favour of the statement that it changes the competitor's
+response only slightly (Table S5). The point estimates are unaffected.
+
 ## S14 Statistical conventions
 
 This is a simulation study and the epistemics of null-hypothesis testing differ
@@ -1027,3 +1054,93 @@ and Sections 4.3 and 5.1. Values from earlier campaigns are identified in place;
 Section 4.3.5's table is one such, and its gated 2× row differs from the canonical
 values by 0.3 and 0.7 percentage points.
 
+**Reproducing the pipeline analyses.** Every output of `wave22_adaptation.py` reported in
+Sections 4.3.3 to 4.7 and in this supplement was regenerated from scratch at commit `fac9d97`,
+under the output prefix `final_`, and each output file records the commit it was produced
+under. The 30-seed reruns of blocks E and J were run at commit `5294ef4`, which changes only how the eligibility file is read and none of the
+simulation code. The architecture comparison was regenerated with deterministic seeding.
+
+## S15 The exponent scan in full
+
+This section holds the detail of Section 4.7 that the main text summarises.
+
+**Pool and seeds.** Eligible counts rise from 942 of 6,814 at *p* = 1 to 1,651 at *p* = 3, while the median CV of that pool falls from 0.554 at *p* = 1 to 0.442 at *p* = 1.75 and 2 before recovering, distinct from the grid-wide median of 0.563 in Section S2, since superlinear adaptation makes durations more regular and draws the grid's high-CV tail into the registered window. Proposition IV figures are from 30 seeds × 20,000 timesteps and are unchanged from a 10-seed run to within three configurations in any cell.
+
+**Raw and filtered transitions.** The raw transition count also rises with *p*, from 0 to 126 of 200,
+though it diverges from the filtered count between *p* = 1.25 and 2.5: higher drive widens
+channel separation and suppresses the margin crossings of Section S2, so raw counts fall,
+while superlinear adaptation shortens sustained episodes, so filtered counts rise. The
+filtered measure is the one corresponding to perceptual alternation, for the reason Section
+4.3.1 gives when withdrawing a claim built on raw counts.
+
+**The three hits at *p* = 1.** They are consistent with the null in Section 4.6, obtained on 100
+configurations: the Wilson intervals overlap and a true rate of 1.5% yields no hits in 100
+draws with probability 0.22. The pool used here is also more permissive (see the deviation
+note below).
+
+**How the two fixed sets bracket the re-derived figures.** On the intersection
+the effect is *stronger* than with eligibility re-derived, which is unsurprising since that set
+is selected on being robust to the exponent and so carries its own filter. The unfiltered set is
+the unbiased test and gives the smaller effect, roughly two thirds of the re-derived rate at
+every exponent, which is the number to quote when asked how much of the trend survives without
+any selection. Its *p* = 1 row also reproduces the zero of Section 4.6 on a pool that section
+never used.
+
+**What the repair costs, and how much of the space satisfies everything.** The gated coupling
+ratio moves with the exponent, from 0.306 pooled at *p* = 1 to 0.718 at *p* = 2 and 1.475 at
+*p* = 3, while Chong et al.'s observed 0.310 sits at *p* = 1. Conditional on reproducing Levelt
+II, the fraction of configurations also matching the ratio within ±0.10 falls from 3 of 4 at
+*p* = 1 to 2 of 107 at *p* = 3 (3/4, 4/5, 2/10, 1/17, 2/34, 6/81 and 2/107 across the exponents),
+with Wilson intervals of [30%, 95%] and [0.5%, 6.6%] that do not overlap, though the decline is
+not strictly monotone. The count satisfying both never exceeds 6 of 200 and does not grow as
+reachability rises more than twentyfold, while the count near the observed ratio falls from 24
+to 8. Adding eligibility and Proposition IV as criteria, the dominance-gain sweep finds at most 3
+of 200 configurations satisfying all four, at *p* = 1.75 with no added mechanism, and the
+inhibition-driven sweep at most 5 of 200 satisfying all five of its criteria. A Wilson interval
+on 3 of 200 is [0.5%, 4.3%], so the honest statement is that no configuration robustly
+satisfies everything, and we draw no conclusion from the count.
+
+**Deviations specific to this analysis.** Eligibility was re-derived with a five-level,
+three-seed sweep for the Levelt-ρ criterion rather than the eleven-level, eight-seed sweep of
+the original grid, which is too coarse to discriminate (median ρ = 1.000) and yields 942
+eligible configurations at *p* = 1 against the registered 762. The same criterion is applied
+at every exponent so the across-exponent comparison is internally consistent, but the pool is
+more permissive and these results should not be pooled with analyses using the registered one.
+The exponent scan was not pre-registered and is exploratory. Because the trend reproduces
+on both fixed sets above, the permissive pool affects the absolute rates but not the direction
+or the significance of the trend, and the unfiltered figures are the conservative ones.
+
+## S16 A pre-registered test on existing human data
+
+**What was tested.** Two predictions of the account were registered at https://osf.io/3rthv/ before
+the data were opened, and tested on the open dataset of Einhäuser, Sandrock and Schütz (2021a, 2021b):
+24 observers, binocular rivalry between two drifting gratings with dominance measured from optokinetic
+nystagmus, task difficulty assigned to each grating trial by trial, and blocks without a task before
+(1–4) and after (13–16) the task blocks (5–12). Task-driven attention can act only on the visible
+stimulus, so during the task it is gated. H1 predicted that the competitor's duration change, relative
+to the pre-task blocks, is more positive in the task phase than after it; H2 that observers with longer
+dominance durations show smaller task-phase coupling ratios. The analysis code was committed before
+the data were opened (commit `8eaee4a`). The full plan, a dated design note and a deviation note are on
+the registration.
+
+**Result.** The registered test could not be conducted as intended. H1 required the difficult
+stimulus's dominance durations to lengthen relative to the pre-task blocks; instead they shortened, by
+a median of 15.6% in the task phase and 16.1% after it, and the competitor's shortened by about as much.
+Under the registration H1 is reported as uninformative (computed for completeness: median difference
+−0.1 percentage points [−12.8, +8.8], one-sided *p* = .71, 18 observers). Four observers met H2's
+inclusion rule (ρ = −0.80, one-sided *p* = .10), too few for the test to be informative.
+
+**Exploratory analyses** did not support the account. Correcting for drift by normalising to trials in
+which both stimuli had the same difficulty, the precondition is met only marginally and H1's estimate
+lies in the opposite direction, not significantly (−9.8 percentage points [−13.4, +7.3]). Restricted to
+the part of each task trial before the response, H1 lies significantly in the opposite direction
+(−6.8 [−29.1, −4.3]), in a phase where both stimuli's durations shorten by around 30%. Without H2's
+inclusion floor, ρ = +0.06 (20 observers). Varying the gain threshold or the minimum episode duration
+did not change these conclusions.
+
+**Interpretation.** The dataset does not contain the effect the registered test presupposes: in this
+paradigm performing the task speeds rivalry as a whole, as attention to a rival display is known
+to do (Paffen, Alais, & Verstraten, 2006), and difficulty does not act as an increment
+applied only while one stimulus is visible. That explanation was reached after seeing the data and is
+not claimed as support. The modelling results are unaffected; the account's predictions for human
+observers remain untested.
