@@ -1,0 +1,4385 @@
+{
+ "excluded": {
+  "H13_out_of_rivalry_or_no_dL": 0,
+  "H15_out_of_rivalry": 0,
+  "H19_out_of_rivalry": 0,
+  "H23_out_of_rivalry": 0
+ },
+ "settings": {
+  "primary_scoring": "mOB",
+  "D_OFF_MS": 585.0
+ },
+ "H13_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H13_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H13_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H13_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H13_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H13": {
+  "holds": false
+ },
+ "H14": {
+  "five_windows": {
+   "label": "primary (i): five windows, observer scoring, all seeds, scaled fit",
+   "windows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  "late_windows": {
+   "label": "primary (ii): three late windows only, scaled fit",
+   "windows": [
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  "holds": false,
+  "holds_vs_dose": false
+ },
+ "H14_sensitivity": [
+  {
+   "label": "five windows, unscaled (beta = 1)",
+   "windows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  {
+   "label": "three late windows, unscaled (beta = 1)",
+   "windows": [
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  {
+   "label": "five windows, merged scoring",
+   "windows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  {
+   "label": "five windows, passive observer 300-600 ms",
+   "windows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  },
+  {
+   "label": "five windows, seed split: weights and e from seeds 0-3, windows from 4-7",
+   "windows": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "n_excluded": 4,
+   "median_beta_handover": NaN,
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   },
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "n_not_separated": 0,
+    "holds": false
+   }
+  }
+ ],
+ "window_profile": {
+  "win_0.2_0-0.25": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "pred_handover_median": 0.0,
+   "pred_dose_median": 0.0,
+   "pred_hazard_median": 0.0,
+   "dose_comp": 0.20332679921693508
+  },
+  "win_0.2_0.25-0.5": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "pred_handover_median": 0.0,
+   "pred_dose_median": 0.0,
+   "pred_hazard_median": 0.0,
+   "dose_comp": 0.19819717589659405
+  },
+  "win_0.2_0.5-0.75": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "pred_handover_median": 0.0,
+   "pred_dose_median": 0.0,
+   "pred_hazard_median": 0.0,
+   "dose_comp": 0.20094520241483496
+  },
+  "win_0.2_0.75-1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "pred_handover_median": 0.0,
+   "pred_dose_median": 0.0,
+   "pred_hazard_median": 0.0,
+   "dose_comp": 0.18589337765824587
+  },
+  "late_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "pred_handover_median": 0.0,
+   "pred_dose_median": 0.0,
+   "pred_hazard_median": 0.0,
+   "dose_comp": 0.20803800792882118
+  }
+ },
+ "H15_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H15_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H15_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H15_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H15_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H15": {
+  "holds": false
+ },
+ "H16": {
+  "a_latency_gate": {
+   "competitor": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "ungated": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "n_out_of_rivalry": 0,
+   "median_main": 0.0,
+   "mw_p": 1.0,
+   "holds": false,
+   "competitor_mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   }
+  },
+  "b_report_gate": {
+   "competitor": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "ungated": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "n_out_of_rivalry": 0,
+   "median_main": 0.0,
+   "mw_p": 1.0,
+   "holds": false,
+   "competitor_mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "competitor_mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   }
+  },
+  "zero_latency_gate": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   }
+  },
+  "holds": false,
+  "b_holds": false
+ },
+ "H17": {
+  "noadapt": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "mw_p": NaN,
+  "testable": false,
+  "holds": false,
+  "noadapt_mOB": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main_mOB": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "noadapt_mOB2": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main_mOB2": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "noadapt_mBm": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main_mBm": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "noadapt_mB": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main_mB": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "noadapt_mBabs": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "main_mBabs": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  },
+  "predicted_normalised_difference_median": {
+   "main": {
+    "handover": 0.7282164535721094,
+    "dose": 2.032599194623508e-06,
+    "hazard": 0.222597033629255
+   },
+   "noadapt": {
+    "handover": 0.0039978812046669865,
+    "dose": 2.7755575615628914e-17,
+    "hazard": 0.05600289564206322
+   },
+   "highnoise": {
+    "handover": 0.13247603146677603,
+    "dose": 5.551115123125783e-17,
+    "hazard": 0.09898187117336703
+   }
+  },
+  "highnoise": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "median": NaN
+  }
+ },
+ "H18a_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H18a_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H18a_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H18a_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H18a_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H18": {
+  "a_holds": false,
+  "b_abs_ramped": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "b_abs_step": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "b_holds": false,
+  "c_rB_dom_change_step": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "c_holds": true,
+  "c_rB_dom_change_ramped": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "c_rB_dom_change_late": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "fragments_abs_per_episode": {
+   "win_0.2_0-0.25": 1.0,
+   "early_ramp_0.2": 1.0,
+   "late_0.2": 1.0
+  },
+  "holds": false
+ },
+ "H19_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_attended_observer": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19_attended_first_test": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H19": {
+  "holds": false,
+  "positive_control_attended": false
+ },
+ "H20_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H20_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H20_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H20_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H20_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H20": {
+  "holds": false
+ },
+ "hold_curve_median": {
+  "0": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  },
+  "0.25": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  },
+  "0.5": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  },
+  "0.75": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  },
+  "1": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  },
+  "1.5": {
+   "mOB": 0.0,
+   "mOB2": 0.0,
+   "mBm": 0.0,
+   "mB": 0.0,
+   "mBabs": 0.0
+  }
+ },
+ "H21": {
+  "label": "primary: continuous-delivery distribution, seeds 0-3 / 4-7, isotonic",
+  "vs_dose": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds": false,
+   "n_not_separated": 0,
+   "n_censored_ambiguous": 0
+  },
+  "vs_hazard": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds": false,
+   "n_not_separated": 0,
+   "n_censored_ambiguous": 0
+  },
+  "n_curve_not_finite": 0,
+  "n_no_prediction": 4,
+  "n_excluded_hold0_not_positive": 0,
+  "n_censored": 0,
+  "median_obs": NaN,
+  "median_pred_handover": NaN,
+  "median_pred_dose": NaN,
+  "median_pred_hazard": NaN,
+  "n_finite": 0,
+  "per_config": {
+   "dpred": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ddose": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "dhaz": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "dobs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  },
+  "holds": false
+ },
+ "H21_sensitivity": [
+  {
+   "label": "baseline distribution",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  },
+  {
+   "label": "all seeds, no split",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  },
+  {
+   "label": "raw crossing",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  },
+  {
+   "label": "merged scoring",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  },
+  {
+   "label": "passive observer 300-600 ms",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  },
+  {
+   "label": "empirical withdrawal time",
+   "vs_dose": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "vs_hazard": {
+    "k": 0,
+    "n": 0,
+    "ci": [
+     NaN,
+     NaN
+    ],
+    "holds": false,
+    "n_not_separated": 0,
+    "n_censored_ambiguous": 0
+   },
+   "n_curve_not_finite": 0,
+   "n_no_prediction": 4,
+   "n_excluded_hold0_not_positive": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN,
+   "median_pred_hazard": NaN,
+   "n_finite": 0
+  }
+ ],
+ "H22_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H22_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H22_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H22_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H22_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H22": {
+  "holds": false
+ },
+ "H23_mOB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23_mOB2": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23_attended_observer": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H23": {
+  "holds": true
+ },
+ "H24": {
+  "a_latency_gate": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "n_out_of_rivalry": 0,
+   "holds": false
+  },
+  "b_chong": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "n_out_of_rivalry": 0,
+   "holds": false
+  },
+  "holds": false
+ },
+ "descriptive": {
+  "main|gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.0035033789756478283,
+   "dose_att": 0.9996508099916119,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|gated_lat_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.00031251761928107217,
+   "dose_att": 0.9352480002493948,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|rep_gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.1779395308417589,
+   "dose_att": 0.8195405795388806,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 292.50562996031744
+  },
+  "main|ungated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1650.0061507936507
+  },
+  "main|win_0.2_0-0.25": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.20332679921693508,
+   "dose_att": 4.186645606926781e-05,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 177.13467261904762
+  },
+  "main|win_0.2_0.25-0.5": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.19819717589659405,
+   "dose_att": 0.0,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|win_0.2_0.5-0.75": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.20094520241483496,
+   "dose_att": 5.055793087453712e-06,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|win_0.2_0.75-1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.18589337765824587,
+   "dose_att": 4.814305930900167e-05,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|late_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.20803800792882118,
+   "dose_att": 0.00023324661953470636,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|early_ramp_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.1996466866710848,
+   "dose_att": 1.9380613291854622e-05,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|gated_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.0035033789756478283,
+   "dose_att": 0.9996508099916119,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|ungated_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1650.0061507936507
+  },
+  "main|chong_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.3092847631963843,
+   "dose_att": 0.680771797106255,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 525.491666677777
+  },
+  "main|chong_0.1_x0.25": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.5071501893629223,
+   "dose_att": 0.6819827760852357,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 861.4929289337492
+  },
+  "main|chong_0.1_x0.5": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.6993847152303123,
+   "dose_att": 0.6941946169672204,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1167.0957540005406
+  },
+  "main|chong_0.1_x0.75": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.8578420977199839,
+   "dose_att": 0.7478758927344288,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1409.3742639350849
+  },
+  "main|chong_0.1_x1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.9474146759392277,
+   "dose_att": 0.8538451259608169,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1541.0197140164987
+  },
+  "main|chong_0.1_x1.5": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.9947219234217557,
+   "dose_att": 0.9770798165221091,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1637.5936650033182
+  },
+  "main|early_rep_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.19683232769597825,
+   "dose_att": 0.0,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "main|late_rep_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.10139496412280072,
+   "dose_att": 0.12502242536666813,
+   "fragments_per_merged": 1.1377708978328174,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1.393576388888889
+  },
+  "main|base_fragments_per_merged": 1.1377708978328174,
+  "main|base_ratio_merged_over_T": 1.1496035233094197,
+  "main|base_ratio_observer_over_T": 1.2411330106565628,
+  "noadapt|gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.013127542980857929,
+   "dose_att": 0.9992378139752744,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "noadapt|gated_lat_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.0005859940906539765,
+   "dose_att": 0.8487722720472389,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "noadapt|rep_gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.22595441640967862,
+   "dose_att": 0.7400473454004659,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 181.41496563866775
+  },
+  "noadapt|ungated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 1027.9573442705816
+  },
+  "noadapt|win_0.2_0-0.25": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.1799981103244695,
+   "dose_att": 0.00019541432362300202,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 82.21552474652755
+  },
+  "noadapt|late_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.14826594685943317,
+   "dose_att": 0.00010561275573980727,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "noadapt|chong_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.31042711788209176,
+   "dose_att": 0.643923431814055,
+   "fragments_per_merged": 1.3391705069124424,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 268.6114409562574
+  },
+  "noadapt|base_fragments_per_merged": 1.3391705069124424,
+  "noadapt|base_ratio_merged_over_T": 1.42507006120658,
+  "noadapt|base_ratio_observer_over_T": 2.8096469160037483,
+  "highnoise|gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.03440643259153425,
+   "dose_att": 0.9986826932948017,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "highnoise|gated_lat_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.001153386052994612,
+   "dose_att": 0.7458933234545921,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "highnoise|rep_gated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.3695814404249791,
+   "dose_att": 0.6338804024832294,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 152.67802345771096
+  },
+  "highnoise|ungated_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 404.4205397239772
+  },
+  "highnoise|win_0.2_0-0.25": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.18054278055600223,
+   "dose_att": 0.0003105691818391464,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 33.379221425158924
+  },
+  "highnoise|late_0.2": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.18606924254904014,
+   "dose_att": 0.00023795387053106298,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 0.0
+  },
+  "highnoise|chong_0.1": {
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mOB2": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_observer": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended_first_test": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "rB_dom": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.4728811219517942,
+   "dose_att": 0.5273536688368989,
+   "fragments_per_merged": 1.3798061185949893,
+   "out_of_rivalry": 0,
+   "realised_withdrawal_ms": 192.14419141770765
+  },
+  "highnoise|base_fragments_per_merged": 1.3798061185949893,
+  "highnoise|base_ratio_merged_over_T": 1.4159706366721165,
+  "highnoise|base_ratio_observer_over_T": 3.994773398010398
+ },
+ "sample": {
+  "n_main": 4,
+  "n_drawn": 12,
+  "n_na": 4,
+  "n_drawn_na": 8,
+  "median_T": 1488.9445932539684,
+  "median_dL_over_T": 0.9785650581006926,
+  "median_T_na": 888.0858345295431,
+  "n_hn": 4,
+  "n_drawn_hn": 4,
+  "median_T_hn": 356.0621963240914,
+  "dry_run": true,
+  "versions": {
+   "python": "3.13.16",
+   "numpy": "2.5.3",
+   "scipy": "1.18.1"
+  }
+ }
+}

@@ -1,0 +1,142 @@
+{
+ "handover": {
+  "H14_five_vs_hazard": [
+   118,
+   153
+  ],
+  "H14_late_vs_hazard": [
+   34,
+   47
+  ],
+  "H14_five_vs_dose": [
+   197,
+   200
+  ],
+  "H14_holds": true,
+  "H14_holds_vs_dose": true,
+  "H13": true,
+  "H17": true,
+  "H21_vs_dose": [
+   69,
+   92
+  ],
+  "H21_holds": true,
+  "H21_vs_hazard": [
+   5,
+   5,
+   127
+  ]
+ },
+ "hazard": {
+  "H14_five_vs_hazard": [
+   40,
+   153
+  ],
+  "H14_late_vs_hazard": [
+   15,
+   47
+  ],
+  "H14_five_vs_dose": [
+   151,
+   200
+  ],
+  "H14_holds": false,
+  "H14_holds_vs_dose": true,
+  "H13": true,
+  "H17": true,
+  "H21_vs_dose": [
+   52,
+   81
+  ],
+  "H21_holds": true,
+  "H21_vs_hazard": [
+   3,
+   3,
+   115
+  ]
+ },
+ "dose": {
+  "H14_five_vs_hazard": [
+   21,
+   153
+  ],
+  "H14_late_vs_hazard": [
+   10,
+   47
+  ],
+  "H14_five_vs_dose": [
+   27,
+   200
+  ],
+  "H14_holds": false,
+  "H14_holds_vs_dose": false,
+  "H13": false,
+  "H17": false,
+  "H21_vs_dose": [
+   21,
+   76
+  ],
+  "H21_holds": false,
+  "H21_vs_hazard": [
+   4,
+   6,
+   108
+  ]
+ },
+ "handover_offset": {
+  "H14_five_vs_hazard": [
+   144,
+   153
+  ],
+  "H14_late_vs_hazard": [
+   29,
+   47
+  ],
+  "H14_five_vs_dose": [
+   199,
+   200
+  ],
+  "H14_holds": true,
+  "H14_holds_vs_dose": true,
+  "H13": true,
+  "H17": true,
+  "H21_vs_dose": [
+   65,
+   81
+  ],
+  "H21_holds": true,
+  "H21_vs_hazard": [
+   3,
+   4,
+   119
+  ]
+ },
+ "hazard_offset": {
+  "H14_five_vs_hazard": [
+   79,
+   153
+  ],
+  "H14_late_vs_hazard": [
+   14,
+   47
+  ],
+  "H14_five_vs_dose": [
+   185,
+   200
+  ],
+  "H14_holds": false,
+  "H14_holds_vs_dose": true,
+  "H13": true,
+  "H17": true,
+  "H21_vs_dose": [
+   63,
+   81
+  ],
+  "H21_holds": true,
+  "H21_vs_hazard": [
+   6,
+   6,
+   116
+  ]
+ }
+}
