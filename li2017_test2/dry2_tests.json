@@ -1,0 +1,1125 @@
+{
+ "excluded": {
+  "windows_out_of_rivalry_or_no_dL": 0,
+  "chong_out_of_rivalry": 0
+ },
+ "H7_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H7_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H7_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H7": {
+  "holds": false
+ },
+ "H8_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H8_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H8_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H8": {
+  "holds": false
+ },
+ "H9_mBm": {
+  "k": 0,
+  "n": 0,
+  "ci": [
+   NaN,
+   NaN
+  ],
+  "median": NaN
+ },
+ "H9": {
+  "holds": false
+ },
+ "window_predictions_median": {
+  "dose_both": NaN,
+  "handover_early": NaN,
+  "handover_late": NaN,
+  "observed_early": NaN,
+  "observed_late": NaN
+ },
+ "H10": {
+  "label": "primary: ungated distribution, seeds 0-3 / 4-7, isotonic",
+  "k": 0,
+  "n": 0,
+  "ci": [
+   NaN,
+   NaN
+  ],
+  "holds_b": false,
+  "partial_rho": NaN,
+  "p_one_sided": NaN,
+  "n_partial": 0,
+  "holds_a": false,
+  "n_excluded_no_prediction": 4,
+  "n_excluded_gated_not_positive": 0,
+  "n_not_separated": 0,
+  "n_censored_ambiguous": 0,
+  "n_censored": 0,
+  "median_obs": NaN,
+  "median_pred_handover": NaN,
+  "median_pred_dose": NaN,
+  "per_config": {
+   "dpred": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "ddose": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "dobs": [
+    null,
+    null,
+    null,
+    null
+   ]
+  }
+ },
+ "H10a": {
+  "holds": false
+ },
+ "H10b": {
+  "holds": false
+ },
+ "H10_sensitivity": [
+  {
+   "label": "baseline distribution",
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds_b": false,
+   "partial_rho": NaN,
+   "p_one_sided": NaN,
+   "n_partial": 0,
+   "holds_a": false,
+   "n_excluded_no_prediction": 4,
+   "n_excluded_gated_not_positive": 0,
+   "n_not_separated": 0,
+   "n_censored_ambiguous": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN
+  },
+  {
+   "label": "all seeds, no split",
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds_b": false,
+   "partial_rho": NaN,
+   "p_one_sided": NaN,
+   "n_partial": 0,
+   "holds_a": false,
+   "n_excluded_no_prediction": 4,
+   "n_excluded_gated_not_positive": 0,
+   "n_not_separated": 0,
+   "n_censored_ambiguous": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN
+  },
+  {
+   "label": "raw crossing (no isotonic fit)",
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds_b": false,
+   "partial_rho": NaN,
+   "p_one_sided": NaN,
+   "n_partial": 0,
+   "holds_a": false,
+   "n_excluded_no_prediction": 4,
+   "n_excluded_gated_not_positive": 0,
+   "n_not_separated": 0,
+   "n_censored_ambiguous": 0,
+   "n_censored": 0,
+   "median_obs": NaN,
+   "median_pred_handover": NaN,
+   "median_pred_dose": NaN
+  }
+ ],
+ "H11_mBm": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H11_mB": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H11_mBabs": {
+  "k": 0,
+  "n": 4,
+  "ci": [
+   0.0,
+   0.48990002040399916
+  ],
+  "median": 0.0
+ },
+ "H11": {
+  "holds": false
+ },
+ "H11_sensitivity_input_le_0.5": {
+  "k": 0,
+  "n": 2,
+  "ci": [
+   0.0,
+   0.6576280471103807
+  ],
+  "median": 0.0
+ },
+ "H12": {
+  "noadapt_gated": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "noadapt_ungated": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "noadapt_attended": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.48990002040399916
+   ],
+   "median": 0.0
+  },
+  "median_main": 0.0,
+  "mw_p": 1.0,
+  "holds": false
+ },
+ "descriptive": {
+  "main|gated_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.003626155320481264,
+   "dose_att": 0.9997028479801815,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|ungated_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|early_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.2094786496029185,
+   "dose_att": 3.6303567349715095e-05,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|late_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.2157547708783079,
+   "dose_att": 0.00019647597384926484,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.18635669238689506,
+   "dose_att": 0.9997833965431772,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x0.35": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.30907736392862784,
+   "dose_att": 0.9997883026633317,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x0.5": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.4303443006425282,
+   "dose_att": 0.9997932813250484,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x0.65": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.5459789929067171,
+   "dose_att": 0.9998010261041598,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x0.8": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.6555460721440813,
+   "dose_att": 0.9998034128757171,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x1": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.7886411289156385,
+   "dose_att": 0.9998335114937973,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x1.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.8892262258452008,
+   "dose_att": 0.9998805445168389,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x1.6": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.9813674731418971,
+   "dose_att": 0.9999644871046143,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|offset_0.2_x2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.996477466917896,
+   "dose_att": 0.9999947319200259,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|chong_1": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.303584115130087,
+   "dose_att": 0.7210720016463291,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|chong_1_x0.5": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.6754486904809451,
+   "dose_att": 0.7419809044013587,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|chong_1_x1": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.9290599424734071,
+   "dose_att": 0.8619421982694064,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|early_rep_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.1973186204000189,
+   "dose_att": 0.0014660307465188295,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|late_rep_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.11767895459634663,
+   "dose_att": 0.10864964391692765,
+   "fragments_per_merged": 1.1578282828282829,
+   "out_of_rivalry": 0
+  },
+  "main|base_fragments_per_merged": 1.1578282828282829,
+  "noadapt|gated_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 0.011853069515392464,
+   "dose_att": 0.9992060520971422,
+   "fragments_per_merged": 1.3073344280240833,
+   "out_of_rivalry": 0
+  },
+  "noadapt|ungated_0.2": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "attended": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.48990002040399916
+    ],
+    "median": 0.0
+   },
+   "dose_comp": 1.0,
+   "dose_att": 1.0,
+   "fragments_per_merged": 1.3073344280240833,
+   "out_of_rivalry": 0
+  },
+  "noadapt|base_fragments_per_merged": 1.3073344280240833
+ },
+ "sample": {
+  "n_main": 4,
+  "n_drawn": 8,
+  "n_na": 4,
+  "n_drawn_na": 4,
+  "median_T": 1684.3546006944443,
+  "median_dL_over_T": 1.0212627781853967,
+  "dry_run": true
+ }
+}
