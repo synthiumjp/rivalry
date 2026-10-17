@@ -1,0 +1,467 @@
+{
+ "mBm": {
+  "L1": {
+   "late_gt_early": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_early": 0.0,
+   "median_late": 0.0,
+   "holds": false
+  },
+  "L2": {
+   "late_lengthens": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "L3": {
+   "late_gt_late_without_transition": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_late": 0.0,
+   "median_late_nt": 0.0,
+   "duty_late": 0.2442302256822586,
+   "duty_late_nt": 0.239020437002182,
+   "holds": false
+  },
+  "L4": {
+   "positions": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+   ],
+   "observed": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "kernel": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "sum_ratio": NaN,
+   "profile_r": NaN,
+   "n": 0,
+   "holds": false
+  },
+  "reported": {
+   "per_unit_duty": {
+    "late_gt_early": [
+     0,
+     4
+    ],
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median_early": 0.0,
+    "median_late": 0.0
+   },
+   "attended_change": {
+    "att_early_0.1": 0.0,
+    "att_late_0.1": 0.0,
+    "att_late_nt_0.1": 0.0,
+    "gated_0.1": 0.0
+   },
+   "live": 0.0,
+   "live_lengthen": [
+    0,
+    4
+   ],
+   "ratio_late_live": NaN,
+   "ratio_early_live": NaN,
+   "continuous": NaN,
+   "continuous_pred": NaN,
+   "gated_pred": NaN,
+   "duty": {
+    "gated_0.1": 0.5098345875740051,
+    "att_early_0.1": 0.24401023983955383,
+    "att_late_0.1": 0.2442302256822586,
+    "att_late_nt_0.1": 0.239020437002182,
+    "ungated_0.1": 1.0,
+    "pulse_0.1_0-0.125": 0.03810347616672516,
+    "pulse_0.1_0.25-0.125": 0.0478780847042799,
+    "pulse_0.1_0.5-0.125": 0.04790308326482773,
+    "pulse_0.1_0.75-0.125": 0.04420323111116886,
+    "pulse_0.1_1-0.125": 0.03412863612174988,
+    "pulse_0.1_1.25-0.125": 0.020934161730110645
+   },
+   "n_split": 4,
+   "n_kernel": 0
+  }
+ },
+ "mOB": {
+  "L1": {
+   "late_gt_early": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_early": 0.0,
+   "median_late": 0.0,
+   "holds": false
+  },
+  "L2": {
+   "late_lengthens": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "L3": {
+   "late_gt_late_without_transition": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_late": 0.0,
+   "median_late_nt": 0.0,
+   "duty_late": 0.2442302256822586,
+   "duty_late_nt": 0.239020437002182,
+   "holds": false
+  },
+  "L4": {
+   "positions": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+   ],
+   "observed": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "kernel": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "sum_ratio": NaN,
+   "profile_r": NaN,
+   "n": 0,
+   "holds": false
+  },
+  "reported": {
+   "per_unit_duty": {
+    "late_gt_early": [
+     0,
+     4
+    ],
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median_early": 0.0,
+    "median_late": 0.0
+   },
+   "attended_change": {
+    "att_early_0.1": 0.0,
+    "att_late_0.1": 0.0,
+    "att_late_nt_0.1": 0.0,
+    "gated_0.1": 0.0
+   },
+   "live": 0.0,
+   "live_lengthen": [
+    0,
+    4
+   ],
+   "ratio_late_live": NaN,
+   "ratio_early_live": NaN,
+   "continuous": NaN,
+   "continuous_pred": NaN,
+   "gated_pred": NaN,
+   "duty": {
+    "gated_0.1": 0.5098345875740051,
+    "att_early_0.1": 0.24401023983955383,
+    "att_late_0.1": 0.2442302256822586,
+    "att_late_nt_0.1": 0.239020437002182,
+    "ungated_0.1": 1.0,
+    "pulse_0.1_0-0.125": 0.03810347616672516,
+    "pulse_0.1_0.25-0.125": 0.0478780847042799,
+    "pulse_0.1_0.5-0.125": 0.04790308326482773,
+    "pulse_0.1_0.75-0.125": 0.04420323111116886,
+    "pulse_0.1_1-0.125": 0.03412863612174988,
+    "pulse_0.1_1.25-0.125": 0.020934161730110645
+   },
+   "n_split": 4,
+   "n_kernel": 0
+  }
+ },
+ "mB": {
+  "L1": {
+   "late_gt_early": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_early": 0.0,
+   "median_late": 0.0,
+   "holds": false
+  },
+  "L2": {
+   "late_lengthens": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "L3": {
+   "late_gt_late_without_transition": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_late": 0.0,
+   "median_late_nt": 0.0,
+   "duty_late": 0.2442302256822586,
+   "duty_late_nt": 0.239020437002182,
+   "holds": false
+  },
+  "L4": {
+   "positions": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+   ],
+   "observed": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "kernel": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "sum_ratio": NaN,
+   "profile_r": NaN,
+   "n": 0,
+   "holds": false
+  },
+  "reported": {
+   "per_unit_duty": {
+    "late_gt_early": [
+     0,
+     4
+    ],
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median_early": 0.0,
+    "median_late": 0.0
+   },
+   "attended_change": {
+    "att_early_0.1": 0.0,
+    "att_late_0.1": 0.0,
+    "att_late_nt_0.1": 0.0,
+    "gated_0.1": 0.0
+   },
+   "live": 0.0,
+   "live_lengthen": [
+    0,
+    4
+   ],
+   "ratio_late_live": NaN,
+   "ratio_early_live": NaN,
+   "continuous": NaN,
+   "continuous_pred": NaN,
+   "gated_pred": NaN,
+   "duty": {
+    "gated_0.1": 0.5098345875740051,
+    "att_early_0.1": 0.24401023983955383,
+    "att_late_0.1": 0.2442302256822586,
+    "att_late_nt_0.1": 0.239020437002182,
+    "ungated_0.1": 1.0,
+    "pulse_0.1_0-0.125": 0.03810347616672516,
+    "pulse_0.1_0.25-0.125": 0.0478780847042799,
+    "pulse_0.1_0.5-0.125": 0.04790308326482773,
+    "pulse_0.1_0.75-0.125": 0.04420323111116886,
+    "pulse_0.1_1-0.125": 0.03412863612174988,
+    "pulse_0.1_1.25-0.125": 0.020934161730110645
+   },
+   "n_split": 4,
+   "n_kernel": 0
+  }
+ },
+ "mBabs": {
+  "L1": {
+   "late_gt_early": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_early": 0.0,
+   "median_late": 0.0,
+   "holds": false
+  },
+  "L2": {
+   "late_lengthens": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "L3": {
+   "late_gt_late_without_transition": [
+    0,
+    4
+   ],
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "median_late": 0.0,
+   "median_late_nt": 0.0,
+   "duty_late": 0.2442302256822586,
+   "duty_late_nt": 0.239020437002182,
+   "holds": false
+  },
+  "L4": {
+   "positions": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.0,
+    1.25
+   ],
+   "observed": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "kernel": [
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN,
+    NaN
+   ],
+   "sum_ratio": NaN,
+   "profile_r": NaN,
+   "n": 0,
+   "holds": false
+  },
+  "reported": {
+   "per_unit_duty": {
+    "late_gt_early": [
+     0,
+     4
+    ],
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median_early": 0.0,
+    "median_late": 0.0
+   },
+   "attended_change": {
+    "att_early_0.1": 0.0,
+    "att_late_0.1": 0.0,
+    "att_late_nt_0.1": 0.0,
+    "gated_0.1": 0.0
+   },
+   "live": 0.0,
+   "live_lengthen": [
+    0,
+    4
+   ],
+   "ratio_late_live": NaN,
+   "ratio_early_live": NaN,
+   "continuous": NaN,
+   "continuous_pred": NaN,
+   "gated_pred": NaN,
+   "duty": {
+    "gated_0.1": 0.5098345875740051,
+    "att_early_0.1": 0.24401023983955383,
+    "att_late_0.1": 0.2442302256822586,
+    "att_late_nt_0.1": 0.239020437002182,
+    "ungated_0.1": 1.0,
+    "pulse_0.1_0-0.125": 0.03810347616672516,
+    "pulse_0.1_0.25-0.125": 0.0478780847042799,
+    "pulse_0.1_0.5-0.125": 0.04790308326482773,
+    "pulse_0.1_0.75-0.125": 0.04420323111116886,
+    "pulse_0.1_1-0.125": 0.03412863612174988,
+    "pulse_0.1_1.25-0.125": 0.020934161730110645
+   },
+   "n_split": 4,
+   "n_kernel": 0
+  }
+ },
+ "n_config": 4
+}
