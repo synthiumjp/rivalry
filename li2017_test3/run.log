@@ -1,0 +1,33 @@
+  [main] accepted 17/200 of 25 drawn
+  [main] accepted 32/200 of 50 drawn
+  [main] accepted 50/200 of 75 drawn
+  [main] accepted 66/200 of 100 drawn
+  [main] accepted 85/200 of 125 drawn
+  [main] accepted 102/200 of 150 drawn
+  [main] accepted 119/200 of 175 drawn
+  [main] accepted 139/200 of 200 drawn
+  [main] accepted 156/200 of 225 drawn
+  [main] accepted 175/200 of 250 drawn
+  [main] accepted 194/200 of 275 drawn
+  [main] accepted 200/200 of 300 drawn
+  [noadapt] accepted 25/100 of 25 drawn
+  [noadapt] accepted 50/100 of 50 drawn
+  [noadapt] accepted 75/100 of 75 drawn
+  [noadapt] accepted 100/100 of 100 drawn
+  [highnoise] accepted 25/50 of 25 drawn
+  [highnoise] accepted 50/50 of 50 drawn
+  [main] chunk 1/8 [3208s]
+  [main] chunk 2/8 [3222s]
+  [main] chunk 3/8 [5067s]
+  [main] chunk 4/8 [5084s]
+  [main] chunk 5/8 [6954s]
+  [main] chunk 6/8 [6987s]
+  [main] chunk 7/8 [8856s]
+  [main] chunk 8/8 [8920s]
+  [noadapt] chunk 1/4 [9699s]
+  [noadapt] chunk 2/4 [9700s]
+  [noadapt] chunk 3/4 [10473s]
+  [noadapt] chunk 4/4 [10474s]
+  [highnoise] chunk 1/2 [11249s]
+  [highnoise] chunk 2/2 [11249s]
+wrote li2017_test3_results.json [11252s]

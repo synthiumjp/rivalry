@@ -1,0 +1,515 @@
+{
+ "test3_windows_mOB": {
+  "label": "third test, five windows, mOB, H14 inclusion set (in rivalry, e > 0)",
+  "n": 195,
+  "best": {
+   "finite shift": 103,
+   "finite hazard": 10,
+   "dose": 65,
+   "first-order handover": 0,
+   "first-order hazard": 17
+  },
+  "median_sse": {
+   "finite shift": 378.23110693740745,
+   "finite hazard": 847.8833308257141,
+   "dose": 574.0881484984935,
+   "first-order handover": 940.8917192738663,
+   "first-order hazard": 679.8961911996241
+  },
+  "observed_median": [
+   -0.29,
+   -2.09,
+   -19.77,
+   -23.12,
+   -16.01
+  ],
+  "predicted_median": {
+   "finite shift": [
+    -5.75,
+    -15.88,
+    -27.15,
+    -26.05,
+    -18.89
+   ],
+   "finite hazard": [
+    -23.66,
+    -5.77,
+    -10.02,
+    -19.8,
+    -15.74
+   ],
+   "dose": [
+    -10.21,
+    -9.88,
+    -9.51,
+    -8.43,
+    -10.08
+   ],
+   "first-order handover": [
+    -2.55,
+    -0.66,
+    -2.08,
+    -8.34,
+    -33.77
+   ],
+   "first-order hazard": [
+    -8.45,
+    -1.68,
+    -3.68,
+    -9.78,
+    -23.53
+   ]
+  }
+ },
+ "test3_windows_mBm": {
+  "label": "third test, five windows, mBm, H14 inclusion set (in rivalry, e > 0)",
+  "n": 195,
+  "best": {
+   "finite shift": 136,
+   "finite hazard": 11,
+   "dose": 47,
+   "first-order handover": 0,
+   "first-order hazard": 1
+  },
+  "median_sse": {
+   "finite shift": 235.44756515019893,
+   "finite hazard": 885.1695285611326,
+   "dose": 760.336787146826,
+   "first-order handover": 1239.8337569340538,
+   "first-order hazard": 969.4440838463343
+  },
+  "observed_median": [
+   -1.18,
+   -5.96,
+   -24.55,
+   -25.25,
+   -17.09
+  ],
+  "predicted_median": {
+   "finite shift": [
+    -5.75,
+    -15.88,
+    -27.15,
+    -26.05,
+    -18.89
+   ],
+   "finite hazard": [
+    -23.66,
+    -5.77,
+    -10.02,
+    -19.8,
+    -15.74
+   ],
+   "dose": [
+    -10.21,
+    -9.88,
+    -9.51,
+    -8.43,
+    -10.08
+   ],
+   "first-order handover": [
+    -2.55,
+    -0.66,
+    -2.08,
+    -8.34,
+    -33.77
+   ],
+   "first-order hazard": [
+    -8.45,
+    -1.68,
+    -3.68,
+    -9.78,
+    -23.53
+   ]
+  }
+ },
+ "test3_windows_mB": {
+  "label": "third test, five windows, mB, H14 inclusion set (in rivalry, e > 0)",
+  "n": 195,
+  "best": {
+   "finite shift": 159,
+   "finite hazard": 24,
+   "dose": 12,
+   "first-order handover": 0,
+   "first-order hazard": 0
+  },
+  "median_sse": {
+   "finite shift": 348.36777570682216,
+   "finite hazard": 890.5478966214221,
+   "dose": 1258.8074863195297,
+   "first-order handover": 2232.7132913388173,
+   "first-order hazard": 1693.865299083026
+  },
+  "observed_median": [
+   -16.37,
+   -14.8,
+   -32.76,
+   -27.91,
+   -15.54
+  ],
+  "predicted_median": {
+   "finite shift": [
+    -5.75,
+    -15.88,
+    -27.15,
+    -26.05,
+    -18.89
+   ],
+   "finite hazard": [
+    -23.66,
+    -5.77,
+    -10.02,
+    -19.8,
+    -15.74
+   ],
+   "dose": [
+    -10.21,
+    -9.88,
+    -9.51,
+    -8.43,
+    -10.08
+   ],
+   "first-order handover": [
+    -2.55,
+    -0.66,
+    -2.08,
+    -8.34,
+    -33.77
+   ],
+   "first-order hazard": [
+    -8.45,
+    -1.68,
+    -3.68,
+    -9.78,
+    -23.53
+   ]
+  }
+ },
+ "test3_windows_mBabs": {
+  "label": "third test, five windows, mBabs, H14 inclusion set (in rivalry, e > 0)",
+  "n": 195,
+  "best": {
+   "finite shift": 53,
+   "finite hazard": 136,
+   "dose": 6,
+   "first-order handover": 0,
+   "first-order hazard": 0
+  },
+  "median_sse": {
+   "finite shift": 1256.165906892604,
+   "finite hazard": 1027.5896579301987,
+   "dose": 1949.77663231601,
+   "first-order handover": 3175.5434764004917,
+   "first-order hazard": 2338.3373539748113
+  },
+  "observed_median": [
+   -38.72,
+   -13.39,
+   -32.36,
+   -28.63,
+   -17.8
+  ],
+  "predicted_median": {
+   "finite shift": [
+    -5.75,
+    -15.88,
+    -27.15,
+    -26.05,
+    -18.89
+   ],
+   "finite hazard": [
+    -23.66,
+    -5.77,
+    -10.02,
+    -19.8,
+    -15.74
+   ],
+   "dose": [
+    -10.21,
+    -9.88,
+    -9.51,
+    -8.43,
+    -10.08
+   ],
+   "first-order handover": [
+    -2.55,
+    -0.66,
+    -2.08,
+    -8.34,
+    -33.77
+   ],
+   "first-order hazard": [
+    -8.45,
+    -1.68,
+    -3.68,
+    -9.78,
+    -23.53
+   ]
+  }
+ },
+ "test3_change_per_unit_dose_mOB": {
+  "win_0.2_0-0.25": -1.199402552615883,
+  "win_0.2_0.25-0.5": -11.089930520538836,
+  "win_0.2_0.5-0.75": -112.36080857886898,
+  "win_0.2_0.75-1": -207.85138118615004,
+  "late_0.2": -273.0895764095095
+ },
+ "test3_holds_mOB": {
+  "label": "third test, hold curve (holds 0.25 to 1.5 T; no-hold value used as anchor), mOB",
+  "n": 200,
+  "best": {
+   "finite shift": 19,
+   "finite hazard": 5,
+   "dose": 0,
+   "first-order handover": 160,
+   "first-order hazard": 16
+  },
+  "median_sse": {
+   "finite shift": 138.78610481735714,
+   "finite hazard": 177.59948410045746,
+   "dose": 266.61340085925985,
+   "first-order handover": 44.651057580709626,
+   "first-order hazard": 109.88780946922782
+  },
+  "observed_median": [
+   9.72,
+   5.23,
+   -7.21,
+   -14.94,
+   -17.37
+  ],
+  "predicted_median": {
+   "finite shift": [
+    5.5,
+    -2.25,
+    -10.01,
+    -14.59,
+    -16.74
+   ],
+   "finite hazard": [
+    6.92,
+    2.67,
+    -4.94,
+    -8.04,
+    -8.7
+   ],
+   "dose": [
+    3.36,
+    -1.95,
+    -6.8,
+    -9.72,
+    -11.73
+   ],
+   "first-order handover": [
+    7.79,
+    3.8,
+    -6.54,
+    -13.23,
+    -16.37
+   ],
+   "first-order hazard": [
+    7.25,
+    2.15,
+    -5.81,
+    -10.02,
+    -11.47
+   ]
+  }
+ },
+ "test3_holds_mBm": {
+  "label": "third test, hold curve (holds 0.25 to 1.5 T; no-hold value used as anchor), mBm",
+  "n": 200,
+  "best": {
+   "finite shift": 36,
+   "finite hazard": 21,
+   "dose": 6,
+   "first-order handover": 105,
+   "first-order hazard": 32
+  },
+  "median_sse": {
+   "finite shift": 114.25180700345922,
+   "finite hazard": 137.40891121163742,
+   "dose": 214.40105061970414,
+   "first-order handover": 49.345457204147635,
+   "first-order hazard": 81.03091519490877
+  },
+  "observed_median": [
+   6.15,
+   1.09,
+   -11.11,
+   -16.97,
+   -18.69
+  ],
+  "predicted_median": {
+   "finite shift": [
+    2.78,
+    -4.55,
+    -12.85,
+    -17.13,
+    -19.69
+   ],
+   "finite hazard": [
+    4.74,
+    0.39,
+    -8.05,
+    -11.01,
+    -12.04
+   ],
+   "dose": [
+    0.71,
+    -4.88,
+    -9.69,
+    -12.59,
+    -14.52
+   ],
+   "first-order handover": [
+    5.53,
+    0.95,
+    -10.51,
+    -16.87,
+    -19.62
+   ],
+   "first-order hazard": [
+    4.69,
+    -0.8,
+    -9.48,
+    -13.19,
+    -14.7
+   ]
+  }
+ },
+ "test2_windows_mBm": {
+  "label": "second test, early and late windows, merged scoring",
+  "n": 197,
+  "best": {
+   "finite shift": 134,
+   "finite hazard": 7,
+   "dose": 37,
+   "first-order handover": 3,
+   "first-order hazard": 16
+  },
+  "median_sse": {
+   "finite shift": 35.354118185546646,
+   "finite hazard": 509.2201724734956,
+   "dose": 158.59901348069286,
+   "first-order handover": 328.40543309095375,
+   "first-order hazard": 160.76464002938138
+  },
+  "observed_median": [
+   -0.52,
+   -16.71
+  ],
+  "predicted_median": {
+   "finite shift": [
+    -5.94,
+    -18.97
+   ],
+   "finite hazard": [
+    -23.59,
+    -15.76
+   ],
+   "dose": [
+    -10.23,
+    -10.16
+   ],
+   "first-order handover": [
+    -2.52,
+    -33.43
+   ],
+   "first-order hazard": [
+    -8.27,
+    -23.94
+   ]
+  }
+ },
+ "test2_delayed_withdrawal_mBm": {
+  "label": "second test, delayed withdrawal (9 delays), merged scoring; gated change s added to each account; first-order accounts use the continuous-delivery distribution, as registered for H10 (under calibration e the first-order handover row is the H10 formula)",
+  "n": 197,
+  "best": {
+   "finite shift": 4,
+   "finite hazard": 1,
+   "dose": 7,
+   "first-order handover": 174,
+   "first-order hazard": 11
+  },
+  "median_sse": {
+   "finite shift": 766.159011032127,
+   "finite hazard": 1995.591459385543,
+   "dose": 781.3398831107429,
+   "first-order handover": 92.42416241688723,
+   "first-order hazard": 756.3015157557768
+  },
+  "observed_median": [
+   9.65,
+   10.09,
+   10.2,
+   5.17,
+   -6.59,
+   -22.92,
+   -29.34,
+   -31.52,
+   -31.56
+  ],
+  "predicted_median": {
+   "finite shift": [
+    10.7,
+    6.2,
+    -1.58,
+    -10.76,
+    -18.33,
+    -25.91,
+    -29.07,
+    -31.39,
+    -31.68
+   ],
+   "finite hazard": [
+    -6.32,
+    -8.88,
+    -11.41,
+    -16.19,
+    -21.12,
+    -28.97,
+    -31.21,
+    -31.68,
+    -31.68
+   ],
+   "dose": [
+    7.48,
+    1.71,
+    -4.34,
+    -10.01,
+    -15.25,
+    -21.57,
+    -26.3,
+    -30.51,
+    -31.55
+   ],
+   "first-order handover": [
+    11.08,
+    10.21,
+    8.59,
+    4.07,
+    -6.11,
+    -21.57,
+    -28.47,
+    -31.66,
+    -31.68
+   ],
+   "first-order hazard": [
+    1.97,
+    -0.42,
+    -3.15,
+    -8.98,
+    -17.67,
+    -27.16,
+    -30.41,
+    -31.68,
+    -31.68
+   ]
+  }
+ },
+ "calibration": {
+  "test3_median_delta_over_T": 0.5717995689219306,
+  "test3_median_k": 5.616169964553595
+ }
+}
