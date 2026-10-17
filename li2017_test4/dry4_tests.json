@@ -1,0 +1,570 @@
+{
+ "mBm": {
+  "K1": {
+   "0.05": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "0.1": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "holds": false
+  },
+  "K2": {
+   "0.5-0.75": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "late": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "holds": false,
+   "profile_5": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   },
+   "profile_20": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   }
+  },
+  "K3": {
+   "median_obs": NaN,
+   "median_pred": NaN,
+   "lengthen": [
+    0,
+    0
+   ],
+   "ci_lengthen": [
+    NaN,
+    NaN
+   ],
+   "exceeds_pred": [
+    0,
+    0
+   ],
+   "ci_exceeds": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K4": {
+   "median_yoked": NaN,
+   "median_pred_yoked": NaN,
+   "median_q": 0.5041998320067198,
+   "closer_to_kernel": [
+    0,
+    0
+   ],
+   "ci_closer": [
+    NaN,
+    NaN
+   ],
+   "live_exceeds": [
+    0,
+    0
+   ],
+   "ci_live": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K5": {
+   "per_unit_5": 0.0,
+   "per_unit_10": 0.0,
+   "per_unit_20": 0.0,
+   "n": 4,
+   "ratio": NaN,
+   "holds": false
+  }
+ },
+ "mOB": {
+  "K1": {
+   "0.05": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "0.1": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "holds": false
+  },
+  "K2": {
+   "0.5-0.75": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "late": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "holds": false,
+   "profile_5": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   },
+   "profile_20": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   }
+  },
+  "K3": {
+   "median_obs": NaN,
+   "median_pred": NaN,
+   "lengthen": [
+    0,
+    0
+   ],
+   "ci_lengthen": [
+    NaN,
+    NaN
+   ],
+   "exceeds_pred": [
+    0,
+    0
+   ],
+   "ci_exceeds": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K4": {
+   "median_yoked": NaN,
+   "median_pred_yoked": NaN,
+   "median_q": 0.5041998320067198,
+   "closer_to_kernel": [
+    0,
+    0
+   ],
+   "ci_closer": [
+    NaN,
+    NaN
+   ],
+   "live_exceeds": [
+    0,
+    0
+   ],
+   "ci_live": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K5": {
+   "per_unit_5": 0.0,
+   "per_unit_10": 0.0,
+   "per_unit_20": 0.0,
+   "n": 4,
+   "ratio": NaN,
+   "holds": false
+  }
+ },
+ "mB": {
+  "K1": {
+   "0.05": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "0.1": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "holds": false
+  },
+  "K2": {
+   "0.5-0.75": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "late": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "holds": false,
+   "profile_5": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   },
+   "profile_20": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   }
+  },
+  "K3": {
+   "median_obs": NaN,
+   "median_pred": NaN,
+   "lengthen": [
+    0,
+    0
+   ],
+   "ci_lengthen": [
+    NaN,
+    NaN
+   ],
+   "exceeds_pred": [
+    0,
+    0
+   ],
+   "ci_exceeds": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K4": {
+   "median_yoked": NaN,
+   "median_pred_yoked": NaN,
+   "median_q": 0.5041998320067198,
+   "closer_to_kernel": [
+    0,
+    0
+   ],
+   "ci_closer": [
+    NaN,
+    NaN
+   ],
+   "live_exceeds": [
+    0,
+    0
+   ],
+   "ci_live": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K5": {
+   "per_unit_5": 0.0,
+   "per_unit_10": 0.0,
+   "per_unit_20": 0.0,
+   "n": 4,
+   "ratio": NaN,
+   "holds": false
+  }
+ },
+ "mBabs": {
+  "K1": {
+   "0.05": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "0.1": {
+    "median_obs": NaN,
+    "median_pred": NaN,
+    "ratio": NaN,
+    "within25": 0,
+    "n": 0,
+    "spearman": NaN
+   },
+   "holds": false
+  },
+  "K2": {
+   "0.5-0.75": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "late": {
+    "R5": NaN,
+    "R20": NaN,
+    "diff": null,
+    "boot_lo": -Infinity,
+    "holds": false
+   },
+   "holds": false,
+   "profile_5": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   },
+   "profile_20": {
+    "0-0.25": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.25-0.5": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.5-0.75": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "0.75-1": {
+     "obs": 0.0,
+     "pred": NaN
+    },
+    "late": {
+     "obs": 0.0,
+     "pred": NaN
+    }
+   }
+  },
+  "K3": {
+   "median_obs": NaN,
+   "median_pred": NaN,
+   "lengthen": [
+    0,
+    0
+   ],
+   "ci_lengthen": [
+    NaN,
+    NaN
+   ],
+   "exceeds_pred": [
+    0,
+    0
+   ],
+   "ci_exceeds": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K4": {
+   "median_yoked": NaN,
+   "median_pred_yoked": NaN,
+   "median_q": 0.5041998320067198,
+   "closer_to_kernel": [
+    0,
+    0
+   ],
+   "ci_closer": [
+    NaN,
+    NaN
+   ],
+   "live_exceeds": [
+    0,
+    0
+   ],
+   "ci_live": [
+    NaN,
+    NaN
+   ],
+   "holds": false
+  },
+  "K5": {
+   "per_unit_5": 0.0,
+   "per_unit_10": 0.0,
+   "per_unit_20": 0.0,
+   "n": 4,
+   "ratio": NaN,
+   "holds": false
+  }
+ },
+ "K6": {
+  "median_share": NaN,
+  "n": 0,
+  "holds": false
+ },
+ "kernel_profile": {
+  "bins": [
+   0.0,
+   0.125,
+   0.25,
+   0.375,
+   0.5,
+   0.625,
+   0.75,
+   0.875,
+   1.0,
+   1.125,
+   1.25,
+   1.375,
+   1.5,
+   1.625,
+   1.75,
+   1.875,
+   2.0,
+   2.125,
+   2.25,
+   2.375,
+   2.5,
+   2.625,
+   2.75,
+   2.875
+  ],
+  "n": 0,
+  "median_pct_per_10pct": null
+ },
+ "n_config": 4
+}
