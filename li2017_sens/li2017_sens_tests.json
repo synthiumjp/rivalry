@@ -1,0 +1,298 @@
+{
+ "L": {
+  "n_config": 60,
+  "n_drawn": 90,
+  "rejected": {
+   "few_episodes": 5,
+   "cv": 21
+  },
+  "mBm": {
+   "S1_gated_lengthens": {
+    "k": 55,
+    "n": 60,
+    "ci": [
+     0.8193105788446039,
+     0.9638795436268733
+    ],
+    "median": 7.392453982752571,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -21.184196315946604,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mOB": {
+   "S1_gated_lengthens": {
+    "k": 47,
+    "n": 60,
+    "ci": [
+     0.6637997232345094,
+     0.8687695600460952
+    ],
+    "median": 2.33182548639378,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -20.158678252180643,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mB": {
+   "S1_gated_lengthens": {
+    "k": 59,
+    "n": 60,
+    "ci": [
+     0.9114487018291041,
+     0.9970518402378096
+    ],
+    "median": 15.747736842683418,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -20.472313029235565,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mBabs": {
+   "S1_gated_lengthens": {
+    "k": 55,
+    "n": 60,
+    "ci": [
+     0.8193105788446039,
+     0.9638795436268733
+    ],
+    "median": 13.398664774410141,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 59,
+    "n": 60,
+    "ci": [
+     0.9114487018291041,
+     0.9970518402378096
+    ],
+    "median": -20.077074948318582,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 59,
+    "n": 60,
+    "ci": [
+     0.9114487018291041,
+     0.9970518402378096
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  }
+ },
+ "U": {
+  "n_config": 60,
+  "n_drawn": 60,
+  "rejected": {
+   "few_episodes": 0,
+   "cv": 0
+  },
+  "mBm": {
+   "S1_gated_lengthens": {
+    "k": 59,
+    "n": 60,
+    "ci": [
+     0.9114487018291041,
+     0.9970518402378096
+    ],
+    "median": 8.6277041705181,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -19.63281219042902,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mOB": {
+   "S1_gated_lengthens": {
+    "k": 53,
+    "n": 60,
+    "ci": [
+     0.7782121187599428,
+     0.9423227939138165
+    ],
+    "median": 3.024923740804681,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -18.659249972402925,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mB": {
+   "S1_gated_lengthens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": 16.698826994163408,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -19.119171692451683,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mBabs": {
+   "S1_gated_lengthens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": 16.633125119768543,
+    "holds": true
+   },
+   "S2_continuous_shortens": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "median": -19.966629521715724,
+    "holds": true
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 60,
+    "n": 60,
+    "ci": [
+     0.9398281469657729,
+     1.0
+    ],
+    "holds": true
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  }
+ }
+}

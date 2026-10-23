@@ -1,0 +1,298 @@
+{
+ "L": {
+  "n_config": 4,
+  "n_drawn": 8,
+  "rejected": {
+   "few_episodes": 2,
+   "cv": 2
+  },
+  "mBm": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mOB": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mB": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mBabs": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  }
+ },
+ "U": {
+  "n_config": 4,
+  "n_drawn": 8,
+  "rejected": {
+   "few_episodes": 2,
+   "cv": 0
+  },
+  "mBm": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mOB": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mB": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  },
+  "mBabs": {
+   "S1_gated_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S2_continuous_shortens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "median": 0.0,
+    "holds": false
+   },
+   "S3_gated_exceeds_continuous": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "not_measurable": {
+    "gated": 0,
+    "continuous": 0
+   }
+  }
+ }
+}
