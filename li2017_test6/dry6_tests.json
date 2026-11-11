@@ -1,0 +1,1991 @@
+{
+ "li": {
+  "n_config": 4,
+  "n_drawn": 8,
+  "rejected": null,
+  "gated_lengthens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "continuous_shortens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "distribution_gated": {
+   "D1_median": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.09090909090909091,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 3.9,
+    "cond": 3.9
+   }
+  },
+  "distribution_continuous": {
+   "D1_median": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.09090909090909091,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 3,
+    "ci": [
+     0.0,
+     0.5614970356393196
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 3.9,
+    "cond": 3.9
+   }
+  },
+  "R1_live_gt_self": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R1_other_scorings": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "R1_per_unit_duty": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R2_self_gt_other_reported": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "replay_dose": {
+   "gated": {
+    "duty": 0.50095996260643,
+    "dose_comp": 0.0034682282986420133,
+    "dose_att": 0.9995881371794056,
+    "agree": 1.0
+   },
+   "replay_self": {
+    "duty": 0.50095996260643,
+    "dose_comp": 0.0034682282986420133,
+    "dose_att": 0.9995881371794056,
+    "agree": 1.0
+   },
+   "replay_other": {
+    "duty": 0.50095996260643,
+    "dose_comp": 0.47793301403134525,
+    "dose_att": 0.503923806165828,
+    "agree": 0.5371708333333333
+   }
+  },
+  "agreement": {
+   "base": 0.49820208333333327,
+   "gated": 1.0,
+   "ungated": 0.5017979166666666,
+   "replay_self": 1.0,
+   "replay_other": 0.5371708333333333,
+   "gated_nt3": 0.9585166666666667,
+   "gated_nt10": 0.8997375,
+   "gated_nt30": 0.7303458333333332,
+   "att_gated0.25": 1.0,
+   "att_gated0.5": 1.0,
+   "att_ungated0.25": 0.5017979166666666,
+   "att_ungated0.5": 0.5017979166666666
+  },
+  "replay_medians": {
+   "live": 0.0,
+   "self": 0.0,
+   "other": 0.0,
+   "self_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "other_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "replay_other_scorings": {
+   "mBm": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mOB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mBabs": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   }
+  },
+  "attended_change": {
+   "gated": 0.0,
+   "ungated": 0.0,
+   "replay_self": 0.0,
+   "replay_other": 0.0,
+   "gated_nt3": 0.0,
+   "gated_nt10": 0.0,
+   "gated_nt30": 0.0,
+   "att_gated0.25": 0.0,
+   "att_gated0.5": 0.0,
+   "att_ungated0.25": 0.0,
+   "att_ungated0.5": 0.0
+  },
+  "duty": {
+   "gated": 0.50095996260643,
+   "ungated": 1.0,
+   "replay_self": 0.50095996260643,
+   "replay_other": 0.50095996260643,
+   "gated_nt3": 0.45504678785800934,
+   "gated_nt10": 0.3967941254377365,
+   "gated_nt30": 0.21070658415555954,
+   "att_gated0.25": 0.50095996260643,
+   "att_gated0.5": 0.50095996260643,
+   "att_ungated0.25": 1.0,
+   "att_ungated0.5": 1.0
+  },
+  "T_median_ms": 1606.1991071428572,
+  "serial_base": {
+   "r_ab_median": 0.35275993243257336,
+   "r_ab_iqr": [
+    0.25106982968801445,
+    0.36839843491101665
+   ],
+   "r_ba_median": 0.3456626652131727,
+   "n_below_human": 1
+  },
+  "serial_vs_gated_within_model": {
+   "rho": NaN,
+   "n": 4
+  },
+  "serial_gated": {
+   "r_ab_median": 0.35275993243257336,
+   "change_median": 0.0
+  },
+  "W1_per_unit_duty": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "W1_total_reported": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "W1_other_scorings": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "withdrawal": {
+   "k3": {
+    "median": 0.0,
+    "lead_ms": 8.75,
+    "duty": 0.45504678785800934
+   },
+   "k10": {
+    "median": 0.0,
+    "lead_ms": 55.875,
+    "duty": 0.3967941254377365
+   },
+   "k30": {
+    "median": 0.0,
+    "lead_ms": 1043.5,
+    "duty": 0.21070658415555954
+   },
+   "live": {
+    "median": 0.0,
+    "lead_ms": 0.0,
+    "duty": 0.50095996260643
+   }
+  },
+  "withdrawal_other_scorings": {
+   "mBm": {
+    "k3": 0.0,
+    "k10": 0.0,
+    "k30": 0.0
+   },
+   "mOB": {
+    "k3": 0.0,
+    "k10": 0.0,
+    "k30": 0.0
+   },
+   "mB": {
+    "k3": 0.0,
+    "k10": 0.0,
+    "k30": 0.0
+   },
+   "mBabs": {
+    "k3": 0.0,
+    "k10": 0.0,
+    "k30": 0.0
+   }
+  },
+  "attention_layer": {
+   "0.25": {
+    "gated_lengthens": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     }
+    },
+    "continuous_shortens": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     }
+    },
+    "gated_gt_continuous": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "gated_gt_continuous_other_scorings": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     }
+    },
+    "attention_response": {
+     "base": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "att_gated0.25": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "att_ungated0.25": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "gated": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "ungated": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     }
+    },
+    "attended_gated": 0.0,
+    "attended_continuous": 0.0,
+    "distribution_gated": {
+     "D1_median": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "D2_mean_long": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "median_change_by_quantile": {
+      "5": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0,
+      "25": 0.0,
+      "30": 0.0,
+      "35": 0.0,
+      "40": 0.0,
+      "45": 0.0,
+      "50": 0.0,
+      "55": 0.0,
+      "60": 0.0,
+      "65": 0.0,
+      "70": 0.0,
+      "75": 0.0,
+      "80": 0.0,
+      "85": 0.0,
+      "90": 0.0,
+      "95": 0.0
+     },
+     "frac_short_change_points": 0.0,
+     "frac_short_base": 0.09090909090909091,
+     "n_episodes_change_pct": 0.0,
+     "mean_long_change": 0.0,
+     "median_change": 0.0,
+     "mean_long05_change": 0.0,
+     "D2_at_05T": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "rate_long_change_pct": 0.0,
+     "unmerged": {
+      "D1_median": {
+       "k": 0,
+       "n": 4,
+       "ci": [
+        0.0,
+        0.4898908403969213
+       ],
+       "holds": false
+      },
+      "D2_mean_long": {
+       "k": 0,
+       "n": 4,
+       "ci": [
+        0.0,
+        0.4898908403969213
+       ],
+       "holds": false
+      },
+      "median_change": 0.0,
+      "mean_long_change": 0.0
+     },
+     "brief_intrusions_per_min": {
+      "base": 3.9,
+      "cond": 3.9
+     }
+    }
+   },
+   "0.5": {
+    "gated_lengthens": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     }
+    },
+    "continuous_shortens": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false,
+      "median": 0.0
+     }
+    },
+    "gated_gt_continuous": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "gated_gt_continuous_other_scorings": {
+     "mBm": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mOB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mB": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     },
+     "mBabs": {
+      "k": 0,
+      "n": 4,
+      "ci": [
+       0.0,
+       0.4898908403969213
+      ],
+      "holds": false
+     }
+    },
+    "attention_response": {
+     "base": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "att_gated0.5": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "att_ungated0.5": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "gated": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     },
+     "ungated": {
+      "during_attended": 0.35571391028817945,
+      "during_competitor": -0.36045956562655124
+     }
+    },
+    "attended_gated": 0.0,
+    "attended_continuous": 0.0,
+    "distribution_gated": {
+     "D1_median": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "D2_mean_long": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "median_change_by_quantile": {
+      "5": 0.0,
+      "10": 0.0,
+      "15": 0.0,
+      "20": 0.0,
+      "25": 0.0,
+      "30": 0.0,
+      "35": 0.0,
+      "40": 0.0,
+      "45": 0.0,
+      "50": 0.0,
+      "55": 0.0,
+      "60": 0.0,
+      "65": 0.0,
+      "70": 0.0,
+      "75": 0.0,
+      "80": 0.0,
+      "85": 0.0,
+      "90": 0.0,
+      "95": 0.0
+     },
+     "frac_short_change_points": 0.0,
+     "frac_short_base": 0.09090909090909091,
+     "n_episodes_change_pct": 0.0,
+     "mean_long_change": 0.0,
+     "median_change": 0.0,
+     "mean_long05_change": 0.0,
+     "D2_at_05T": {
+      "k": 0,
+      "n": 3,
+      "ci": [
+       0.0,
+       0.5614970356393196
+      ],
+      "holds": false
+     },
+     "rate_long_change_pct": 0.0,
+     "unmerged": {
+      "D1_median": {
+       "k": 0,
+       "n": 4,
+       "ci": [
+        0.0,
+        0.4898908403969213
+       ],
+       "holds": false
+      },
+      "D2_mean_long": {
+       "k": 0,
+       "n": 4,
+       "ci": [
+        0.0,
+        0.4898908403969213
+       ],
+       "holds": false
+      },
+      "median_change": 0.0,
+      "mean_long_change": 0.0
+     },
+     "brief_intrusions_per_min": {
+      "base": 3.9,
+      "cond": 3.9
+     }
+    }
+   }
+  },
+  "AT1_att_gated_lengthens": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false,
+   "median": 0.0
+  },
+  "AT2_att_continuous_shortens": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false,
+   "median": 0.0
+  },
+  "AT3_att_gated_gt_continuous": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "C1_within_model": {
+   "rho": NaN,
+   "n": 3
+  },
+  "C2_gated_lengthens_low_serial": {
+   "k": 0,
+   "n": 1,
+   "ci": [
+    0.0,
+    0.7934506882081973
+   ],
+   "holds": false,
+   "testable": false,
+   "median_change": 0.0
+  }
+ },
+ "sfa": {
+  "n_config": 4,
+  "n_drawn": 12,
+  "rejected": {
+   "few_episodes": 3,
+   "cv": 1,
+   "short": 2
+  },
+  "gated_lengthens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "continuous_shortens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "distribution_gated": {
+   "D1_median": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.07733932733932733,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 0.6,
+    "cond": 0.6
+   }
+  },
+  "distribution_continuous": {
+   "D1_median": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.07733932733932733,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 0.6,
+    "cond": 0.6
+   }
+  },
+  "R1_live_gt_self": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R1_other_scorings": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "R1_per_unit_duty": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R2_self_gt_other_reported": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "replay_dose": {
+   "gated": {
+    "duty": 0.5037498474121094,
+    "dose_comp": 0.00118562080137799,
+    "dose_att": 0.9992961545049066,
+    "agree": 1.0
+   },
+   "replay_self": {
+    "duty": 0.5037498474121094,
+    "dose_comp": 0.00118562080137799,
+    "dose_att": 0.9992961545049066,
+    "agree": 1.0
+   },
+   "replay_other": {
+    "duty": 0.5037498474121094,
+    "dose_comp": 0.4945629817350789,
+    "dose_att": 0.5012073164294005,
+    "agree": 0.5113
+   }
+  },
+  "agreement": {
+   "base": 0.49483750000000004,
+   "gated": 1.0,
+   "ungated": 0.5051625,
+   "replay_self": 1.0,
+   "replay_other": 0.5113
+  },
+  "replay_medians": {
+   "live": 0.0,
+   "self": 0.0,
+   "other": 0.0,
+   "self_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "other_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "replay_other_scorings": {
+   "mBm": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mOB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mBabs": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   }
+  },
+  "attended_change": {
+   "gated": 0.0,
+   "ungated": 0.0,
+   "replay_self": 0.0,
+   "replay_other": 0.0
+  },
+  "duty": {
+   "gated": 0.5037498474121094,
+   "ungated": 1.0,
+   "replay_self": 0.5037498474121094,
+   "replay_other": 0.5037498474121094
+  },
+  "T_median_ms": 788.0115858818591,
+  "serial_base": {
+   "r_ab_median": 0.06961703280412145,
+   "r_ab_iqr": [
+    -0.0033856304143752847,
+    0.16770445427890407
+   ],
+   "r_ba_median": 0.37881148298451905,
+   "n_below_human": 3
+  },
+  "serial_vs_gated_within_model": {
+   "rho": NaN,
+   "n": 4
+  },
+  "serial_gated": {
+   "r_ab_median": 0.06961703280412145,
+   "change_median": 0.0
+  },
+  "C1_within_model": {
+   "rho": NaN,
+   "n": 4
+  },
+  "C2_gated_lengthens_low_serial": {
+   "k": 0,
+   "n": 3,
+   "ci": [
+    0.0,
+    0.5614970356393196
+   ],
+   "holds": false,
+   "testable": false,
+   "median_change": 0.0
+  }
+ },
+ "dep": {
+  "n_config": 4,
+  "n_drawn": 40,
+  "rejected": {
+   "few_episodes": 8,
+   "cv": 8,
+   "short": 20
+  },
+  "gated_lengthens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "continuous_shortens": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false,
+    "median": 0.0
+   }
+  },
+  "distribution_gated": {
+   "D1_median": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.03977272727272727,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 0.3,
+    "cond": 0.3
+   }
+  },
+  "distribution_continuous": {
+   "D1_median": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "D2_mean_long": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "median_change_by_quantile": {
+    "5": 0.0,
+    "10": 0.0,
+    "15": 0.0,
+    "20": 0.0,
+    "25": 0.0,
+    "30": 0.0,
+    "35": 0.0,
+    "40": 0.0,
+    "45": 0.0,
+    "50": 0.0,
+    "55": 0.0,
+    "60": 0.0,
+    "65": 0.0,
+    "70": 0.0,
+    "75": 0.0,
+    "80": 0.0,
+    "85": 0.0,
+    "90": 0.0,
+    "95": 0.0
+   },
+   "frac_short_change_points": 0.0,
+   "frac_short_base": 0.03977272727272727,
+   "n_episodes_change_pct": 0.0,
+   "mean_long_change": 0.0,
+   "median_change": 0.0,
+   "mean_long05_change": 0.0,
+   "D2_at_05T": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "rate_long_change_pct": 0.0,
+   "unmerged": {
+    "D1_median": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "D2_mean_long": {
+     "k": 0,
+     "n": 4,
+     "ci": [
+      0.0,
+      0.4898908403969213
+     ],
+     "holds": false
+    },
+    "median_change": 0.0,
+    "mean_long_change": 0.0
+   },
+   "brief_intrusions_per_min": {
+    "base": 0.3,
+    "cond": 0.3
+   }
+  },
+  "R1_live_gt_self": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R1_other_scorings": {
+   "mBm": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mOB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mB": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "mBabs": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "R1_per_unit_duty": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "R2_self_gt_other_reported": {
+   "k": 0,
+   "n": 4,
+   "ci": [
+    0.0,
+    0.4898908403969213
+   ],
+   "holds": false
+  },
+  "replay_dose": {
+   "gated": {
+    "duty": 0.49918006360530853,
+    "dose_comp": 0.0006897259111958501,
+    "dose_att": 0.9995652480192969,
+    "agree": 1.0
+   },
+   "replay_self": {
+    "duty": 0.49918006360530853,
+    "dose_comp": 0.0006897259111958501,
+    "dose_att": 0.9995652480192969,
+    "agree": 1.0
+   },
+   "replay_other": {
+    "duty": 0.49918003380298615,
+    "dose_comp": 0.5026333227604012,
+    "dose_att": 0.4772797635364881,
+    "agree": 0.49315
+   }
+  },
+  "agreement": {
+   "base": 0.5060020833333334,
+   "gated": 1.0,
+   "ungated": 0.49399791666666665,
+   "replay_self": 1.0,
+   "replay_other": 0.49315
+  },
+  "replay_medians": {
+   "live": 0.0,
+   "self": 0.0,
+   "other": 0.0,
+   "self_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "other_lengthens": {
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "replay_other_scorings": {
+   "mBm": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mOB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mB": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   },
+   "mBabs": {
+    "live": 0.0,
+    "self": 0.0,
+    "other": 0.0
+   }
+  },
+  "attended_change": {
+   "gated": 0.0,
+   "ungated": 0.0,
+   "replay_self": 0.0,
+   "replay_other": 0.0
+  },
+  "duty": {
+   "gated": 0.49918006360530853,
+   "ungated": 1.0,
+   "replay_self": 0.49918006360530853,
+   "replay_other": 0.49918003380298615
+  },
+  "T_median_ms": 1112.0396949404762,
+  "serial_base": {
+   "r_ab_median": 0.284413788091176,
+   "r_ab_iqr": [
+    0.2516209094533094,
+    0.3447473029850625
+   ],
+   "r_ba_median": 0.31204673623836765,
+   "n_below_human": 0
+  },
+  "serial_vs_gated_within_model": {
+   "rho": NaN,
+   "n": 4
+  },
+  "serial_gated": {
+   "r_ab_median": 0.284413788091176,
+   "change_median": 0.0
+  },
+  "C1_within_model": {
+   "rho": NaN,
+   "n": 4
+  },
+  "C2_gated_lengthens_low_serial": {
+   "k": 0,
+   "n": 0,
+   "ci": [
+    NaN,
+    NaN
+   ],
+   "holds": false,
+   "testable": false,
+   "median_change": NaN
+  }
+ },
+ "C1_serial_predicts_gated": {
+  "rho": NaN,
+  "n": 8,
+  "ci": [
+   NaN,
+   NaN
+  ],
+  "holds": false
+ },
+ "decisions": {
+  "li": {
+   "G1_gated_lengthens": false,
+   "G2_continuous_shortens": false,
+   "D1_median": false,
+   "D2_mean_long": false,
+   "C2": "not testable",
+   "R1_live_gt_self": false,
+   "W1": false,
+   "AT1": false,
+   "AT2": false,
+   "AT3": false
+  },
+  "sfa": {
+   "G1_gated_lengthens": false,
+   "G2_continuous_shortens": false,
+   "D1_median": false,
+   "D2_mean_long": false,
+   "C2": "not testable"
+  },
+  "dep": {
+   "G1_gated_lengthens": false,
+   "G2_continuous_shortens": false,
+   "D1_median": false,
+   "D2_mean_long": false,
+   "C2": "not testable"
+  },
+  "C1": false
+ }
+}
