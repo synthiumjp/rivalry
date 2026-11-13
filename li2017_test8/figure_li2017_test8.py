@@ -64,7 +64,7 @@ a.axhline(0, color=INK, lw=0.6)
 a.set_xlabel('attended grating, change in reported duration (%)')
 a.set_ylabel('competitor, change in reported duration (%)')
 a.set_title('A  Chong et al.\'s timing, sizes 2.5% to 20%', loc='left')
-a.legend(frameon=False, loc='upper left')
+a.legend(frameon=False, loc='lower right')
 a.text(TARGET + 2, a.get_ylim()[0] + 0.3, '29%', color=GREY, fontsize=6.5)
 
 a = ax[1]
