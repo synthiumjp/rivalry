@@ -1,0 +1,42 @@
+  [test7_li] accepted 0/4 of 4 drawn
+  [test7_li] accepted 0/4 of 8 drawn
+  [test7_li] accepted 0/4 of 12 drawn
+  [test7_li] accepted 1/4 of 16 drawn
+  [test7_li] accepted 1/4 of 20 drawn
+  [test7_li] accepted 1/4 of 24 drawn
+  [test7_li] accepted 1/4 of 28 drawn
+  [test7_li] accepted 1/4 of 32 drawn
+  [test7_li] accepted 1/4 of 36 drawn
+  [test7_li] accepted 1/4 of 40 drawn
+  [test7_li] accepted 1/4 of 44 drawn
+  [test7_li] accepted 1/4 of 48 drawn
+  [test7_li] accepted 2/4 of 52 drawn
+  [test7_li] accepted 2/4 of 56 drawn
+  [test7_li] accepted 2/4 of 60 drawn
+  [test7_li] accepted 2/4 of 64 drawn
+  [test7_li] accepted 2/4 of 68 drawn
+  [test7_li] accepted 2/4 of 72 drawn
+  [test7_li] accepted 2/4 of 76 drawn
+  [test7_li] accepted 2/4 of 80 drawn
+  [test7_li] accepted 2/4 of 84 drawn
+  [test7_li] accepted 3/4 of 88 drawn
+  [test7_li] accepted 3/4 of 92 drawn
+  [test7_li] accepted 3/4 of 96 drawn
+  [test7_li] accepted 3/4 of 100 drawn
+  [test7_li] accepted 3/4 of 104 drawn
+  [test7_li] accepted 4/4 of 108 drawn
+  [li] chunk 1/1 [260s]
+  [test7_sfa] accepted 2/4 of 4 drawn
+  [test7_sfa] accepted 2/4 of 8 drawn
+  [test7_sfa] accepted 3/4 of 12 drawn
+  [test7_sfa] accepted 4/4 of 16 drawn
+  [sfa] chunk 1/1 [286s]
+  [test7_dep] accepted 0/4 of 4 drawn
+  [test7_dep] accepted 0/4 of 8 drawn
+  [test7_dep] accepted 0/4 of 12 drawn
+  [test7_dep] accepted 0/4 of 16 drawn
+  [test7_dep] accepted 1/4 of 20 drawn
+  [test7_dep] accepted 3/4 of 24 drawn
+  [test7_dep] accepted 4/4 of 28 drawn
+  [dep] chunk 1/1 [321s]
+wrote dry7.json [321s]

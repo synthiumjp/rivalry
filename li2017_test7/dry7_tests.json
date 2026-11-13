@@ -1,0 +1,43 @@
+{
+ "li": {
+  "n_config": 4,
+  "n_drawn": 108,
+  "rejected": {
+   "few_episodes": 86,
+   "cv": 9,
+   "short": 0,
+   "serial": 9,
+   "surplus": 0
+  },
+  "testable": false
+ },
+ "sfa": {
+  "n_config": 4,
+  "n_drawn": 16,
+  "rejected": {
+   "few_episodes": 5,
+   "cv": 0,
+   "short": 3,
+   "serial": 4,
+   "surplus": 0
+  },
+  "testable": false
+ },
+ "dep": {
+  "n_config": 4,
+  "n_drawn": 28,
+  "rejected": {
+   "few_episodes": 2,
+   "cv": 2,
+   "short": 5,
+   "serial": 15,
+   "surplus": 0
+  },
+  "testable": false
+ },
+ "decisions": {
+  "li": "not testable (fewer than 10 configurations)",
+  "sfa": "not testable (fewer than 10 configurations)",
+  "dep": "not testable (fewer than 10 configurations)"
+ }
+}
