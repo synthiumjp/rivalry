@@ -46,7 +46,8 @@ INK, ACC, WARN, MUT = '#1a1a1a', '#2b6cb0', '#c05621', '#9aa5b1'
 
 
 def load(name, quiet=False):
-    for cand in (name, f'w22_{name}', f'w22_fix_{name}'):
+    # regenerated outputs first, so figures plot the reproducible campaign
+    for cand in (f'final_{name}', name, f'w22_{name}', f'w22_fix_{name}'):
         if os.path.exists(cand):
             with open(cand) as f:
                 return json.load(f)
@@ -96,7 +97,7 @@ def figure1():
         ax1.set_xlabel('coefficient of variation of dominance durations')
         ax1.set_ylabel('configurations')
         ax1.set_xlim(0, 1.6)
-    finish(fig, 1, 'Figure 1. Parameter space and duration variability')
+    finish(fig, 1, 'v11 Figure 1. Duration variability across the parameter grid')
 
 
 # ---------------------------------------------------------------- Figure 3
@@ -156,7 +157,7 @@ def figure3():
             ax[2].set_title('C  no fixed period reaches yoked', loc='left')
         else:
             need(3, 'C', 'chop_* in wave22_N_intermittency.json')
-    finish(fig, 3, 'Figure 3. Gate timing as an independent variable')
+    finish(fig, 3, 'v11 Figure 2. Delivery timing as an independent variable')
 
 
 # ---------------------------------------------------------------- Figure 6
@@ -178,9 +179,9 @@ def figure6():
     if any(h is not None for h in hits):
         ax[0].plot(P, [h if h is not None else np.nan for h in hits], 'o-',
                    color=ACC, ms=4)
-        ax[0].set_xlabel('adaptation exponent p')
+        ax[0].set_xlabel('adaptation exponent q')
         ax[0].set_ylabel('Levelt II reachable (of 200)')
-        ax[0].set_title('A  reachability rises with p', loc='left')
+        ax[0].set_title('A  reachability rises with q', loc='left')
     else:
         need(6, 'A', 'n_hit per exponent in wave22_B_levelt.json')
 
@@ -191,9 +192,9 @@ def figure6():
                    color=ACC, ms=4, label='5-timestep filter')
         ax[1].plot(P, [d if d is not None else np.nan for d in raw], 's--',
                    color=MUT, ms=4, label='raw transitions')
-        ax[1].set_xlabel('adaptation exponent p')
-        ax[1].set_ylabel('Proposition IV recovered (of 200)')
-        ax[1].set_title('B  and so does Proposition IV', loc='left')
+        ax[1].set_xlabel('adaptation exponent q')
+        ax[1].set_ylabel('Mod. Prop. IV recovered (of 200)')
+        ax[1].set_title('B  and so does Modified Proposition IV', loc='left')
         ax[1].legend(frameon=False, loc='upper left')
     else:
         need(6, 'B', 'raw/filt n_dd per exponent in wave22_E_prop4.json')
@@ -206,13 +207,13 @@ def figure6():
             if any(y is not None for y in ys):
                 ax[2].plot(P, [y if y is not None else np.nan for y in ys], style,
                            color=col, ms=4, label=name.replace('_', ' '))
-        ax[2].set_xlabel('adaptation exponent p')
+        ax[2].set_xlabel('adaptation exponent q')
         ax[2].set_ylabel('Levelt II reachable (of 200)')
-        ax[2].set_title('C  on sets fixed across p', loc='left')
+        ax[2].set_title('C  on sets fixed across q', loc='left')
         ax[2].legend(frameon=False, loc='upper left')
     else:
         need(6, 'C', 'wave22_K_fixedset.json')
-    finish(fig, 6, 'Figure 6. One modification repairs both structural failures')
+    finish(fig, 6, 'v11 Figure 7. Superlinear adaptation repairs both failures')
 
 
 # ---------------------------------------------------------------- Figure 7
@@ -247,7 +248,7 @@ def figure7():
     ax[1].bar(xs, [x if x is not None else np.nan for x in r], .55, color=MUT)
     ax[1].set_xticks(xs); ax[1].set_xticklabels(labs, rotation=18, ha='right')
     ax[1].set_ylabel('gated coupling ratio')
-    ax[1].set_title('B  magnitudes span fifteenfold', loc='left')
+    ax[1].set_title('B  magnitudes do not transfer', loc='left')
 
     c = a.get('crossover') or {}
     got = [(f, c[f]) for f in fams if f in c and c[f].get('n')]
@@ -259,11 +260,11 @@ def figure7():
         ax[2].set_xticks(range(len(got)))
         ax[2].set_xticklabels([f.split(None, 1)[-1] for f, _ in got],
                               rotation=18, ha='right')
-        ax[2].set_ylabel('crossover in tau / D')
-        ax[2].set_title('C  and the crossover does not', loc='left')
+        ax[2].set_ylabel('reversal point, τ / T')
+        ax[2].set_title('C  and the reversal point does not', loc='left')
     else:
         need(7, 'C', "run wave23_architectures.py with --crossover")
-    finish(fig, 7, 'Figure 7. The result is architectural')
+    finish(fig, 7, 'v11 Figure 6. The sign reversal across architectures')
 
 
 # ---------------------------------------------------------------- Figure 8
@@ -295,7 +296,7 @@ def figure8():
         ax[0].legend(frameon=False, fontsize=5.5)
     else:
         need(8, 'A', 'classifiers.*.auc in wave9_results.json')
-    finish(fig, 8, 'Figure 8. Controllability and the graded rectifier')
+    finish(fig, 8, 'v11 Figure S1. Classification of controllability')
 
 
 
@@ -454,13 +455,19 @@ def figure2():
         ax[2].set_title('C  Proposition III', loc='left')
     need(2, 'D', 'equal-strength sweep with signal-scaled noise; not in '
                  'wave2_B_levelt.json, which varies one channel only')
-    finish(fig, 2, 'Figure 2. Modified Levelt propositions')
+    finish(fig, 2, 'v11 Figure S2. Modified Levelt propositions')
 
 
 # ---------------------------------------------------------------- Figure 4
+# Mode numbers as defined in wave15_paired.py (MODES).
+FORMULATION = {'1': 'persistence', '2': 'input increment', '3': 'response gain',
+               '4': 'inhibitory output', '5': 'adaptation'}
+
+
 def figure4():
     """From wave15_A_paired.json: 100 configurations, modes 1-5 each swept over
-    magnitude m, with supp_act and rival recorded, against a common baseline."""
+    magnitude m, with supp_act and rival recorded, against a common baseline.
+    Mode names follow MODES in wave15_paired.py."""
     d = load('wave15_A_paired.json')
     if d is None:
         return
@@ -483,11 +490,11 @@ def figure4():
             xy = np.array(pts[k], float)
             g = np.isfinite(xy).all(axis=1)
             ax[0].plot(xy[g, 0], xy[g, 1], '.', color=cols[i], ms=2.5, alpha=.45,
-                       label=f'mode {k}')
+                       label=FORMULATION[k])
     ax[0].axhline(0, color=INK, lw=.6); ax[0].axvline(0, color=INK, lw=.6)
     ax[0].set_xlabel('suppressed-phase activation change (%)')
     ax[0].set_ylabel('competitor duration change (%)')
-    ax[0].set_title('A  the coupling variable', loc='left')
+    ax[0].set_title('A  all magnitudes swept', loc='left')
     ax[0].legend(frameon=False, ncol=2, fontsize=6)
 
     meds = []
@@ -511,20 +518,17 @@ def figure4():
         ax[1].barh(ypos, [c for _, _, c in meds], height=.62,
                    color=[cols[int(k) - 1] for k, _, _ in meds])
         ax[1].set_yticks(ypos)
-        ax[1].set_yticklabels([f'mode {k}\n({s:+.0f}% supp)' for k, s, _ in meds])
+        ax[1].set_yticklabels([f'{FORMULATION[k]}\n({s:+.0f}%)' for k, s, _ in meds])
         ax[1].axvline(0, color=INK, lw=.7)
         ax[1].set_xlabel('competitor duration change (%)')
         ax[1].set_title('B  ordered by suppressed-phase activation', loc='left')
         print('    mode order by suppressed-phase activation, lowest first:')
         for k, s, c in meds:
-            print(f'      mode {k}: suppressed-phase {s:+7.1f}%, '
+            print(f'      {FORMULATION[k]:<18s}: suppressed-phase {s:+7.1f}%, '
                   f'competitor {c:+7.1f}%')
     else:
         need(4, 'B', 'finite medians per mode in wave15_A_paired.json')
-    finish(fig, 4, 'Figure 4. What the coupling sign tracks')
-    print("""    NOTE: modes are numbered 1 to 5 in the stored file with no names. Map them
-    to the five formulations of Section 4.5.1 before use; the ordering by
-    suppressed-phase activation in panel B should match that section's table.""")
+    finish(fig, 4, 'v11 Figure 4. What the sign of the competitor response tracks')
 
 
 # ---------------------------------------------------------------- Figure 5
@@ -535,7 +539,8 @@ def figure5():
         return
     key = '1.0' if '1.0' in d else sorted(d, key=float)[0]
     blk = d[key]
-    fig, ax = plt.subplots(1, 2, figsize=(6.4, 2.6))
+    fig, ax0 = plt.subplots(1, 1, figsize=(4.2, 2.6))
+    ax = [ax0, None]
     per = blk.get('per_config') or {}
     got = False
     for cond, col, lab in (('gated_1x', ACC, 'gated'), ('ungated_1x', WARN, 'ungated')):
@@ -552,59 +557,111 @@ def figure5():
                    fontsize=6.5, color=INK)
         ax[0].set_xlabel('competitor-to-attended ratio')
         ax[0].set_ylabel('configurations')
-        ax[0].set_title('A  gated and ungated distributions', loc='left')
         ax[0].legend(frameon=False)
     else:
         need(5, 'A', 'per_config pA/pB in wave22_C_gates.json')
+    finish(fig, 5, 'v11 Figure 3. Chong et al.s manipulation reproduced in direction')
 
-    rows = per.get('gated_1x') or []
 
-    def find_kappa(r):
-        for key in ('kap', 'kappa'):
-            if r.get(key) is not None:
-                return float(r[key])
-        p = r.get('params') or {}
-        for key in ('kappa', 'kap'):
-            if p.get(key) is not None:
-                return float(p[key])
-        return None
 
-    kap = [find_kappa(r) for r in rows]
-    if rows and not any(k is not None for k in kap):
-        print(f"    panel B: no kappa in per_config rows. Keys present: "
-              f"{sorted(rows[0])[:12]}")
-    rat = [r['pB'] / r['pA'] if r.get('pA') and abs(r['pA']) > 1e-9 else None
-           for r in rows]
-    pairs = [(k, v) for k, v in zip(kap, rat) if k is not None and v is not None]
-    if pairs:
-        k, v = zip(*pairs)
-        ax[1].plot(k, np.clip(v, -1, 2), '.', color=MUT, ms=3)
-        ax[1].set_xlabel('adaptation gain kappa')
+def figure_mechanism():
+    """Section 4.4: switching-threshold geometry.
+    (A) The adaptation imbalance u travelling between thresholds towards an asymptote,
+        drawn from the closed-form solution, unmanipulated and with a gated increment.
+    (B) Gated coupling ratio against rho measured from unmanipulated traces (block R).
+    (C) Exclusion from rivalry against the increment's threshold shift relative to the
+        margin L - c (check_geometry)."""
+    R = load('wave22_R_geometry.json')
+    G = None
+    for cand in ('final_check_geometry_output.json', 'w22_check_geometry_output.json',
+                 'check_geometry_output.json'):
+        if os.path.exists(cand):
+            G = json.load(open(cand))
+            break
+    fig, ax = plt.subplots(1, 3, figsize=(8.4, 2.7))
+
+    # ---- A: the competitor's episode, from the handover, under each schedule
+    # Closed form in units of the asymptote L and of 1/gamma. The episode runs from the
+    # start threshold towards -L and ends at the end threshold. An increment present at
+    # the start handover raises the start by delta; one present at the end handover
+    # lowers the end threshold by delta.
+    L, c, d = 1.0, 0.55, 0.15
+    # drawn so that curves sharing a start point stay visible: dashed under solid
+    cases = (('unmanipulated', c, -c, MUT, '-'),
+             ('anti-gated', c, -(c - d), WARN, ':'),
+             ('continuous', c + d, -(c - d), WARN, '--'),
+             ('gated', c + d, -c, ACC, '-'))
+    T0 = np.log((c + L) / (L - c))
+    for lab, u0, u1, col, ls in cases:
+        T = np.log((u0 + L) / (u1 + L))
+        t = np.linspace(0, T, 200)
+        u = -L + (u0 + L) * np.exp(-t)
+        ax[0].plot(t, u, color=col, lw=1.6, ls=ls,
+                   label=f'{lab}  {100 * (T - T0) / T0:+.0f}%' if lab != 'unmanipulated'
+                   else lab)
+        ax[0].plot([T], [u1], 'o', color=col, ms=3.5)
+    ax[0].axhline(-L, color=INK, lw=0.7, alpha=0.5)
+    ax[0].text(0.03, -L + 0.04, 'asymptote', fontsize=6.5, color=INK)
+    ax[0].set_xlabel('time since handover (units of 1/γ)')
+    ax[0].set_ylabel('adaptation imbalance u (units of L)')
+    ax[0].set_ylim(-1.08, 0.8)
+    ax[0].legend(frameon=False, fontsize=6.2, loc='upper right', title="competitor's episode",
+                 title_fontsize=6.2)
+    ax[0].set_title('A  which threshold moves sets the sign', loc='left')
+    print("    schematic: competitor episode change, gated "
+          f"{100*(np.log((c+d+L)/(L-c))-T0)/T0:+.0f}%, continuous "
+          f"{100*(np.log((c+d+L)/(L-c+d))-T0)/T0:+.0f}%, anti-gated "
+          f"{100*(np.log((c+L)/(L-c+d))-T0)/T0:+.0f}%")
+
+    # ---- B: gated ratio against rho
+    if R and R.get('rows'):
+        rows = R['rows']
+        rho = np.array([r.get('rho', np.nan) for r in rows], float)
+        gr = np.array([r.get('gated_0.25', np.nan) for r in rows], float)
+        ok = np.isfinite(rho) & np.isfinite(gr)
+        ax[1].plot(rho[ok], np.clip(gr[ok], -0.5, 2.0), '.', color=ACC, ms=3, alpha=0.6)
+        lim = [0, max(1.0, float(np.nanpercentile(rho[ok], 99)) * 1.1)]
+        ax[1].plot(lim, lim, color=INK, lw=0.8, ls='--')
+        rk = lambda v: np.argsort(np.argsort(v))
+        sp = float(np.corrcoef(rk(rho[ok]), rk(gr[ok]))[0, 1])
+        ax[1].text(0.04, 0.93, f'Spearman {sp:+.2f}, n = {int(ok.sum())}',
+                   transform=ax[1].transAxes, fontsize=6.5)
+        ax[1].set_xlabel('φ = (L − c)/(L + c), unmanipulated trace')
         ax[1].set_ylabel('gated coupling ratio')
-        ax[1].set_title('B  ratio against adaptation gain', loc='left')
+        ax[1].set_title('B  the ratio follows φ', loc='left')
+        print(f"    panel B: Spearman {sp:+.3f} on {int(ok.sum())}")
     else:
-        grid = load('phase1_grid_results.json', quiet=True)
-        recs = (grid or {}).get('results', grid if isinstance(grid, list) else [])
-        by_idx = {i: (r.get('params') or {}).get('kappa') for i, r in enumerate(recs)}
-        def cfg_id(r):
-            for key in ('config', 'config_idx', 'grid_index', 'idx'):
-                if r.get(key) is not None:
-                    return int(r[key])
-            return None
-        pairs = [(by_idx.get(cfg_id(r)), rr) for r, rr in zip(rows, rat)
-                 if rr is not None and by_idx.get(cfg_id(r)) is not None]
-        if pairs:
-            k, v = zip(*pairs)
-            ax[1].plot(k, np.clip(v, -1, 2), '.', color=MUT, ms=3)
-            ax[1].set_xlabel('adaptation gain kappa')
-            ax[1].set_ylabel('gated coupling ratio')
-            ax[1].set_title('B  ratio against adaptation gain', loc='left')
-        else:
-            need(5, 'B', "kappa per configuration; not in wave22_C_gates.json "
-                         "per_config nor recoverable from phase1 by config index")
-    need(5, 'C', 'ramp sweep, tau against competitor response; run block N or the '
-                 'wave11 ramp campaign')
-    finish(fig, 5, 'Figure 5. Reproducing a published gated manipulation')
+        need('mechanism', 'B', 'wave22_R_geometry.json (block R)')
+
+    # ---- C: exclusion against delta / margin
+    if G and G.get('attrition'):
+        rec = [q for q in G['attrition'] if np.isfinite(q.get('x', np.nan))]
+        x = np.array([q['x'] for q in rec]); ex = np.array([q['excl'] for q in rec], bool)
+        edges = np.array([0, 0.25, 0.5, 0.75, 1.0, 1.5, np.inf])
+        mids, frac, ns = [], [], []
+        for lo, hi in zip(edges[:-1], edges[1:]):
+            sel = (x >= lo) & (x < hi)
+            if sel.sum():
+                mids.append(lo if np.isinf(hi) else 0.5 * (lo + hi)); ns.append(int(sel.sum()))
+                frac.append(ex[sel].mean())
+        ax[2].bar(range(len(frac)), frac, color=WARN, alpha=0.8, width=0.7)
+        for k, (f_, n_) in enumerate(zip(frac, ns)):
+            ax[2].text(k, f_ + 0.01, f'n={n_}', ha='center', fontsize=5.5, color=INK)
+        labels = ['<.25', '.25–.5', '.5–.75', '.75–1', '1–1.5', '≥1.5'][:len(frac)]
+        ax[2].set_xticks(range(len(frac)))
+        ax[2].set_xticklabels(labels, fontsize=6.5)
+        ax[2].set_xlabel('threshold shift δ / gap (L − c)')
+        ax[2].set_ylabel('proportion leaving rivalry')
+        ax[2].set_ylim(0, max(0.1, max(frac) * 1.25))
+        ax[2].set_title('C  and predicts who leaves', loc='left')
+    else:
+        need('mechanism', 'C', 'check_geometry_output.json (python check_geometry.py)')
+
+    OUT.mkdir(exist_ok=True)
+    fig.savefig(OUT / 'figure_mechanism.pdf', bbox_inches='tight')
+    fig.savefig(OUT / 'figure_mechanism.png', bbox_inches='tight')
+    plt.close(fig)
+    print("  wrote figures/figure_mechanism.pdf")
 
 
 def main():
@@ -614,8 +671,9 @@ def main():
     ap.add_argument('--audit-panels', action='store_true', dest='ap')
     args = ap.parse_args()
     # keyed by manuscript figure number
+    # 9 is the mechanism figure of Section 4.4, written as figure_mechanism.pdf
     todo = {1: figure8, 2: figure1, 3: figure2, 4: figure4,
-            5: figure3, 6: figure5, 7: figure6, 8: figure7}
+            5: figure3, 6: figure5, 7: figure6, 8: figure7, 9: figure_mechanism}
     if args.ap:
         audit_panels()
         return
@@ -636,18 +694,10 @@ def main():
         for m in dict.fromkeys(MISSING):
             print("  -", m)
         print("""
-  Three panels have no stored source and need a run rather than an extraction:
 
-    1A  architecture schematic and two example traces. Draw by hand, or use the
-        trace-returning kernel in block P of wave22_adaptation.py.
-    2D  equal-strength sweep under fixed and signal-scaled noise. Section 4.3's
-        remedy. wave2_B_levelt.json varies one channel only, so this needs the
-        bilateral sweep re-run.
-    5C  ramp speed against competitor response. Block N of wave22_adaptation.py
-        has the machinery; the crossover values are also in wave23 --crossover.
-    8B  softplus rectifier sweep. Six numbers, transcribable from Appendix A.1.
-
-  Everything else on this list is an extraction whose source was found.""")
+    None of these panels appears in manuscript v11 (1A, 2D, 5C and 8B were
+    dropped from the earlier figure plan), so nothing is missing for v11.
+""")
 
 
 if __name__ == '__main__':

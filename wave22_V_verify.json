@@ -683,5 +683,18 @@
     }
    }
   }
- ]
+ ],
+ "_provenance": {
+  "THETA": 0.05,
+  "SPLIT_INDET": 1,
+  "ADAPT_PIPELINE": 1,
+  "MIN_DUR": 5,
+  "X_INIT": 0.1,
+  "BURN": 500,
+  "XMAX": 5.0,
+  "numba": "0.64.0",
+  "git_commit": "fac9d97",
+  "argv": "wave22_adaptation.py --verify",
+  "timestamp": "2026-10-02T15:56:47"
+ }
 }
