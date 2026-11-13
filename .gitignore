@@ -4,3 +4,11 @@ __pycache__/
 *.kernels.json
 *.zip
 build/
+
+figures/*.png
+wave[0-9]*_*
+w22_*
+deep_dump*
+inspect_outputs.py
+inventory_report.txt
+summarise_wave6.py
