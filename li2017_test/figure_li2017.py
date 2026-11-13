@@ -31,10 +31,10 @@ def wilson(k, n, z=1.96):
 fig, ax = plt.subplots(1, 3, figsize=(7.2, 2.7))
 
 # A: proportion lengthening, gated / ungated / yoked, both criteria, 10% increment
-labels = ['gated', 'ungated', 'yoked']
-for j, (crit, col, lab) in enumerate((('mB', ACC, 'difference criterion'), ('mBabs', WARN, 'absolute criterion'))):
+keys = ['gated', 'ungated', 'yoked']; labels = ['gated', 'continuous', 'yoked']
+for j, (crit, col, lab) in enumerate((('mB', ACC, 'unmerged scoring'), ('mBabs', WARN, 'absolute criterion'))):
     ps, lo, hi = [], [], []
-    for m in labels:
+    for m in keys:
         x = comp(f'{m}_0.1', crit); x = x[np.isfinite(x)]
         k, n = int((x > 0).sum()), len(x)
         a, b = wilson(k, n); ps.append(k / n); lo.append(k / n - a); hi.append(b - k / n)
