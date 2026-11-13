@@ -1,0 +1,187 @@
+{
+ "li": {
+  "n_config": 4,
+  "baseline_reproduces_test7": {
+   "max_rel_diff": Infinity,
+   "identical": false
+  },
+  "attended_change_obs": {
+   "chong_0.025": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.05": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.075": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.1": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.2": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "testable": false
+ },
+ "sfa": {
+  "n_config": 4,
+  "baseline_reproduces_test7": {
+   "max_rel_diff": 1.0520475607020208,
+   "identical": false
+  },
+  "attended_change_obs": {
+   "chong_0.025": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.05": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.075": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.1": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.2": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "testable": false
+ },
+ "dep": {
+  "n_config": 4,
+  "baseline_reproduces_test7": {
+   "max_rel_diff": 1.0051753465310702,
+   "identical": false
+  },
+  "attended_change_obs": {
+   "chong_0.025": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.05": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.075": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.1": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   },
+   "chong_0.2": {
+    "median": 0.0,
+    "k": 0,
+    "n": 4,
+    "ci": [
+     0.0,
+     0.4898908403969213
+    ],
+    "holds": false
+   }
+  },
+  "testable": false
+ },
+ "decisions": {
+  "li": "not testable (fewer than 10 configurations)",
+  "sfa": "not testable (fewer than 10 configurations)",
+  "dep": "not testable (fewer than 10 configurations)"
+ }
+}

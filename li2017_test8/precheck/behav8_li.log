@@ -1,0 +1,129 @@
+/home/claude/chris/work/t8/li2017_test8/precheck/behav8.py:69: RuntimeWarning: Mean of empty slice
+  mean_lev_rep1=float(lev[rp == 1].mean()), mean_lev_rep2=float(lev[rp == 2].mean()),
+/usr/local/lib/python3.13/site-packages/numpy/_core/_methods.py:142: RuntimeWarning: invalid value encountered in scalar divide
+  ret = ret.dtype.type(ret / rcount)
+/usr/local/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:3862: RuntimeWarning: Mean of empty slice
+  return _methods._mean(a, axis=axis, dtype=dtype,
+{
+ "model": "li",
+ "cfg": {
+  "inp": 0.615941614225856,
+  "wo": 0.661679091679,
+  "wa": 0.6456454530944082,
+  "wh": 0.6076278370379358,
+  "tau_h": 3722.864470369667,
+  "noise": 0.05709402229982395
+ },
+ "secs_chunk": 38.0487265586853,
+ "T": 9436.625,
+ "base": {
+  "mOA": 13508.0,
+  "mOB": 8401.0,
+  "mA": 10466.25,
+  "mB": 8407.0,
+  "mBm": 8412.0,
+  "nOB": 0.75
+ },
+ "chong_0.025": {
+  "mOA": -21.402132069884512,
+  "mOB": -0.6031028052215934,
+  "mA": 0.5995461602770811,
+  "mBm": -0.6062767475035663,
+  "mB": -0.618532175567979,
+  "mBabs": 79.20508744038156,
+  "nOB": 33.333333333333336,
+  "duty": 0.6516039371490479,
+  "dose_comp": 0.04738421458750963,
+  "pred": 0.34840606375744976,
+  "pred_base": 0.4275128994840206
+ },
+ "chong_0.05": {
+  "mOA": -7.465946106011253,
+  "mOB": -2.698091497044006,
+  "mA": 18.72447151558581,
+  "mBm": -1.9218576636550886,
+  "mB": -1.9348955235716196,
+  "mBabs": 75.70747217806041,
+  "nOB": 33.333333333333336,
+  "duty": 0.6952152252197266,
+  "dose_comp": 0.045323156751692295,
+  "pred": 0.30440782368705255,
+  "pred_base": 0.4275128994840206
+ },
+ "chong_0.1": {
+  "mOA": -16.722517368205967,
+  "mOB": -3.0799220272904484,
+  "mA": 64.13679439637413,
+  "mBm": -72.90451416259394,
+  "mB": -72.95577641058,
+  "mBabs": 247.82896917467684,
+  "nOB": -66.66666666666667,
+  "duty": 0.9421619176864624,
+  "dose_comp": 0.016321817587595433,
+  "pred": 0.057377704891804326,
+  "pred_base": 0.4275128994840206
+ },
+ "per_seed_mOA_base": [
+  NaN,
+  14781.0,
+  12235.0,
+  NaN
+ ],
+ "per_seed_mOA_10": [
+  NaN,
+  NaN,
+  10189.0,
+  NaN
+ ],
+ "per_seed_mOB_base": [
+  NaN,
+  6138.0,
+  5130.0,
+  13935.0
+ ],
+ "per_seed_mOB_10": [
+  NaN,
+  NaN,
+  4972.0,
+  NaN
+ ],
+ "equiv_schedule3_chong": {
+  "rb": true,
+  "on": true,
+  "rep1": true,
+  "rep2": true
+ },
+ "level": {
+  "min": 0.0,
+  "max": 1.0,
+  "max_abs_step": 0.0019230842590332031,
+  "expected_step": 0.0019230769230769232,
+  "frac_up_while_rep1": 1.0,
+  "frac_down_while_not_rep1": 1.0,
+  "mean_lev_rep1": 0.9912286631765933,
+  "mean_lev_rep2": NaN,
+  "frac_at_1_rep1": 0.9824573263478114
+ },
+ "level_after_report1_ms": {
+  "0": 0.001923076924867928,
+  "100": 0.19423076510429382,
+  "260": 0.5019230842590332,
+  "520": 1.0,
+  "800": 1.0
+ },
+ "level_after_report2_ms": {
+  "0": NaN,
+  "100": NaN,
+  "260": NaN,
+  "520": NaN,
+  "800": NaN
+ },
+ "level_at_competitor_onset_mean": NaN,
+ "inst0": {
+  "n_rep_A": 0,
+  "n_rep_B": 0,
+  "mean_rep_A": NaN,
+  "mean_rep_B": NaN
+ },
+ "secs_total": 60.1296706199646
+}
